@@ -10,8 +10,8 @@
 
 	<body>
 		<h1>
-			3代幻之岛计算器 v0.9 
-			<br/>GEN3 Mirage island calculator v0.9
+			3代幻之岛计算器 v1.0
+			<br/>GEN3 Mirage island calculator v1.0
 		</h1>
 		<hr/> <hr/> 
 
@@ -36399,28 +36399,41 @@
 					alert("请输入正确日期\nPlease enter correct time");
 					return;
 				}
-				
-				var dnum=parseInt($("#dnum").val())*$("#pom").val();
+				var pom = $("#pom").val();
+				var dnumv = $("#dnum").val();
+				var dnum= parseInt(dnumv)*pom;
 				var dtype=$("#dtype").val();
+				var day1 = getDayByDType(dtype,sy,sm,sd,dnum);
+				if(sy == 2000){
+					if(day1.getFullYear() > 2000){
+						dnum= (parseInt(dnumv)+parseInt(366))*(pom);
+						day1 = getDayByDType(dtype,sy,sm,sd,dnum);
+					}
+				}
 				
-				if(dtype==1)
-				{
-					day1=new Date(sy,sm,sd+dnum);
-				}
-				if(dtype==2)
-				{
-					day1=new Date(sy,sm,sd+dnum*7);
-				}
-				else if(dtype==3)
-				{
-					day1=new Date(sy,sm+dnum,sd);
-				}
 				
 				
 				$("#result1").html(getdatestring(day1));				
 				//localStorage.setItem("dayadd",$("#dnum").val()+","+$("#dtype").val()+","+$("#pom").val());				
 				//LoadJs("s2l.php?c="+Math.ceil(day1/86400000));
 			}		
+			
+			function getDayByDType(dtype,sy,sm,sd,dnum){
+				var day = null;
+				if(dtype==1)
+				{
+					day=new Date(sy,sm,sd+dnum);
+				}
+				if(dtype==2)
+				{
+					day=new Date(sy,sm,sd+dnum*7);
+				}
+				else if(dtype==3)
+				{
+					day=new Date(sy,sm+dnum,sd);
+				}
+				return day;
+			}
 
 			function getdatestring(dobj) 
 			{
