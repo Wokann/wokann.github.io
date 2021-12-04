@@ -12,6 +12,20 @@
 
 		<p> <br> 2、请输入第1步中获得的晃晃斑pid后四位（十六进制）：(Please enter the last four digits of the pid you get in Step1:) <br><input id="filterName" name="filterName"> <span class="search">搜索(Search)</span> <br> </p>
 		
+		<script>
+			$(function() {
+				$("#partHtml").load("https:www.baidu.com");
+				$('table tbody tr').hide();
+				$('.search').on('click', function() {
+					// console.log($('#filterName').val());
+					$('table tbody tr').hide()
+						.filter(":contains('" + ($('#filterName').val()) + "')")
+						.show();
+					 
+					})
+		 })
+		</script>			
+		
 		<table>
 		    <thead>
 		    <tr><th>天数（Days）</th><th>幻之岛种子（Mirage island seed）</th><th>日期（d/m/y）（以2001年1月1日为起始）（Date started on 1/1/2001）</th></tr>
@@ -36180,18 +36194,10 @@
 			
 		</table>
 		<div>
-				<div id="partHtml" style="width: 12.5rem;height: 1.875rem;"></div>
+				<div id="partHtml" style="width: 20rem;height: 1.875rem;"></div>
 		</div>
 		
-		<script>
-		 $(function() {
-			 $("#partHtml").load("https:www.baidu.com");
-			 $('table tbody tr').hide();
-		     $('.search').on('click', function() {
-		         // console.log($('#filterName').val());
-		         $('table tbody tr').hide()
-		             .filter(":contains('" + ($('#filterName').val()) + "')")
-		             .show();
+
 					 
 		     })
 		 })
