@@ -36326,7 +36326,8 @@
 		<hr/> 
 
 	<script >
-		$(function() {
+		$(function() 
+		{
 			$('#search').on('click', function() {
 				var inputData = $('#filterName').val();
 				if(inputData){
@@ -36345,12 +36346,16 @@
 				}
 				
 			);
+
 			$('#calculate').on('click', function() {
 				dayadd();
 			});
-			function callback(){
+
+			function callback()
+			{
 				$("#notData").hide();
 			}
+
 			function dayadd()
 			{
 				var sy=parseInt($("#SY").val());
@@ -36358,7 +36363,8 @@
 				var sd=parseInt($("#SD").val());				
 				var day0=new Date(sy,sm,sd);	
 				
-				if(day0=="Invalid Date"){
+				if(day0=="Invalid Date")
+				{
 					alert("请输入正确日期");
 					return;
 				}
@@ -36366,13 +36372,16 @@
 				var dnum=parseInt($("#dnum").val())*$("#pom").val();
 				var dtype=$("#dtype").val();
 				
-				if(dtype==1){
+				if(dtype==1)
+				{
 					day1=new Date(sy,sm,sd+dnum);
 				}
-				if(dtype==2){
+				if(dtype==2)
+				{
 					day1=new Date(sy,sm,sd+dnum*7);
 				}
-				else if(dtype==3){
+				else if(dtype==3)
+				{
 					day1=new Date(sy,sm+dnum,sd);
 				}
 				
@@ -36380,11 +36389,13 @@
 				$("#result1").html(getdatestring(day1));				
 				//localStorage.setItem("dayadd",$("#dnum").val()+","+$("#dtype").val()+","+$("#pom").val());				
 				//LoadJs("s2l.php?c="+Math.ceil(day1/86400000));
-			}			
-			function getdatestring(dobj) {
-				return  dobj.getFullYear() + "年(y)" + (1 + dobj.getMonth()) + "月(m)" + dobj.getDate() + "日(d)" ;
+			}		
 
+			function getdatestring(dobj) 
+			{
+				return  dobj.getFullYear() + "年(y)" + (1 + dobj.getMonth()) + "月(m)" + dobj.getDate() + "日(d)" ;
 			}
+
 			 function s2l(ly,lm,ld)
 			{
 				$("#nongli").innerHTML=ly!=undefined?getlinfo(ly,lm,ld):"";				
@@ -36392,80 +36403,84 @@
 							
 			function daydiff()
 			{
-			var y2=parseInt($("#SY2").val());
-			var m2=parseInt($("#SM2").val());
-			var d2=parseInt($("#SD2").val());
-			var y3=parseInt($("#SY3").val());
-			var m3=parseInt($("#SM3").val());
-			var d3=parseInt($("#SD3").val());
-			localStorage.setItem("diffc",y3+"-"+m3+"-"+d3);				
+				var y2=parseInt($("#SY2").val());
+				var m2=parseInt($("#SM2").val());
+				var d2=parseInt($("#SD2").val());
+				var y3=parseInt($("#SY3").val());
+				var m3=parseInt($("#SM3").val());
+				var d3=parseInt($("#SD3").val());
+				localStorage.setItem("diffc",y3+"-"+m3+"-"+d3);				
 			
-			var day2=new Date(y2,m2-1,d2);
-			var day3=new Date(y3,m3-1,d3);
-			var dnum=(day3-day2)/86400000;				
+				var day2=new Date(y2,m2-1,d2);
+				var day3=new Date(y3,m3-1,d3);
+				var dnum=(day3-day2)/86400000;				
 			
-			var minfo="";
+				var minfo="";
 			
-			if(dnum>0){
+				if(dnum>0)
+				{
 			
-			var mnum;
-			var mleft;
+					var mnum;
+					var mleft;
 			
-			mnum=(y3-y2)*12+(m3-m2);
-			if(d3>=d2){
-			mleft=d3-d2;
-			}
-			else{
-			mnum--;
-			mleft=(day3-new Date(y3,m3-2,d2))/86400000;
-			}
+					mnum=(y3-y2)*12+(m3-m2);
+					if(d3>=d2)
+					{
+						mleft=d3-d2;
+					}
+					else
+					{
+						mnum--;
+						mleft=(day3-new Date(y3,m3-2,d2))/86400000;
+					}
 			
-			minfo=" = "+Math.floor(dnum/7)+"星期"+dnum%7+"天("+" = "+mnum+"个月"+mleft+"天";
-			}				
+					minfo=" = "+Math.floor(dnum/7)+"星期"+dnum%7+"天("+" = "+mnum+"个月"+mleft+"天";
+				}				
 			
-			$("#result2").innerHTML=dnum+"天"+minfo;				
+				$("#result2").innerHTML=dnum+"天"+minfo;				
 			}		
 			
 			function setday(ty,tm,td)
 			{
 			
-			$("#SY").val(ty);
-			$("#SM").val(tm);
-			$("#SD").val(td);
+				$("#SY").val(ty);
+				$("#SM").val(tm);
+				$("#SD").val(td);
+						
+				$("#SY2").val(ty);
+				$("#SM2").val(tm);
+				$("#SD2").val(td);				
 			
+				var temp=localStorage.getItem("diffc");
 			
-			$("#SY2").val(ty);
-			$("#SM2").val(tm);
-			$("#SD2").val(td);				
+				if(temp!=null)
+				{
+					var ss=temp.split('-');
+					$("#SY3").val(ss[0]);
+					$("#SM3").val(ss[1]);
+					$("#SD3").val(ss[2]);
+				}
+				else
+				{
+					$("#SY3").val(ty+1);
+					$("#SM3").val(1);
+					$("#SD3").val(1);
+				}
 			
-			var temp=localStorage.getItem("diffc");
-			
-			if(temp!=null)
-			{
-			var ss=temp.split('-');
-			$("#SY3").val(ss[0]);
-			$("#SM3").val(ss[1]);
-			$("#SD3").val(ss[2]);
-			}
-			else{
-			$("#SY3").val(ty+1);
-			$("#SM3").val(1);
-			$("#SD3").val(1);
-			}
-			
-			temp=localStorage.getItem("dayadd");
-			if(temp!=null){
-				var ss=temp.split(',');
-				$("#dnum").val(ss[0]);
-				$("#dtype").val(ss[1]);
-				$("#pom").val(ss[2]);
-			}
-			else{
-			   $("#dnum").val(100); 
+				temp=localStorage.getItem("dayadd");
+				if(temp!=null)
+				{
+					var ss=temp.split(',');
+					$("#dnum").val(ss[0]);
+					$("#dtype").val(ss[1]);
+					$("#pom").val(ss[2]);
+				}
+				else
+				{
+				   $("#dnum").val(100); 
+				}				
 			}				
-			}				
-		});
-		
+		});		
 	</script>
 	</body>
 </html>
