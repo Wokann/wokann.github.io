@@ -9,18 +9,16 @@ table {
 	margin:auto;
 }
 p {
-	font:normal 12px/17px Cascadia Code;
+	font:normal Cascadia Code;
 	text-align:center;
 }
 td {
-	font:normal 12px/17px Cascadia Code;
+	font:normal Cascadia Code;
 	text-align:center;
-	padding:2px;
 }
 th {
-	font:bold 12px/17px Cascadia Code;
+	font:bold Cascadia Code;
 	text-align:center;
-	padding:2px;
 	border-bottom:1px solid #333;
 }
 .even {

@@ -4,54 +4,26 @@
 		<meta charset="utf-8" />
 		<title>3代幻之岛计算器_v0.5</title>
 		<script src="./js/jquery.min.js"></script>
+		<script src="./js/base.js"></script> 
 		<link type="text/css" rel="styleSheet"  href="./css/index.css" />
 	</head>
 	<body>
 		<h1>3代幻之岛计算器 v0.5 <br/>
 			GEN3 Mirage island calculator v0.5</h1>
-		<hr>
+		<hr/><hr/><hr/>
 		<p> <br/> 第1步：请点击<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">这里</a>以查询你晃晃斑的PID。
 			<br/> Step1: Please click <a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">here</a> to check your Spindas' PID。<br/> 
 		</p>
-		<br/> <br/> 
+		<hr/>  
 		<p>
-			______________________________________________________<br/>
-			——————————————————————————————————————————————————————
 			<br/> 第2步：请输入第1步中获得的晃晃斑PID后四位（十六进制）：
 			<br/> Step2: Please enter the last four digits of the PID (hex) you get in Step1:
 			<br/> <input id="filterName" name="filterName">
-			<br/><button class="search">搜索(Search)</button> 
+			<br/><button id="search" class="search">搜索(Search)</button> 
 			<br/> 范围（range）：0000~FFFF
 		</p>
-	
-		
-		<script>
-			$(function() {
-				$('.search').on('click', function() {
-					var inputData = $('#filterName').val();
-					if(inputData){
-						inputData = inputData.toUpperCase();
-						var obj =  $('table tbody tr').hide().filter(":contains('" + (inputData) + "')");
-							if(obj.length > 0){
-								obj.show(0,callback);
-							}else{
-								$("#notData").show();
-							}
-						}else{
-							
-								alert("请输入晃晃斑pid后四位（十六进制）\nPlease enter the last four digits of your Spinda's PID (hex)");
-							
-						}
-					}
-					
-				);
-			});
-			function callback(){
-				$("#notData").hide();
-			}
-		</script>	
 
-		<table>
+		<table id="PIDSearch">
 		    <thead>
 		    <tr class="table1">
 				<th>目标天数
@@ -66,7 +38,7 @@
 					【当前输入的值】<br/>
 					【永远不会使幻之岛出现。】<br/>
 					【请选择其他晃晃斑。】<br/>
-					• The current value you input •<br/>
+					• The current val() you input •<br/>
 					• will never lanuch Mirage island. •<br/>
 					• Please choose another spinda. •
 				</td>
@@ -36241,10 +36213,8 @@
 			when you change the cartridge’s RTC with these Target-Days.
 		</p>
 
-		<br/> <br/> 
-		<p>
-			______________________________________________________<br/>
-			——————————————————————————————————————————————————————
+		<hr/> 
+		<p>			
 			<br/>第3步：请输入建档时，电路时钟（RTC）的时间，
 			<br/>以日月年的顺序输入（d/m/y），
 			<br/>及第2步中你的目标天数：
@@ -36252,23 +36222,68 @@
 			<br/>when you started game like：d/m/y，
 			<br/>and the Target-Day you get from Step2:
 			<br/> 
-			
-			<script type="text/javascript" src="./js/base.js"></script>
 
-			<script>
-				function dayadd()
-				{
-				var sy=parseInt($("SY").value);
-				var sm=parseInt($("SM").value)-1;
-				var sd=parseInt($("SD").value);				
-				var day0=new Date(sy,sm,sd);				
-				if(day0=="Invalid Date"){
-				alert("请输入正确日期");
-				return;
+			<table>
+				<tr>
+				<td>
+				<td>起始RTC（Start-RTC）：<br/>
+				<input type=number class=d id=SD name=SD>日(d)<br/>
+				<input type=number class=d id=SM name=SM>月(m)<br/>
+				<input type=number class=y id=SY name=SY>年(y)
+				<tr>
+				<td width=1em>&nbsp;
+				<td>
+				<input type="hidden" id="pom" value="1"/>
+				<input type="hidden" id="dtype" value="1"/>
+				目标天数（Target-Day）：<br/>第<input type=number class=y id=dnum>天(Day) 	
+				<tr>
+				<td>
+				<td>
+				<input id="calculate" type=button value="计算(Calculate)" >     
+				<br/><br/>目标RTC（Target-RTC）：<span id=result1></span>
+			</table>
+			<br/> 
+		</p>
+	<script >
+		$(function() {
+			$('#search').on('click', function() {
+				var inputData = $('#filterName').val();
+				if(inputData){
+					inputData = inputData.toUpperCase();
+					var obj =  $('#PIDSearch tbody tr').hide().filter(":contains('" + (inputData) + "')");
+						if(obj.length > 0){
+							obj.show(0,callback);
+						}else{
+							$("#notData").show();
+						}
+					}else{
+						
+							alert("请输入晃晃斑pid后四位（十六进制）\nPlease enter the last four digits of your Spinda's PID (hex)");
+						
+					}
 				}
 				
-				var dnum=parseInt($("dnum").value)*$("pom").value;
-				var dtype=$("dtype").value;
+			);
+			$('#calculate').on('click', function() {
+				dayadd();
+			});
+			function callback(){
+				$("#notData").hide();
+			}
+			function dayadd()
+			{
+				var sy=parseInt($("#SY").val());
+				var sm=parseInt($("#SM").val())-1;
+				var sd=parseInt($("#SD").val());				
+				var day0=new Date(sy,sm,sd);	
+				
+				if(day0=="Invalid Date"){
+					alert("请输入正确日期");
+					return;
+				}
+				
+				var dnum=parseInt($("#dnum").val())*$("#pom").val();
+				var dtype=$("#dtype").val();
 				
 				if(dtype==1){
 					day1=new Date(sy,sm,sd+dnum);
@@ -36281,113 +36296,95 @@
 				}
 				
 				
-				$("result1").innerHTML=getdatestring(day1)				
-				localStorage.setItem("dayadd",$("dnum").value+","+$("dtype").value+","+$("pom").value);				
-				LoadJs("s2l.php?c="+Math.ceil(day1/86400000));
-				}				
-				
-				function s2l(ly,lm,ld)
-				{
-				$("nongli").innerHTML=ly!=undefined?getlinfo(ly,lm,ld):"";				
-				}		
-								
-				function daydiff()
-				{
-				var y2=parseInt($("SY2").value);
-				var m2=parseInt($("SM2").value);
-				var d2=parseInt($("SD2").value);
-				var y3=parseInt($("SY3").value);
-				var m3=parseInt($("SM3").value);
-				var d3=parseInt($("SD3").value);
-				localStorage.setItem("diffc",y3+"-"+m3+"-"+d3);				
-				
-				var day2=new Date(y2,m2-1,d2);
-				var day3=new Date(y3,m3-1,d3);
-				var dnum=(day3-day2)/86400000;				
-				
-				var minfo="";
-				
-				if(dnum>0){
-				
-				var mnum;
-				var mleft;
-				
-				mnum=(y3-y2)*12+(m3-m2);
-				if(d3>=d2){
-				mleft=d3-d2;
-				}
-				else{
-				mnum--;
-				mleft=(day3-new Date(y3,m3-2,d2))/86400000;
-				}
-				
-				minfo=" = "+Math.floor(dnum/7)+"星期"+dnum%7+"天("+" = "+mnum+"个月"+mleft+"天";
-				}				
-				
-				$("result2").innerHTML=dnum+"天"+minfo;				
-				}		
-				
-				function setday(ty,tm,td)
-				{
-				
-				$("SY").value=ty;
-				$("SM").value=tm;
-				$("SD").value=td;
-				
-				
-				$("SY2").value=ty;
-				$("SM2").value=tm;
-				$("SD2").value=td;				
-				
-				var temp=localStorage.getItem("diffc");
-				
-				if(temp!=null)
-				{
-				var ss=temp.split('-');
-				$("SY3").value=ss[0];
-				$("SM3").value=ss[1];
-				$("SD3").value=ss[2];
-				}
-				else{
-				$("SY3").value=ty+1;
-				$("SM3").value=1;
-				$("SD3").value=1;
-				}
-				
-				temp=localStorage.getItem("dayadd");
-				if(temp!=null){
-					var ss=temp.split(',');
-					$("dnum").value=ss[0];
-					$("dtype").value=ss[1];
-					$("pom").value=ss[2];
-				}
-				else{
-				   $("dnum").value=100; 
-				}				
-				}				
-				</script>
+				$("#result1").html(getdatestring(day1));				
+				//localStorage.setItem("dayadd",$("#dnum").val()+","+$("#dtype").val()+","+$("#pom").val());				
+				//LoadJs("s2l.php?c="+Math.ceil(day1/86400000));
+			}			
+			function getdatestring(dobj) {
+				return  dobj.getFullYear() + "年(y)" + (1 + dobj.getMonth()) + "月(m)" + dobj.getDate() + "日(d)" ;
 
-
-			<table>
-				<tr>
-				<td>
-				<td>起始RTC（Start-RTC）：<br/>
-				<input type=number class=d id=SD name=SD>日(d)<br/>
-				<input type=number class=d id=SM name=SM>月(m)<br/>
-				<input type=number class=y id=SY name=SY>年(y)
-				<tr>
-				<td width=1em>&nbsp;
-				<td><select id="pom"><option value=1>往后</option></select>
-				目标天数（Target-Day）：<br/>第<input type=number class=y id=dnum>天(Day)
-				<select id="dtype">	<option value=1></option></select>   	
-				<tr>
-				<td>
-				<td>
-				<input type=button value="计算(Calculate)" onclick="dayadd()">     
-				<br/><br/>目标RTC（Target-RTC）：<span id=result1></span>
-			</table>
-			<br/> 
-		</p>
-	
+			}
+			 function s2l(ly,lm,ld)
+			{
+				$("#nongli").innerHTML=ly!=undefined?getlinfo(ly,lm,ld):"";				
+			}		
+							
+			function daydiff()
+			{
+			var y2=parseInt($("#SY2").val());
+			var m2=parseInt($("#SM2").val());
+			var d2=parseInt($("#SD2").val());
+			var y3=parseInt($("#SY3").val());
+			var m3=parseInt($("#SM3").val());
+			var d3=parseInt($("#SD3").val());
+			localStorage.setItem("diffc",y3+"-"+m3+"-"+d3);				
+			
+			var day2=new Date(y2,m2-1,d2);
+			var day3=new Date(y3,m3-1,d3);
+			var dnum=(day3-day2)/86400000;				
+			
+			var minfo="";
+			
+			if(dnum>0){
+			
+			var mnum;
+			var mleft;
+			
+			mnum=(y3-y2)*12+(m3-m2);
+			if(d3>=d2){
+			mleft=d3-d2;
+			}
+			else{
+			mnum--;
+			mleft=(day3-new Date(y3,m3-2,d2))/86400000;
+			}
+			
+			minfo=" = "+Math.floor(dnum/7)+"星期"+dnum%7+"天("+" = "+mnum+"个月"+mleft+"天";
+			}				
+			
+			$("#result2").innerHTML=dnum+"天"+minfo;				
+			}		
+			
+			function setday(ty,tm,td)
+			{
+			
+			$("#SY").val(ty);
+			$("#SM").val(tm);
+			$("#SD").val(td);
+			
+			
+			$("#SY2").val(ty);
+			$("#SM2").val(tm);
+			$("#SD2").val(td);				
+			
+			var temp=localStorage.getItem("diffc");
+			
+			if(temp!=null)
+			{
+			var ss=temp.split('-');
+			$("#SY3").val(ss[0]);
+			$("#SM3").val(ss[1]);
+			$("#SD3").val(ss[2]);
+			}
+			else{
+			$("#SY3").val(ty+1);
+			$("#SM3").val(1);
+			$("#SD3").val(1);
+			}
+			
+			temp=localStorage.getItem("dayadd");
+			if(temp!=null){
+				var ss=temp.split(',');
+				$("#dnum").val(ss[0]);
+				$("#dtype").val(ss[1]);
+				$("#pom").val(ss[2]);
+			}
+			else{
+			   $("#dnum").val(100); 
+			}				
+			}				
+		});
+		
+	</script>
 	</body>
 </html>
