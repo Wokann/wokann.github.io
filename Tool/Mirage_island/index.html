@@ -14,7 +14,9 @@
 			<br/> Step1: Please click <a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">here</a> to check your Spindas' PID。<br/> 
 		</p>
 		<br/> <br/> 
-		<p> ——————————————————————————————————————————————————————
+		<p>
+			______________________________________________________<br/>
+			——————————————————————————————————————————————————————
 			<br/> 第2步：请输入第1步中获得的晃晃斑PID后四位（十六进制）：
 			<br/> Step2: Please enter the last four digits of the PID (hex) you get in Step1:
 			<br/> <input id="filterName" name="filterName">
@@ -36230,14 +36232,161 @@
 			<tr><td>Day36,158.</td><td>9301</td></tr>
 		    </tbody>
 		</table>
+
+		<p>
+			【注】：目标天数大于30,000天的，不建议采用，<br/>
+			因其在调整卡带RTC后，游戏可能不会正常生成对应幻之岛种子<br/>
+			【Warning】：Target-Days greater than 30,000 aren't recommended to choose<br/>
+			cause game may not generate Mirage island seed normally <br/>
+			when you change the cartridge’s RTC with these Target-Days.
+		</p>
+
 		<br/> <br/> 
-		<p> ——————————————————————————————————————————————————————
-			<br/> 第3步：请输入建档时，电路时钟（RTC）的时间，<br/>以日月年的顺序输入（d/m/y），<br/>及第2步中你的目标天数：
-			<br/> Step3: Please enter the RTC <br/>when you start game like：d/m/y，<br/>and the Target-Day you get from Step2:
-			<br/> 起始RTC（Start-RTC）：<input id="filterName" name="filterName">
-			<br/> 目标天数（Target-Day）：<input id="filterName" name="filterName">
-			<br/><button class="search">计算(Calculate)</button> 
-			<br/> 目标RTC（Target-RTC）：
+		<p>
+			______________________________________________________<br/>
+			——————————————————————————————————————————————————————
+			<br/>第3步：请输入建档时，电路时钟（RTC）的时间，
+			<br/>以日月年的顺序输入（d/m/y），
+			<br/>及第2步中你的目标天数：
+			<br/>Step3: Please enter the RTC 
+			<br/>when you started game like：d/m/y，
+			<br/>and the Target-Day you get from Step2:
+			<br/> 
+			
+			<script type="text/javascript" src="./js/base.js"></script>
+
+			<script>
+				function dayadd()
+				{
+				var sy=parseInt($("SY").value);
+				var sm=parseInt($("SM").value)-1;
+				var sd=parseInt($("SD").value);				
+				var day0=new Date(sy,sm,sd);				
+				if(day0=="Invalid Date"){
+				alert("请输入正确日期");
+				return;
+				}
+				
+				var dnum=parseInt($("dnum").value)*$("pom").value;
+				var dtype=$("dtype").value;
+				
+				if(dtype==1){
+					day1=new Date(sy,sm,sd+dnum);
+				}
+				if(dtype==2){
+					day1=new Date(sy,sm,sd+dnum*7);
+				}
+				else if(dtype==3){
+					day1=new Date(sy,sm+dnum,sd);
+				}
+				
+				
+				$("result1").innerHTML=getdatestring(day1)				
+				localStorage.setItem("dayadd",$("dnum").value+","+$("dtype").value+","+$("pom").value);				
+				LoadJs("s2l.php?c="+Math.ceil(day1/86400000));
+				}				
+				
+				function s2l(ly,lm,ld)
+				{
+				$("nongli").innerHTML=ly!=undefined?getlinfo(ly,lm,ld):"";				
+				}		
+								
+				function daydiff()
+				{
+				var y2=parseInt($("SY2").value);
+				var m2=parseInt($("SM2").value);
+				var d2=parseInt($("SD2").value);
+				var y3=parseInt($("SY3").value);
+				var m3=parseInt($("SM3").value);
+				var d3=parseInt($("SD3").value);
+				localStorage.setItem("diffc",y3+"-"+m3+"-"+d3);				
+				
+				var day2=new Date(y2,m2-1,d2);
+				var day3=new Date(y3,m3-1,d3);
+				var dnum=(day3-day2)/86400000;				
+				
+				var minfo="";
+				
+				if(dnum>0){
+				
+				var mnum;
+				var mleft;
+				
+				mnum=(y3-y2)*12+(m3-m2);
+				if(d3>=d2){
+				mleft=d3-d2;
+				}
+				else{
+				mnum--;
+				mleft=(day3-new Date(y3,m3-2,d2))/86400000;
+				}
+				
+				minfo=" = "+Math.floor(dnum/7)+"星期"+dnum%7+"天("+" = "+mnum+"个月"+mleft+"天";
+				}				
+				
+				$("result2").innerHTML=dnum+"天"+minfo;				
+				}		
+				
+				function setday(ty,tm,td)
+				{
+				
+				$("SY").value=ty;
+				$("SM").value=tm;
+				$("SD").value=td;
+				
+				
+				$("SY2").value=ty;
+				$("SM2").value=tm;
+				$("SD2").value=td;				
+				
+				var temp=localStorage.getItem("diffc");
+				
+				if(temp!=null)
+				{
+				var ss=temp.split('-');
+				$("SY3").value=ss[0];
+				$("SM3").value=ss[1];
+				$("SD3").value=ss[2];
+				}
+				else{
+				$("SY3").value=ty+1;
+				$("SM3").value=1;
+				$("SD3").value=1;
+				}
+				
+				temp=localStorage.getItem("dayadd");
+				if(temp!=null){
+					var ss=temp.split(',');
+					$("dnum").value=ss[0];
+					$("dtype").value=ss[1];
+					$("pom").value=ss[2];
+				}
+				else{
+				   $("dnum").value=100; 
+				}				
+				}				
+				</script>
+
+
+			<table>
+				<tr>
+				<td>
+				<td>起始RTC（Start-RTC）：<br/>
+				<input type=number class=d id=SD name=SD>日(d)<br/>
+				<input type=number class=d id=SM name=SM>月(m)<br/>
+				<input type=number class=y id=SY name=SY>年(y)
+				<tr>
+				<td width=1em>&nbsp;
+				<td><select id="pom"><option value=1>往后</option></select>
+				目标天数（Target-Day）：<br/>第<input type=number class=y id=dnum>天(Day)
+				<select id="dtype">	<option value=1></option></select>   	
+				<tr>
+				<td>
+				<td>
+				<input type=button value="计算(Calculate)" onclick="dayadd()">     
+				<br/><br/>目标RTC（Target-RTC）：<span id=result1></span>
+			</table>
+			<br/> 
 		</p>
 	
 	</body>
