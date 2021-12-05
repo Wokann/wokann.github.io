@@ -4,20 +4,19 @@ h1 {
 }
 
 table {
-	border:5px;
 	text-align:center;
 	margin:auto;
 }
 p {
-	font:normal Cascadia Code;
+	font:normal 12px/17px Cascadia Code;
 	text-align:center;
 }
 td {
-	font:normal Cascadia Code;
+	font:normal 12px/17px Cascadia Code;
 	text-align:center;
 }
 th {
-	font:bold Cascadia Code;
+	font:bold 12px/17px Cascadia Code;
 	text-align:center;
 	border-bottom:1px solid #333;
 }
