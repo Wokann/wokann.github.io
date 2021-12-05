@@ -3,6 +3,11 @@ h1 {
 	font:bold Cascadia Code;
 }
 
+h2 {
+	text-align:center;
+	font:bold Cascadia Code;
+}
+
 table {
 	text-align:center;
 	margin:auto;

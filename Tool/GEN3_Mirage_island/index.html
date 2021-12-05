@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>3代幻之岛计算器_v0.5</title>
+		<title>3代幻之岛计算器</title>
 		<script src="./js/jquery.min.js"></script>
 		<script src="./js/base.js"></script> 
 		<link type="text/css" rel="styleSheet"  href="./css/index.css" />
@@ -10,19 +10,25 @@
 
 	<body>
 		<h1>
-			3代幻之岛计算器 v0.5 
-			<br/>GEN3 Mirage island calculator v0.5
+			3代幻之岛计算器 v0.9 
+			<br/>GEN3 Mirage island calculator v0.9
 		</h1>
-		<hr/><hr/><hr/>
+		<hr/> <hr/> 
 
+		<h2>
+			第1步
+		<h2/>
 		<p class="p"> 
-			<br/> 第1步：请点击<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">这里</a>以查询你晃晃斑的PID。
+			请点击<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">这里</a>以查询你晃晃斑的PID。
 			<br/> Step1: Please click <a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">here</a> to check your Spindas' PID。<br/> 
 		</p>
-		<hr/>  
+		<hr/> 
 
+		<h2>
+			第2步
+		<h2/>
 		<p class="p">
-			<br/> 第2步：请输入第1步中获得的晃晃斑PID后四位（十六进制）：
+			请输入第1步中获得的晃晃斑PID后四位（十六进制）：
 			<br/> Step2: Please enter the last four digits of the PID (hex) you get in Step1: 
 			<br/><input id="filterName" name="filterName">
 			<br/><button id="search" class="search">搜索(Search)</button>
@@ -43,7 +49,7 @@
 						【当前输入的值】<br/>
 						【永远不会使幻之岛出现。】<br/>
 						【请选择其他晃晃斑。】<br/>
-						• The current val() you input •<br/>
+						• The current value you input •<br/>
 						• will never lanuch Mirage island. •<br/>
 						• Please choose another spinda. •
 					</td>
@@ -36219,9 +36225,12 @@
 			<br/>when you change the cartridge’s RTC with these Target-Days.
 		</p>
 		<hr/> 
-		
-		<p class="p">			
-			<br/>第3步：请输入建档时，电路时钟（RTC）的时间，
+
+		<h2>
+			第3步
+		<h2/>
+		<p class="p">	
+			请输入建档时，电路时钟（RTC）的时间，
 			<br/>以日月年的顺序输入（d/m/y），
 			<br/>及第2步中你的目标天数：
 			<br/>Step3: Please enter the RTC 
@@ -36259,7 +36268,8 @@
 			<br/>after RTC over 2099/12/31 23:59:59.
 			<br/>It cann't be fixed as easy as normal berry glitch.
 		</p>
-		
+		<hr/> 
+
 	<script >
 		$(function() {
 			$('#search').on('click', function() {
