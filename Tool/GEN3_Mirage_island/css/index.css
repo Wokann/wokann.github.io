@@ -13,16 +13,16 @@ table {
 	margin:auto;
 }
 p {
-	font:normal 25px Cascadia Code;
+	font:normal 22px Cascadia Code;
 	text-align:center;
 	margin:auto;
 }
 td {
-	font:normal 25px Cascadia Code;
+	font:normal 22px Cascadia Code;
 	text-align:center;
 }
 th {
-	font:bold 25px Cascadia Code;
+	font:bold 22px Cascadia Code;
 	text-align:center;
 	border-bottom:1px solid #333;
 }
