@@ -36328,26 +36328,30 @@
 	<script >
 		$(function() 
 		{
-			$('#search').on('click', function() {
+			$('#search').on('click', function() 
+			{
 				var inputData = $('#filterName').val();
-				if(inputData){
+				if(inputData)
+				{
 					inputData = inputData.toUpperCase();
 					var obj =  $('#PIDSearch tbody tr').hide().filter(":contains('" + (inputData) + "')");
-						if(obj.length > 0){
+						if(obj.length > 0)
+						{
 							obj.show(0,callback);
-						}else{
+						}
+						else
+						{
 							$("#notData").show();
 						}
-					}else{
-						
-							alert("请输入晃晃斑pid后四位（十六进制）\nPlease enter the last four digits of your Spinda's PID (hex)");
-						
-					}
 				}
-				
-			);
+				else
+				{
+					alert("请输入晃晃斑pid后四位（十六进制）\nPlease enter the last four digits of your Spinda's PID (hex)");
+				}
+			});
 
-			$('#calculate').on('click', function() {
+			$('#calculate').on('click', function() 
+			{
 				dayadd();
 			});
 
@@ -36393,13 +36397,10 @@
 
 			function getdatestring(dobj) 
 			{
-				return  dobj.getFullYear() + "年(y)" + (1 + dobj.getMonth()) + "月(m)" + dobj.getDate() + "日(d)" ;
+				return  dobj.getFullYear() + "年(y)" + 
+						(1 + dobj.getMonth()) + "月(m)" + 
+						dobj.getDate() + "日(d)" ;
 			}
-
-			 function s2l(ly,lm,ld)
-			{
-				$("#nongli").innerHTML=ly!=undefined?getlinfo(ly,lm,ld):"";				
-			}		
 							
 			function daydiff()
 			{
