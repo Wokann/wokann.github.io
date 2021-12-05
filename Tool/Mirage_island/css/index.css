@@ -1,20 +1,19 @@
 table {
-	border:0;
+	border:5px;
 }
 p {
 	font:normal 12px/17px Arial;
 }
 td {
-	font:normal 12px/17px Arial;
+	font:normal 12px/17px Cascadia Code;
+	text-align:center;
 	padding:2px;
-	width:100px;
 }
 th {
-	font:bold 12px/17px Arial;
-	text-align:left;
-	padding:4px;
+	font:bold 12px/17px Cascadia Code;
+	text-align:center;
+	padding:2px;
 	border-bottom:1px solid #333;
-	width:100px;
 }
 .even {
 	background:#FFF38F;
@@ -27,4 +26,7 @@ th {
         .selected {
 	background:#FF6500;
 	color:#fff;
+}
+.table1 {
+	display:none;
 }
