@@ -2,19 +2,20 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>3代幻之岛计算器_v0.1</title>
+		<title>3代幻之岛计算器_v0.5</title>
 		<script src="./js/jquery.min.js"></script>
 		<link type="text/css" rel="styleSheet"  href="./css/index.css" />
 	</head>
 	<body>
-		<h1>3代幻之岛计算器 v0.1 <br/>
-			GEN3 Mirage island calculator v0.1</h1>
+		<h1>3代幻之岛计算器 v0.5 <br/>
+			GEN3 Mirage island calculator v0.5</h1>
 		<hr>
-		<p> <br/> 第1步：请点击<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">这里</a>以查询你的晃晃斑PID。
+		<p> <br/> 第1步：请点击<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">这里</a>以查询你晃晃斑的PID。
 			<br/> Step1: Please click <a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">here</a> to check your Spindas' PID。<br/> 
 		</p>
-		
-		<p> <br/> 第2步：请输入第1步中获得的晃晃斑PID后四位（十六进制）：
+		<br/> <br/> <br/> <br/> 
+		<p> ——————————————————————————————————————————————————————
+			<br/> 第2步：请输入第1步中获得的晃晃斑PID后四位（十六进制）：
 			<br/> Step2: Please enter the last four digits of the PID (hex) you get in Step1:
 			<br/> <input id="filterName" name="filterName">
 			<br/><button class="search">搜索(Search)</button> 
@@ -51,20 +52,21 @@
 		<table>
 		    <thead>
 		    <tr class="table1">
-				<th>天数
-					<br/>（Days）</th>
+				<th>目标天数
+					<br/>（Target-Days）</th>
 				<th>幻之岛种子
 					<br/>（Mirage island seed）</th>
 			</tr>
 		    </thead>
 		    <tbody class="content">
 			<tr id="notData">
-				<td colspan="2">
-					当前输入的值永远不会使幻之岛出现。<br/>
-					请选择其他晃晃斑。<br/>
-					The current value you input<br/>
-					will never lanuch Mirage island.<br/>
-					Please choose another spinda.
+				<td colspan="2" align="center">
+					【当前输入的值】<br/>
+					【永远不会使幻之岛出现。】<br/>
+					【请选择其他晃晃斑。】<br/>
+					• The current value you input •<br/>
+					• will never lanuch Mirage island. •<br/>
+					• Please choose another spinda. •
 				</td>
 			</tr>
 			<tr><td>Day0.</td><td>0000</td></tr>
@@ -36228,6 +36230,15 @@
 			<tr><td>Day36,158.</td><td>9301</td></tr>
 		    </tbody>
 		</table>
+		<br/> <br/> <br/> <br/> 
+		<p> ——————————————————————————————————————————————————————
+			<br/> 第3步：请输入建档时，电路时钟（RTC）的时间，<br/>以日月年的顺序输入（d/m/y），<br/>及第2步中你的目标天数：
+			<br/> Step3: Please enter the RTC <br/>when you start game like：d/m/y，<br/>and the Target-Day you get from Step2:
+			<br/> 起始RTC（Start-RTC）：<input id="filterName" name="filterName">
+			<br/> 目标天数（Target-Day）：<input id="filterName" name="filterName">
+			<br/><button class="search">计算(Calculate)</button> 
+			<br/> 目标RTC（Target-RTC）：
+		</p>
 	
 	</body>
 </html>

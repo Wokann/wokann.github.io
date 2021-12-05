@@ -1,13 +1,15 @@
 h1 {
 	text-align:center;
+	font:bold Cascadia Code;
 }
 
 table {
 	border:5px;
 	text-align:center;
+	margin:0 auto ;
 }
 p {
-	font:normal 12px/17px Arial;
+	font:normal 12px/17px Cascadia Code;
 	text-align:center;
 }
 td {
@@ -43,5 +45,7 @@ th {
 	display:none;
 }
 #notData{
-	display:block
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
 }
