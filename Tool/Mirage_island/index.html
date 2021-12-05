@@ -10,49 +10,62 @@
 		<h1>3代幻之岛计算器 v0.1 <br/>
 			GEN3 Mirage island calculator v0.1</h1>
 		<hr>
-		<p> <br/> 1、请点击
-			<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">这里</a>
-			以查询你的晃晃斑pid。
-			<br/>    Please click 
-			<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">here</a> 
-			to check your spindas' pid。<br/> </p>
+		<p> <br/> 第1步：请点击<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">这里</a>以查询你的晃晃斑PID。
+			<br/> Step1: Please click <a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">here</a> to check your Spindas' PID。<br/> 
+		</p>
 		
-		<p> <br/> 2、请输入第1步中获得的晃晃斑pid后四位（十六进制）：
-			<br/>    Please enter the last four digits of the pid you get in Step1:) 
-			<br/>    <input id="filterName" name="filterName">
-			 <br/><button class="search">搜索(Search)</button> 
-			 <br/> 字母请大写输入
-			 <br/>Please enter capital letters
-			</p>
-
-		<div>
-				<div id="partHtml" style="width: 20rem;height: 1.875rem;"></div>
-		</div>
+		<p> <br/> 第2步：请输入第1步中获得的晃晃斑PID后四位（十六进制）：
+			<br/> Step2: Please enter the last four digits of the PID (hex) you get in Step1:
+			<br/> <input id="filterName" name="filterName">
+			<br/><button class="search">搜索(Search)</button> 
+			<br/> 范围（range）：0000~FFFF
+		</p>
+	
 		
 		<script>
 			$(function() {
-				$("#partHtml").load("https:www.baidu.com");
-				$('table tbody tr').hide();
 				$('.search').on('click', function() {
-					// console.log($('#filterName').val());
-					$('table tbody tr').hide()
-						.filter(":contains('" + ($('#filterName').val()) + "')")
-						.show();
-					 
-					})
-		 })
+					var inputData = $('#filterName').val();
+					if(inputData){
+						inputData = inputData.toUpperCase();
+						var obj =  $('table tbody tr').hide().filter(":contains('" + (inputData) + "')");
+							if(obj.length > 0){
+								obj.show(0,callback);
+							}else{
+								$("#notData").show();
+							}
+						}else{
+							
+								alert("请输入晃晃斑pid后四位（十六进制）\nPlease enter the last four digits of your Spinda's PID (hex)");
+							
+						}
+					}
+					
+				);
+			});
+			function callback(){
+				$("#notData").hide();
+			}
 		</script>	
 
-		<table >
+		<table>
 		    <thead>
-		    <tr>
+		    <tr class="table1">
 				<th>天数
 					<br/>（Days）</th>
 				<th>幻之岛种子
 					<br/>（Mirage island seed）</th>
 			</tr>
 		    </thead>
-		    <tbody class="table">
+		    <tbody class="content">
+			<tr id="notData">
+				<td colspan="2">
+					当前输入的值永远不会使幻之岛出现。<br/>
+					请选择其他晃晃斑。<br/>
+					The current value you input will never lanuch Mirage island.<br/>
+					Please choose another spinda.
+				</td>
+			</tr>
 			<tr><td>Day0.</td><td>0000</td></tr>
 			<tr><td>Day1.</td><td>0000</td></tr>
 			<tr><td>Day2.</td><td>D3DC</td></tr>
@@ -36212,12 +36225,7 @@
 			<tr><td>Day36,156.</td><td>CCA9</td></tr>
 			<tr><td>Day36,157.</td><td>68FA</td></tr>
 			<tr><td>Day36,158.</td><td>9301</td></tr>
-				
-		
-				
-				
 		    </tbody>
-			
 		</table>
 	
 	</body>

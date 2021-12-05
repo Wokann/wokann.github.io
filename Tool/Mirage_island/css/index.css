@@ -1,8 +1,14 @@
+h1 {
+	text-align:center;
+}
+
 table {
 	border:5px;
+	text-align:center;
 }
 p {
 	font:normal 12px/17px Arial;
+	text-align:center;
 }
 td {
 	font:normal 12px/17px Cascadia Code;
@@ -28,5 +34,14 @@ th {
 	color:#fff;
 }
 .table1 {
+	text-align:center;
+}
+.content{
+	/* display:none; */
+}
+.content tr{
 	display:none;
+}
+#notData{
+	display:block
 }
