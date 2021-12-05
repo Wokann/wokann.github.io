@@ -1,30 +1,40 @@
 h1 {
 	text-align:center;
-	font:bold 45px Cascadia Code;
+	font:bold 40px Cascadia Code;
 }
 
 h2 {
 	text-align:center;
-	font:bold 30px Cascadia Code;
+	font:bold 25px Cascadia Code;
 }
 
+h3 {
+	text-align:center;
+	font:bold 20px Cascadia Code;
+}
 table {
 	text-align:center;
 	margin:auto;
 }
 p {
-	font:normal 20px Cascadia Code;
+	font:normal 15px Cascadia Code;
 	text-align:center;
 	margin:auto;
 }
 td {
-	font:normal 20px Cascadia Code;
+	font:normal 15px Cascadia Code;
 	text-align:center;
+	border:1px solid #333;
+}
+.td2 {
+	font:normal 15px Cascadia Code;
+	text-align:center;
+	border:0px;
 }
 th {
-	font:bold 20px Cascadia Code;
+	font:bold 15px Cascadia Code;
 	text-align:center;
-	border-bottom:1px solid #333;
+	border:1px solid #333;
 }
 .even {
 	background:#FFF38F;

@@ -16,42 +16,45 @@
 		<hr/> <hr/> 
 
 		<h2>
-			第1步
+			第1步：获取晃晃斑PID<br/>
+			Stpe 1: Get Spinda's PID
 		<h2/>
 		<p class="p"> 
 			请点击<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">这里</a>以查询你晃晃斑的PID。
-			<br/> Step1: Please click <a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">here</a> to check your Spindas' PID。<br/> 
+			<br/>Please click <a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">here</a> to check your Spindas' PID。<br/> 
 		</p>
 		<hr/> 
 
 		<h2>
-			第2步
+			第2步：搜索匹配PID的目标天数<br/>
+			Step 2: Search Target-Days matching Spinda's PID
 		<h2/>
 		<p class="p">
 			请输入第1步中获得的晃晃斑PID后四位（十六进制）：
-			<br/> Step2: Please enter the last four digits of the PID (hex) you get in Step1: 
+			<br/>Please enter the last four digits of the PID (hex) you get in Step 1: 
 			<br/><input id="filterName" name="filterName">
 			<br/><button id="search" class="search">搜索(Search)</button>
 			<br/>范围（range）：0000~FFFF
-			<br/> 
+			<br/><br/>
 			<table id="PIDSearch">
 		   		<thead>
 		  	 	<tr class="table1">
 					<th>目标天数
 						<br/>（Target-Days）</th>
-					<th>幻之岛种子
-						<br/>（Mirage island seed）</th>
+					<th>幻之岛值
+						<br/>（Mirage island value）</th>
 				</tr>
 		   		</thead>
 		    	<tbody class="content">
 				<tr id="notData">
 					<td colspan="2" align="center">
-						【当前输入的值】<br/>
-						【永远不会使幻之岛出现。】<br/>
-						【请选择其他晃晃斑。】<br/>
-						• The current value you input •<br/>
-						• will never lanuch Mirage island. •<br/>
-						• Please choose another spinda. •
+						•••••••••当前输入的值•••••••••<br/>
+						••••••永远不会使幻之岛出现••••••<br/>
+						••••请选择其他晃晃斑进行第1步••••<br/><br/>
+						•••••••••••The current value you input•••••••••••<br/>
+						•••••••••will never lanuch Mirage island•••••••••<br/>
+						••••••Please choose another spinda to Step 1••••••
+						<br/> 
 					</td>
 				</tr>
 				<tr><td>Day0.</td><td>0000</td></tr>
@@ -36217,44 +36220,99 @@
 			</table>
 		</p>
 
-		<p class="p">
+		<p class="p"><br/>
 			<br/>【注】：目标天数大于30,000天的，不建议采用，
-			<br/>因其在调整卡带RTC后，游戏可能不会正常生成对应幻之岛种子
+			<br/>因其在调整卡带RTC后，游戏可能不会正常生成对应幻之岛值
 			<br/>【Warning】：Target-Days greater than 30,000 aren't recommended to choose
-			<br/>cause game may not generate Mirage island seed normally 
+			<br/>cause game may not generate Mirage island value normally 
 			<br/>when you change the cartridge’s RTC with these Target-Days.
 		</p>
 		<hr/> 
 
 		<h2>
-			第3步
+			第3步：确定出现幻之岛的时间<br/>
+			Step 3: Get the time when Mirage island appers
 		<h2/>
+		<h3>
+			情况1：目标RTC = 目标天数 + 起始RTC<br/>
+			(Case 1: Target-RTC = Target-Day + Start-RTC)<br/>
+			_______________________________________________
+		<h3/>
 		<p class="p">	
-			请输入建档时，电路时钟（RTC）的时间，
-			<br/>以日月年的顺序输入（d/m/y），
-			<br/>及第2步中你的目标天数：
-			<br/>Step3: Please enter the RTC 
-			<br/>when you started game like：d/m/y，
-			<br/>and the Target-Day you get from Step2:
-			<br/> 
+			请输入第2步中你的目标天数，
+			<br/>及建档时，起始RTC的时间。
+			<br/>Please enter the Target-Day  
+			<br/>you get from Step 2 and
+			<br/>the Start-RTC when you set clock in-game.
+			<br/><br/>
 			<table class="table">
-				<tr>
-				<td>
-				<td>起始RTC（Start-RTC）：<br/>
-				<input type=number class=d id=SD name=SD>日(d)<br/>
-				<input type=number class=d id=SM name=SM>月(m)<br/>
-				<input type=number class=y id=SY name=SY>年(y)
-				<tr>
-				<td width=1em>&nbsp;
-				<td>
-				<input type="hidden" id="pom" value="1"/>
-				<input type="hidden" id="dtype" value="1"/>
-				目标天数（Target-Day）：<br/>第<input type=number class=y id=dnum>天(Day) 	
-				<tr>
-				<td>
-				<td>
-				<input id="calculate" type=button value="计算(Calculate)" >     
-				<br/><br/>目标RTC（Target-RTC）：<span id=result1></span>
+				<tr class="td2">
+					<td class="td2">
+						目标天数（Target-Day）：<br/>
+						第<input type=number class=y id=dnum>天(Day) 
+						<input type="hidden" id="pom" value="1"/>
+						<input type="hidden" id="dtype" value="1"/>
+					<br/><br/>
+						起始RTC（Start-RTC）：<br/>
+						<input type=number class=d id=SD name=SD>日(d)<br/>
+						<input type=number class=d id=SM name=SM>月(m)<br/>
+						<input type=number class=y id=SY name=SY>年(y)
+					<br/>
+						<input id="calculate" type=button value="计算(Calculate)" >     
+					<br/><br/>
+						目标RTC（Target-RTC）：<span id=result1></span>
+					</td>
+				</tr>
+			</table>
+		</p>
+
+		<p class="p">
+			<br/> 【注】：目标RTC接近2099年的，不建议采用，因其在超过2099年12月31日23:59:59后，
+			<br/>会重置为2000年1月1日00:00:00，从而引发更为恶劣的时钟漏洞。
+			<br/>比起寻常的时钟漏洞它更难以修复。
+			<br/>【Warning】：Target-RTC near 2099 years aren't recommended to choose
+			<br/>cause a worse berry glitch will happen 
+			<br/>which time will reset to 2000/1/1 00:00:00
+			<br/>after RTC over 2099/12/31 23:59:59.
+			<br/>It cann't be fixed as easy as normal berry glitch.
+		</p>
+
+		<h3>
+			情况2：目标RTC = （目标天数 - 当前天数） + 当前RTC<br/>
+			(Case 2: Target-RTC = (Target-Day - Current-Day)+ Current-RTC)<br/>
+			_______________________________________________
+		<h3/>
+		<p class="p">	
+			请输入第2步中你的目标天数、
+			<br/>当前天数和当前RTC。
+			<br/>Please enter the Target-Day  
+			<br/>you get from Step 2 and
+			<br/>the Current-Days and 
+			<br/>the Current-RTC.
+			<br/><br/>
+			<table class="table">
+				<tr class="td2">
+					<td class="td2">
+						目标天数（Target-Day）：<br/>
+						第<input type=number class=y id=dnum>天(Day) 
+						<input type="hidden" id="pom" value="1"/>
+						<input type="hidden" id="dtype" value="1"/>
+						当前天数（Current-Day）：<br/>
+						第<input type=number class=y id=dnum>天(Day) 
+						<input type="hidden" id="pom" value="1"/>
+						<input type="hidden" id="dtype" value="1"/>
+					<br/><br/>
+						当前RTC（Current-RTC）：<br/>
+						<input type=number class=d id=SD name=SD>日(d)<br/>
+						<input type=number class=d id=SM name=SM>月(m)<br/>
+						<input type=number class=y id=SY name=SY>年(y)
+					<br/>
+						<input id="calculate" type=button value="计算(Calculate)" >     
+					<br/><br/>
+						目标RTC（Target-RTC）：<span id=result1></span>
+						<br/>注意情况2暂未完成
+					</td>
+				</tr>
 			</table>
 		</p>
 
