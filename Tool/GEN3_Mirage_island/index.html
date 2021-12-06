@@ -36328,7 +36328,7 @@
 
 			<p class="p">
 			　　• 将公式4分别代入公式3，你便得到了它：<br/>
-			　　• Substitute formula 4 into formula 2、3, and here you get:
+			　　• Substitute formula 4 into formula 3, and here you get:
 				</p><br/>
 	
 				<table class="td2">
@@ -36336,8 +36336,6 @@
 					<tr><td class="td3">★Target-RTC </td><td class="td3">=</td><td class="td3">Target-GameDay + [ Current-RTC - ( Current-RLT - Start-RLT ) ]</td><td class="td2">——————</td><td class="td2">⑤</td></tr>
 				</table><br/>
 		</p>
-
-
 		<hr/> 
 
 	<script >
@@ -36412,9 +36410,9 @@
 
 			function getdatestring(dobj) 
 			{
-				return  dobj.getFullYear() + "年(y)" + 
+				return  dobj.getDate() + "日(d)"  + 
 						(1 + dobj.getMonth()) + "月(m)" + 
-						dobj.getDate() + "日(d)" ;
+						dobj.getFullYear() + "年(y)";
 			}
 							
 			function daydiff()
