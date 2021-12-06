@@ -4,19 +4,23 @@ h1 {
 }
 
 h2 {
-	text-align:center;
+	text-align:left;
 	font:bold 25px Cascadia Code;
 }
 
 h3 {
-	text-align:center;
+	text-align:left;
 	font:bold 20px Cascadia Code;
 }
 table {
-	text-align:center;
-	margin:auto;
+	text-align:left;;
 }
 p {
+	font:normal 15px Cascadia Code;
+	text-align:left;
+	margin:auto;
+}
+.p2 {
 	font:normal 15px Cascadia Code;
 	text-align:center;
 	margin:auto;
@@ -29,6 +33,12 @@ td {
 .td2 {
 	font:normal 15px Cascadia Code;
 	text-align:center;
+	border:0px;
+	margin:auto;
+}
+.td3 {
+	font:bold 15px Cascadia Code;
+	text-align:left;
 	border:0px;
 }
 th {
@@ -50,6 +60,7 @@ th {
 }
 .table1 {
 	text-align:center;
+	margin:auto;
 }
 .content{
 	/* display:none; */

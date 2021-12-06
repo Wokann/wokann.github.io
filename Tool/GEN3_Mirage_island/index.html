@@ -20,27 +20,29 @@
 			Stpe 1: Get Spinda's PID
 		<h2/>
 		<p class="p"> 
-			请点击<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">这里</a>以查询你晃晃斑的PID。
-			<br/>Please click <a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">here</a> to check your Spindas' PID。<br/> 
+			　　• 请点击<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">这里</a>以查询你晃晃斑的PID。<br/>
+			　　• Please click <a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">here</a> to check your Spindas' PID。<br/> 
 		</p>
 		<hr/> 
 
 		<h2>
-			第2步：搜索匹配PID的目标天数<br/>
-			Step 2: Search Target-Days matching Spinda's PID
+			第2步：搜索匹配PID的目标游戏天数<br/>
+			Step 2: Search Target-GameDays matching Spinda's PID
 		<h2/>
 		<p class="p">
-			请输入第1步中获得的晃晃斑PID后四位（十六进制）：
-			<br/>Please enter the last four digits of the PID (hex) you get in Step 1: 
-			<br/><input id="filterName" name="filterName">
-			<br/><button id="search" class="search">搜索(Search)</button>
-			<br/>范围（range）：0000~FFFF
+			　　• 请输入第1步中获得的晃晃斑PID后四位（十六进制）：<br/>
+			　　• Please enter the last four digits of the PID (hex) you get in Step 1: 
 			<br/><br/>
-			<table id="PIDSearch">
+			<table class="td2">
+				<tr><td class="td2"><input id="filterName" name="filterName"></td></tr>
+				<tr><td class="td2"><button id="search" class="search">搜索(Search)</button></td></tr>
+				<tr><td class="td2">范围（range）：0000~FFFF</td></tr>
+			</table>
+			<table class="table1" id="PIDSearch">
 		   		<thead>
 		  	 	<tr class="table1">
-					<th>目标天数
-						<br/>（Target-Days）</th>
+					<th>目标游戏天数
+						<br/>（Target-GameDays）</th>
 					<th>幻之岛值
 						<br/>（Mirage island value）</th>
 				</tr>
@@ -36220,12 +36222,10 @@
 			</table>
 		</p>
 
-		<p class="p"><br/>
-			<br/>【注】：目标天数大于30,000天的，不建议采用，
-			<br/>因为卡带的RTC自设定二楼时钟起运行超过30,000天后，游戏可能并不会正常生成对应幻之岛值。
-			<br/>【Warning】：Target-Days greater than 30,000 aren't recommended to choose
-			<br/>cause if the RTC runs over 30,000 days started from first setting clock in player's home，
-			<br/>game may not generate Mirage island value normally.
+		<p class="p"><br/><br/>
+			　　【注】：目标游戏天数大于30,000天的，不建议采用，因为游戏内天数自设置二楼时钟起运行超过30,000天后，游戏可能并不会正常生成对应幻之岛值。<br/>
+			　　【Warning】：Target-GameDays over 30,000 aren't recommended to choose 
+			cause if in-game days run over 30,000 days started from you first setting clock in player's home, game may stop generate Mirage island value.
 		</p>
 		<hr/> 
 
@@ -36233,21 +36233,32 @@
 			第3步：确定出现幻之岛的时间<br/>
 			Step 3: Get the time when Mirage island appers
 		<h2/>
+
 		<h3>
 			_______________________________________________<br/>
-			情况1：目标RTC = 目标天数 + 起始RTC<br/>
-			(Case 1: Target-RTC = Target-Day + Start-RTC)
+			标准情况 (Standard Case)
 		<h3/>
-		<p class="p">	
-			请输入第2步中你的目标天数，
-			<br/>及建档设定二楼时钟时，起始RTC的时间。
-			<br/>Please enter the Target-Day you get from Step 2 
-			<br/>and the Start-RTC when you set clock in-game.
-			<br/><br/>
-			<table class="table">
+
+		<p class="p">
+			<p class="p">
+			　　• 在确定幻之岛出现的具体时间【目标RTC】之前，除了第2步中获得的【目标游戏天数】外，我们还需要获得一项数据：【起始RTC】即在建档初期设置二楼时钟时，所对应的RTC的时间。通过时钟修复软件我们可以获知卡带的RTC时间。（按需点击<a href="http://furlocks-forest.net/wiki/uploadedfiles/rtcread.zip">gba</a>、<a href="https://sourceforge.net/projects/rtcread-ds/">nds</a>以获得gba、nds端时钟修复软件）。以下便是第1个公式：<br/>
+			　　• To get the accruate RTC when mirage island appers 【Target-RTC】, we need the 【Target-GameDays】 got from Step 2 and another data: 【Start-RTC】it's the RTC when you set the clock in player's home (p.s. Not the Time in game, But the Time in your cartridge's RTC) . We can get cartridges' RTC by using a homebrew software called rtcread on gba or nds flashcart.(Click <a href="http://furlocks-forest.net/wiki/uploadedfiles/rtcread.zip">gba</a> or <a href="https://sourceforge.net/projects/rtcread-ds/">nds</a> to get rtcread you need.) Then we get the first formula:
+			</p><br/>
+			
+			<table class="td2">
+				<tr><td class="td3">★目标RTC </td><td class="td3">=</td><td class="td2">目标游戏天数 + 起始RTC</td><td class="td2">——————</td><td class="td2">①</td></tr>
+				<tr><td class="td3">★Target-RTC </td><td class="td3">=</td><td class="td2">Target-GameDay + Start-RTC</td><td class="td2">——————</td><td class="td2">①</td></tr>
+			</table><br/>			
+		
+			<p class="p">
+			　　• 请输入目标游戏天数和起始RTC的时间。<br/>
+			　　• Please enter the Target-GameDay and the Start-RTC.
+			</p>
+			<br/>
+			<table class="td2">
 				<tr class="td2">
 					<td class="td2">
-						目标天数（Target-Day）：<br/>
+						目标游戏天数（Target-GameDay）：<br/>
 						第<input type=number class=y id=dnum>天(Day) 
 						<input type="hidden" id="pom" value="1"/>
 						<input type="hidden" id="dtype" value="1"/>
@@ -36262,67 +36273,71 @@
 						<input id="calculate" type=button value="计算(Calculate)" >  
 					</td>   
 				</tr>
+				<tr class="td2"><td class="td2">　　</td></tr>
 				<tr class="td2">
-					<td  class="td2"  colspan="3">
+					<td  class="th"  colspan="3">
 						目标RTC（Target-RTC）：<span id=result1></span>
 					</td>
 				</tr>
 			</table>
+
+			<p class="p"><br/>
+				　　【注】：目标RTC接近2099年的，不建议采用，因其在超过2099年12月31日23:59:59后，会重置为2000年1月1日00:00:00，从而引发更为恶劣的时钟漏洞。	比起寻常的时钟漏洞它更难以修复。<br/>
+				　　【Warning】：Target-RTC near 2099 years aren't recommended to choose cause a worse berry glitch will happen which time will reset to 2000/1/1 00:00:00 	after RTC over 2099/12/31 23:59:59. It cann't be fixed as easy as normal berry glitch.
+			</p>
 		</p>
 
 		<h3>
 			_______________________________________________<br/>
-			情况2：目标RTC = （目标天数 - 当前天数） + 当前RTC<br/>
-			(Case 2: Target-RTC = (Target-Day - Current-Day)+ Current-RTC)
+			其他情况 (Other Cases)
 		<h3/>
-		<p class="p">	
-			请输入第2步中你的目标天数、
-			<br/>当前天数和当前RTC。
-			<br/>Please enter the Target-Day you get from Step 2 
-			<br/>and the Current-Days and the Current-RTC.
+		<p class="p">
+			<p class="p">
+			　　• 如果您的卡带已经建档，且未记住【起始RTC】，可以通过查看【当前RTC】（时钟修复软件）、【当前游戏天数】（需导出存档查看）来进行推算，即第2个公式：<br/>
+			　　• If you already have a saved game and forget your 【Start-RTC】, you can get it by getting 【Current-RTC】(using rtcread) and 【Current-GameDay】(need backing up your save). And this is the second formula:
+			</p><br/>
+
+			<table class="td2">
+				<tr><td class="td3">起始RTC </td><td class="td3">=</td><td class="td2">当前RTC - 当前游戏天数</td><td class="td2">——————</td><td class="td2">②</td></tr>
+				<tr><td class="td3">Start-RTC </td><td class="td3">=</td><td class="td2">Current-RTC - Current-GameDay</td><td class="td2">——————</td><td class="td2">②</td></tr>
+			</table><br/>
+
+			<p class="p">
+			　　• 将公式2代入公式1，你便得到了它：<br/>
+			　　• Substitute formula 2 into formula 1, and here you get:
+			</p><br/>
+
+			<table class="td2">
+				<tr><td class="td3">★目标RTC </td><td class="td3">=</td><td class="td2">目标游戏天数 + ( 当前RTC - 当前游戏天数 )</td><td class="td2">——————</td><td class="td2">③</td></tr>
+				<tr><td class="td3">★Target-RTC </td><td class="td3">=</td><td class="td2">Target-GameDay + ( Current-RTC - Current-GameDay )</td><td class="td2">——————</td><td class="td2">③</td></tr>
+			</table><br/>
+			<p class="p">
+				　　【注】：标准情况其实是公式3的特殊情况。标准情况下，【起始RTC】=【当前RTC】，【当前游戏天数】=0。<br/>
+				　　【Warning】：Actually，Standard Case is a special case of formula 3. In this case, 【Start-RTC】=【Current-RTC】,【Current-GameDay】=0.
+			</p>
 			<br/><br/>
-			<table class="table">
-				<tr class="td2">
-					<td class="td2">
-						目标天数（Target-Day）：<br/>
-						第<input type=number class=y id=dnum>天(Day) 
-						<input type="hidden" id="pom" value="1"/>
-						<input type="hidden" id="dtype" value="1"/>
-					</td>
-					<td class="td2">
-						当前天数（Current-Day）：<br/>
-						第<input type=number class=y id=dnum>天(Day) 
-						<input type="hidden" id="pom" value="1"/>
-						<input type="hidden" id="dtype" value="1"/>
-					</td>
-					<td class="td2">
-						当前RTC（Current-RTC）：<br/>
-						<input type=number class=d id=SD name=SD>日(d)<br/>
-						<input type=number class=d id=SM name=SM>月(m)<br/>
-						<input type=number class=y id=SY name=SY>年(y)
-					</td>
-					<td class="td2">
-						<input id="calculate" type=button value="计算(Calculate)" >  
-					</td>   
-				</tr>
-				<tr class="td2">
-					<td  class="td2"  colspan="4">
-						目标RTC（Target-RTC）：<span id=result1></span>
-					</td>
-				</tr>
-			</table>
+			<p class="p">
+			　　• 倘若你无法或不愿导出存档，但同时你还记得现实中建档的日期，那么你可以推算【当前游戏天数】：<br/>
+			　　• If you don't have flashcart to back up your save or just not willing to do so, and you still remember when you start your game in real-life time ( let's call it 【RLT】), you can calculate 【Current-GameDay】 like this:
+			</p><br/>
+
+			<table class="td2">
+				<tr><td class="td3">当前游戏天数 </td><td class="td3">=</td><td class="td2">当前现实时间 - 起始现实时间</td><td class="td2">——————</td><td class="td2">④</td></tr>
+				<tr><td class="td3">Current-GameDay </td><td class="td3">=</td><td class="td2">Current-RLT - Start-RLT</td><td class="td2">——————</td><td class="td2">④</td></tr>
+			</table><br/>
+
+			<p class="p">
+			　　• 将公式4分别代入公式3，你便得到了它：<br/>
+			　　• Substitute formula 4 into formula 2、3, and here you get:
+				</p><br/>
+	
+				<table class="td2">
+					<tr><td class="td3">★目标RTC </td><td class="td3">=</td><td class="td2">目标游戏天数 + [ 当前RTC - ( 当前现实时间 - 起始现实时间 ) ]</td><td class="td2">——————</td><td class="td2">⑤</td></tr>
+					<tr><td class="td3">★Target-RTC </td><td class="td3">=</td><td class="td2">Target-GameDay + [ Current-RTC - ( Current-RLT - Start-RLT ) ]</td><td class="td2">——————</td><td class="td2">⑤</td></tr>
+				</table><br/>
 		</p>
 
-		<p class="p">
-			<br/> 【注】：目标RTC接近2099年的，不建议采用，因其在超过2099年12月31日23:59:59后，
-			<br/>会重置为2000年1月1日00:00:00，从而引发更为恶劣的时钟漏洞。
-			<br/>比起寻常的时钟漏洞它更难以修复。
-			<br/>【Warning】：Target-RTC near 2099 years aren't recommended to choose
-			<br/>cause a worse berry glitch will happen 
-			<br/>which time will reset to 2000/1/1 00:00:00
-			<br/>after RTC over 2099/12/31 23:59:59.
-			<br/>It cann't be fixed as easy as normal berry glitch.
-		</p>
+
 		<hr/> 
 
 	<script >
