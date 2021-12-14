@@ -1,36 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>卧看Blog</title>
   
+  <subtitle>WoKann</subtitle>
+  <link href="https://wokann.github.io/atom.xml" rel="self"/>
   
-  <link href="http://example.com/atom.xml" rel="self"/>
-  
-  <link href="http://example.com/"/>
-  <updated>2021-12-05T15:56:16.504Z</updated>
-  <id>http://example.com/</id>
+  <link href="https://wokann.github.io/"/>
+  <updated>2021-12-14T15:36:49.929Z</updated>
+  <id>https://wokann.github.io/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>卧看微尘</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="http://example.com/2021/12/03/hello-world/"/>
-    <id>http://example.com/2021/12/03/hello-world/</id>
-    <published>2021-12-03T02:16:14.958Z</published>
-    <updated>2021-12-05T15:56:16.504Z</updated>
+    <title>卧看的博客</title>
+    <link href="https://wokann.github.io/2021/12/14/hello-world/"/>
+    <id>https://wokann.github.io/2021/12/14/hello-world/</id>
+    <published>2021-12-14T15:39:29.687Z</published>
+    <updated>2021-12-14T15:36:49.929Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
-        
-      
+    <summary type="html">&lt;p&gt;欢迎来到我的Blog，此博客基于 &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt; 打造，主题使用的是 &lt;a href=&quot;https://github.com/AlynxZhou/hexo-theme-aria/&quot;&gt;ARIA&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;当你在阅读的时候有任何的问题,欢迎与我联系.&lt;/p&gt;</summary>
     
     
     
