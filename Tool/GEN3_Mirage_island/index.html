@@ -36647,7 +36647,7 @@
 			</table><br/>			
 		
 			<p class="p">
-			　　• 请输入经过RTC天数和初始RTC的时间。<br/>
+			　　• 请输入经过RTC天数和初始RTC。<br/>
 			　　• Please enter the Elapsed-RTC-Days and the Initial-RTC.
 			</p><br/>
 			
@@ -36675,21 +36675,21 @@
 						目标（RTCTarget-RTC）
 					</td>
 					<td  class="th">
-						漏洞版卡带（未官方修复）<br/>Glitch-ver cartridges (without official fix)：
+						树果漏洞版卡带（未官方修复）<br/>BerryGlitch-ver Cartridges<br/>(Without Official-Fix)
 					</td>
 					<td  class="th"><span id=result1></span>
 					</td>
 				</tr>
 				<tr class="td2">
 					<td  class="th">
-						漏洞版卡带（已官方修复）<br/>Glitch-ver cartridges (with official fix)：
+						树果漏洞版卡带（已官方修复）<br/>BerryGlitch-ver Cartridges<br/>(With Official-Fix)
 					</td>
 					<td  class="th"><span id=result3></span>
 					</td>
 				</tr>
 				<tr class="td2">
 					<td  class="th">
-						无漏洞版卡带<br/>Non-Glitch-ver cartridges：
+						无树果漏洞版卡带<br/>Non-BerryGlitch-ver Cartridges
 					</td>
 					<td  class="th"><span id=result2></span>
 					</td>
@@ -36697,12 +36697,14 @@
 			</table>
 
 			<p class="p"><br/>
-				　　【注1】：目标RTC接近2099年的，不建议采用，因其在超过2099年12月31日23:59:59后，会重置为2000年1月1日00:00:00，从而引发更为恶劣的时钟漏洞。	比起寻常的时钟漏洞它更难以修复。<br/>
+				　　【注1】：目标RTC接近2099年的，不建议采用，易触发2099漏洞。<br/>
 				　　【注2】：由于仅计算日月年，不考虑时分秒，所得到的目标RTC可能会有前后1天左右的误差，重新调整RTC即可。<br/>
 				　　【注3】：若发现实际RTC无法触发，切勿存档！！！切勿存档！！！切勿存档！！！直接关机再用时钟修复软件调整RTC。<br/>
-				　　【Warning1】：Target-RTC near 2099 years aren't recommended to choose cause a worse berry glitch will happen which time will reset to 2000/1/1 00:00:00 	after RTC over 2099/12/31 23:59:59. It cann't be fixed as easy as normal berry glitch.<br/>
+				　　【注4】：目标RTC必须大于你保存时的对应RTC，否则无法触发幻之岛，而是进入漏洞状态。<br/>
+				　　【Warning1】：Target-RTC near 2099 years aren't recommended to choose cause 2099 glitch may happen easily.<br/>
 				　　【Warning2】：Your Target-RTC calculated may have 1 day before or after the real Target-RTC which can lanuch your Mirage island, cause we just calculate day，month and year without calculating hour, minute and second. Just change your RTC again.<br/>
-				　　【Warning3】：When you find your RTC cannot lanuch your Mirage island, NEVER! NEVER! NEVER! save your game. Just turn off your gba and use rtcread to change your rtc.
+				　　【Warning3】：When you find your RTC cannot lanuch your Mirage island, NEVER! NEVER! NEVER! save your game. Just turn off your gba and use rtcread to change your rtc.<br/>
+				　　【Warning4】：Target-RTC must later than the RTC when you save game, or you game will be in glitch and won't lanuch Mirage island.
 			</p>
 		</p>
 
