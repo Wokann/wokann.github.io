@@ -36671,13 +36671,21 @@
 				</tr>
 				<tr class="td2"><td class="td2">　　</td></tr>
 				<tr class="td2">
-					<td  class="th"  colspan="3">
-						适用于漏洞版卡带——目标RTC（Target-RTC）：<span id=result1></span>
+					<td class="th" rowspan="3">
+						目标（RTCTarget-RTC）
+					</td>
+					<td  class="th"  colspan="2">
+						漏洞版卡带（未官方修复）（Glitch-ver cartridges without official fix）：<span id=result1></span>
 					</td>
 				</tr>
 				<tr class="td2">
-					<td  class="th"  colspan="3">
-						适用于无漏洞版卡带——目标RTC（Target-RTC）：<span id=result2></span>
+					<td  class="th"  colspan="2">
+						漏洞版卡带（已官方修复）（Glitch-ver cartridges with official fix）：<span id=result3></span>
+					</td>
+				</tr>
+				<tr class="td2">
+					<td  class="th"  colspan="2">
+						无漏洞版卡带（Non-Glitch-ver cartridges）：<span id=result2></span>
 					</td>
 				</tr>
 			</table>
@@ -36811,17 +36819,22 @@
 				var dtype=$("#dtype").val();
 				var day1 = getDayByDType(dtype,sy,sm,sd,dnum);
 				var day2 = getDayByDType(dtype,sy,sm,sd,dnum);
+				var day3 = getDayByDType(dtype,sy,sm,sd,dnum);
 				if(sy <= 2000){
 					if(day1.getFullYear() > 2000){
 						dnum= (parseInt(dnumv)+parseInt(366))*(pom);
 						day1 = getDayByDType(dtype,sy,sm,sd,dnum);
 					}
 				}
-				
+				if(sy >= 1999){
+						dnum= (parseInt(dnumv)+parseInt(366))*(pom);
+						day3 = getDayByDType(dtype,sy,sm,sd,dnum);
+				}
 				
 				
 				$("#result1").html(getdatestring(day1));
 				$("#result2").html(getdatestring(day2));
+				$("#result3").html(getdatestring(day3));
 				//localStorage.setItem("dayadd",$("#dnum").val()+","+$("#dtype").val()+","+$("#pom").val());				
 				//LoadJs("s2l.php?c="+Math.ceil(day1/86400000));
 			}		
