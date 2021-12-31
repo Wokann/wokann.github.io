@@ -16,7 +16,31 @@
 		<hr/> <hr/> 
 
 		<h2>
-			第1步：获取晃晃斑PID<br/>
+			第1步：确保处在非RTC漏洞状态<br/>
+			Stpe 1: Make sure you’re not in RTC glitch
+		<h2/>
+		<p class="p"> 
+			　　• 通过时钟修复软件我们可以获知卡带的RTC时间。（按需点击<a href="https://github.com/megaboyexe/GBA_RTCRead/releases/download/v1.0/rtcread.zip">gba</a>、
+			<a href="https://github.com/megaboyexe/GBA_RTCRead/releases/download/v1.0/rtcread-ds.zip">nds</a>以获得gba、nds端时钟修复软件，
+			软件源代码<a href="https://github.com/megaboyexe/GBA_RTCRead">点此</a>。<br/>
+			　　• We can get cartridges' RTC by using a homebrew software called rtcread on gba or nds flashcarts.(Click <a href="https://github.com/megaboyexe/GBA_RTCRead/releases/download/v1.0/rtcread.zip">gba</a> 
+			or <a href="https://github.com/megaboyexe/GBA_RTCRead/releases/download/v1.0/rtcread-ds.zip">nds</a> to get rtcread you need.
+			Source code click <a href="https://github.com/megaboyexe/GBA_RTCRead">here</a><br/> 
+		</p>
+		<hr/> 
+
+		<h2>
+			第2步：计算初始RTC<br/>
+			Stpe 2: Get your Initial-RTC 
+		<h2/>
+		<p class="p"> 
+			　　• 请点击<a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">这里</a>以查询你晃晃斑的PID。<br/>
+			　　• Please click <a href="http://pokemon.thundaga.com/spinda/Spinda%20Painter.htm">here</a> to check your Spindas' PID。<br/> 
+		</p>
+		<hr/> 
+
+		<h2>
+			第3步：获取晃晃斑PID<br/>
 			Stpe 1: Get Spinda's PID
 		<h2/>
 		<p class="p"> 
@@ -26,8 +50,8 @@
 		<hr/> 
 
 		<h2>
-			第2步：搜索匹配PID的目标游戏天数<br/>
-			Step 2: Search Target-GameDays matching Spinda's PID
+			第4步：搜索匹配PID的经过RTC天数<br/>
+			Step 4: Search Elapsed-RTC-Days matching Spinda's PID
 		<h2/>
 		<p class="p">
 			　　• 请输入第1步中获得的晃晃斑PID后四位（十六进制）：<br/>
@@ -41,10 +65,10 @@
 			<table class="table1" id="PIDSearch">
 		   		<thead>
 		  	 	<tr class="table1">
-					<th>目标游戏天数
-						<br/>（Target-GameDays）</th>
+					<th>经过RTC天数
+						<br/>（Elapsed-RTC-Days）</th>
 					<th>幻之岛值
-						<br/>（Mirage island value）</th>
+						<br/>（Mirage_Value）</th>
 				</tr>
 		   		</thead>
 		    	<tbody class="content">
@@ -53,9 +77,9 @@
 						•••••••••当前输入的值•••••••••<br/>
 						••••••永远不会使幻之岛出现••••••<br/>
 						••••请选择其他晃晃斑进行第1步••••<br/><br/>
-						•••••••••••The current value you input•••••••••••<br/>
+						•••••••••••The current PID you input•••••••••••<br/>
 						•••••••••will never lanuch Mirage island•••••••••<br/>
-						••••••Please choose another spinda to Step 1••••••
+						••••••Please choose another spinda to Step 3••••••
 						<br/> 
 					</td>
 				</tr>
@@ -36589,48 +36613,48 @@
 		</p>
 
 		<p class="p"><br/><br/>
-			　　【注】：目标游戏天数大于30,000天的，不建议采用，因为游戏内天数自设置二楼时钟起运行超过30,000天后，游戏可能并不会正常生成对应幻之岛值。<br/>
-			　　【Warning】：Target-GameDays over 30,000 aren't recommended to choose 
+			　　【注】：经过RTC天数大于30,000天的，不建议采用，因为游戏内天数自设置二楼时钟起运行超过30,000天后，游戏可能并不会正常生成对应幻之岛值。<br/>
+			　　【Warning】：Elapsed-RTC-Days over 30,000 aren't recommended to choose 
 			cause if in-game days run over 30,000 days started from you first setting clock in player's home, game may stop generate Mirage island value.
 		</p>
 		<hr/> 
 
 		<h2>
-			第3步：确定出现幻之岛的时间<br/>
-			Step 3: Get the time when Mirage island appers
+			第5步：确定出现幻之岛的目标RTC<br/>
+			Step 3: Get the Target-RTC when Mirage island appers
 		<h2/>
 
-		<h3>
+		<!--<h3>
 			_______________________________________________<br/>
 			标准情况 (Standard Case)
-		<h3/>
+		<h3/>-->
 
 		<p class="p">
 			<p class="p">
-			　　• 在确定幻之岛出现的具体时间【目标RTC】之前，除了第2步中获得的【目标游戏天数】外，我们还需要获得一项数据：【起始RTC】即在建档初期设置二楼时钟时，所对应的RTC的时间。通过时钟修复软件我们可以获知卡带的RTC时间。（按需点击<a href="https://github.com/megaboyexe/GBA_RTCRead/releases/download/v1.0/rtcread.zip">gba</a>、<a href="https://github.com/megaboyexe/GBA_RTCRead/releases/download/v1.0/rtcread-ds.zip">nds</a>以获得gba、nds端时钟修复软件，软件源代码<a href="https://github.com/megaboyexe/GBA_RTCRead">点此</a>）。以下便是第1个公式：<br/>
-			　　• To get the accruate RTC when mirage island appers 【Target-RTC】, we need the 【Target-GameDays】 got from Step 2 and another data: 【Start-RTC】it's the RTC when you set the clock in player's home (p.s. Not the Time in game, But the Time in your cartridge's RTC) . We can get cartridges' RTC by using a homebrew software called rtcread on gba or nds flashcart.(Click <a href="https://github.com/megaboyexe/GBA_RTCRead/releases/download/v1.0/rtcread.zip">gba</a> or <a href="https://github.com/megaboyexe/GBA_RTCRead/releases/download/v1.0/rtcread-ds.zip">nds</a> to get rtcread you need.Source code click <a href="https://github.com/megaboyexe/GBA_RTCRead">here</a>) Then we get the first formula:
+			　　• 我们通过如下公式进行计算：<br/>
+			　　• we use this formula to calculate:
 			</p><br/>
 			
 			<table class="td2">
-				<tr><td class="td3">★目标RTC </td><td class="td3">=</td><td class="td3">目标游戏天数 + 起始RTC</td><td class="td2">——————</td><td class="td2">①</td></tr>
-				<tr><td class="td3">★Target-RTC </td><td class="td3">=</td><td class="td3">Target-GameDay + Start-RTC</td><td class="td2">——————</td><td class="td2">①</td></tr>
+				<tr><td class="td3">★目标RTC </td><td class="td3">=</td><td class="td3"></td> 经过RTC天数 + 初始RTC</td><!--<td class="td2">——————</td><td class="td2">①</td>--></tr>
+				<tr><td class="td3">★Target-RTC </td><td class="td3">=</td><td class="td3"></td> Elapsed-RTC-Days + Initial-RTC</td><!--<td class="td2">——————</td><td class="td2">①</td>--></tr>
 			</table><br/>			
 		
 			<p class="p">
-			　　• 请输入目标游戏天数和起始RTC的时间。（本RTC计算器已考虑时钟漏洞的影响，请放心计算）<br/>
-			　　• Please enter the Target-GameDay and the Start-RTC. ( Berry Glitch has been considered in this calculator. Feel free to use it.)
+			　　• 请输入经过RTC天数和初始RTC的时间。<br/>
+			　　• Please enter the Elapsed-RTC-Days and the Initial-RTC.
 			</p><br/>
 			
 			<table class="td2">
 				<tr class="td2">
 					<td class="td2">
-						目标游戏天数（Target-GameDay）：<br/>
+						经过RTC天数（Elapsed-RTC-Days）：<br/>
 						第<input type=number class=y id=dnum>天(Day) 
 						<input type="hidden" id="pom" value="1"/>
 						<input type="hidden" id="dtype" value="1"/>
 					</td>
 					<td class="td2">
-						起始RTC（Start-RTC）：<br/>
+						初始RTC（Initial-RTC）：<br/>
 						<input type=number class=d id=SD name=SD>日(d)<br/>
 						<input type=number class=d id=SM name=SM>月(m)<br/>
 						<input type=number class=y id=SY name=SY>年(y)
@@ -36662,7 +36686,7 @@
 			</p>
 		</p>
 
-		<h3>
+		<!--<h3>
 			_______________________________________________<br/>
 			其他情况 (Other Cases)
 		<h3/>
@@ -36725,7 +36749,7 @@
 					<tr><td class="td3">★目标RTC </td><td class="td3">=</td><td class="td3">目标游戏天数 + [ 当前RTC - ( 当前现实时间 - 起始现实时间 ) ]</td><td class="td2">——————</td><td class="td2">⑥</td></tr>
 					<tr><td class="td3">★Target-RTC </td><td class="td3">=</td><td class="td3">Target-GameDay + [ Current-RTC - ( Current-RLT - Start-RLT ) ]</td><td class="td2">——————</td><td class="td2">⑥</td></tr>
 				</table><br/>
-		</p>
+		</p>-->
 		<hr/> 
 
 	<script >
