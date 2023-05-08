@@ -1,0 +1,75 @@
+h1 {
+	text-align:center;
+	font:bold 40px Cascadia Code;
+}
+
+h2 {
+	text-align:left;
+	font:bold 25px Cascadia Code;
+}
+
+h3 {
+	text-align:left;
+	font:bold 20px Cascadia Code;
+}
+table {
+	text-align:left;;
+}
+p {
+	font:normal 15px Cascadia Code;
+	text-align:left;
+	margin:auto;
+}
+.p2 {
+	font:normal 15px Cascadia Code;
+	text-align:center;
+	margin:auto;
+}
+td {
+	font:normal 15px Cascadia Code;
+	text-align:center;
+	border:1px solid #333;
+}
+.td2 {
+	font:normal 15px Cascadia Code;
+	text-align:center;
+	border:0px;
+	margin:auto;
+}
+.td3 {
+	font:bold 15px Cascadia Code;
+	text-align:left;
+	border:0px;
+}
+th {
+	font:bold 15px Cascadia Code;
+	text-align:center;
+	border:1px solid #333;
+}
+.even {
+	background:#FFF38F;
+}
+/* 偶数行样式*/
+        .odd {
+	background:#FFFFEE;
+}
+/* 奇数行样式*/
+        .selected {
+	background:#FF6500;
+	color:#fff;
+}
+.table1 {
+	text-align:center;
+	margin:auto;
+}
+.content{
+	/* display:none; */
+}
+.content tr{
+	display:none;
+}
+#notData{
+	display: table-row;
+	vertical-align: inherit;
+	border-color: inherit;
+}
