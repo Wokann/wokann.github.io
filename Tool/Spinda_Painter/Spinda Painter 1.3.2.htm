@@ -1,0 +1,2290 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- saved from url=(0048)https://gatorshark.webs.com/Spinda%20Painter.htm -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="Content-Language" content="en">
+<meta http-equiv="imagetoolbar" content="no">
+<meta name="viewport" content="initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="robots" content="index, nofollow">
+<meta name="googlebot" content="index, nofollow">
+<title>Spinda Painter</title>
+
+<style type="text/css" media="screen, tv">
+<!--
+html * {
+color: #000000;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+body {
+margin: 0px;
+padding: 0px;
+background-color: #F5F2D8;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+
+form {
+margin: 0px;
+-moz-user-select: text;
+-webkit-user-select: text;
+-ms-user-select: text;
+}
+
+label {
+cursor: default;
+}
+
+img {
+border-width: 0px;
+}
+
+.dragSpot {
+position: relative;
+cursor: move;
+}
+
+.dragAny {
+position: relative;
+}
+
+.dragRoot {}
+.noClone {}
+
+.dragSpot b {background: #DE6B39 url("spinda/Spinda_over.gif") scroll no-repeat 50px 50px;}
+.dragSpot.shiny b {background: #90A038 url("spinda/Spinda_over_S.gif") scroll no-repeat 50px 50px;}
+
+.viewSpot b {background: #DE6B39 url("spinda/Spinda_over_Real.gif") scroll no-repeat 410px 145px;}
+.viewSpot.shiny b {background: #90A038 url("spinda/Spinda_over_Real_S.gif") scroll no-repeat 410px 145px;}
+
+.xsnazzy.dragAny {
+-moz-border-radius: 8px;
+-webkit-border-radius: 8px;
+border-radius: 8px;
+-moz-box-shadow: 1px 2px 6px #888;
+-webkit-box-shadow: 1px 2px 6px #888;
+box-shadow: 1px 2px 6px #888;
+}
+
+.winframe {
+width: 17em;
+width: 301px;
+min-width: 301px;
+}
+
+.winframe th, .winframe label  {
+font-size: 16px;
+}
+
+.canvas1, .canvas2, .canvas3, .canvas4 {
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+border-color: #224488;
+visibility: hidden;
+}
+
+.winframe .viewsOptions[id^=viewsOptions_] {display:none;}
+
+.mini_shadow {
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=33)";
+filter: alpha(opacity=33);
+-moz-opacity: 0.33;
+-webkit-opacity: 0.33;
+opacity: 0.33;
+}
+
+.boundaries {
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+filter: alpha(opacity=20);
+-moz-opacity: 0.2;
+-webkit-opacity: 0.2;
+opacity: 0.2;
+/*background-image: url("spinda/boundaries6.gif");*/
+background-repeat: no-repeat;
+visibility: hidden;
+}
+
+.closebtn {
+position: absolute;
+width: 9px;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+line-height: 6px;
+height: 8px;
+margin: 2px;
+right: 5px;
+top: 3px;
+margin-top: -1px;
+border: 1px solid red;
+background-color: #FF5533;
+color: #FFFFFF;
+font-family: Verdana, Arial, sans-serif;
+font-size: 8.4px;
+font-weight: bold;
+cursor: pointer;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+}
+
+/* .closebtn {
+background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAIBAMAAADZ48iGAAAAB3RJTUUH2wgCERgiZMvV/AAAAAlwSFlzAAALEQAACxEBf2RfkQAAAARnQU1BAACxjwv8YQUAAAAhUExURUSIzP8zM/8zAP/M//////+ZM/9mZv//zP9mM/+ZzP/MZieiCrAAAAABdFJOUwBA5thmAAAAKklEQVR42mNgVFJSZGAQrkipEGBQ8zLPUGDQmOLaASPVzEEiwq4gWbBKAN8YCSVWylFbAAAAAElFTkSuQmCC");
+color: transparent;
+border-width: 0px;
+background-repeat: no-repeat;
+width: 9px;
+height: 8px;
+} */
+
+.miniframe .closebtn, .statsframe .closebtn { background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAJBAMAAAD5iKAgAAAAB3RJTUUH2wgCEws2HHqUfQAAAAlwSFlzAAALEQAACxEBf2RfkQAAAARnQU1BAACxjwv8YQUAAAAeUExURUSIzO5EIu4zAP/M////zP+ZM/9mM/9mZv/////MZu/LF1cAAAABdFJOUwBA5thmAAAALklEQVR42mNgVFJSEmAQdk23LGRQb65wS2JQq+gIA5LJnWkwNkQcqKZTkQGsHgBaDgzrfTUU0QAAAABJRU5ErkJggg==");
+background-repeat: no-repeat;
+color: transparent;
+border-width: 0px;
+width: 10px;
+height: 9px;
+right: 4px;
+}
+
+.winframe div.closebtn {
+position: absolute;
+width: 16px;
+-moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+line-height: 8px;
+height: 17px;
+margin: 2px;
+right: 5px;
+top: 7px;
+margin-top: -1px;
+padding-top: 3px;
+border: 1px solid #DD0000;
+background-color: #FF5533;
+color: #FFFFFF;
+font-family: "Comic Sans MS", Arial, sans-serif;
+font-size: 17.4px;
+font-weight: bold;
+text-align: center;
+vertical-align: baseline;
+cursor: pointer;
+-moz-border-radius: 3px;
+-webkit-border-radius: 3px;
+border-radius: 3px;
+}
+
+.winframe div.closebtn {
+background:url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAARBAMAAAAmgTH3AAAAB3RJTUUH2wgCEQ8R3pgwfAAAAAlwSFlzAAALEQAACxEBf2RfkQAAAARnQU1BAACxjwv8YQUAAAAhUExURUSIzMxmZt0AAP8zAP9mM//M//////+ZM/9mZv+ZzP/MZi07UBoAAAABdFJOUwBA5thmAAAAaUlEQVR42mNgVAIDAQZhFzAwZFCZluLi4prlBGSkubhMAzE805YAEZDhEpbeltYCYrSlpaW7gBieaWlLwAyXsCwXmEgJmDEtLQysxjMtpS0NxGhLKwGbowHUCzQKKBJWArQLyIDbDnMPABhGKBujuzxAAAAAAElFTkSuQmCC");
+color: transparent;
+border-width: 0px;
+background-repeat: no-repeat;
+}
+
+.mini_pid {
+color: #FFF; 
+background-color: transparent;
+position: absolute;
+top: 1px;
+right: 18px;
+vertical-align: top;
+font-size: 8.4px;
+font-family: Verdana, Geneva, monospace;
+text-align: right;
+cursor: move;
+z-index: 1;
+text-shadow: rgba(0,0,0,0.01) 0 0 0;  /* "Komodo" text-shadow hack (legible text in Safari) */
+display: none;
+}
+
+
+.statsframe {
+width: 19.5em; 
+min-width: 207px;
+}
+
+.statsframe table {
+width: 19em;
+min-width: 203px;
+}
+
+.statsframe td {
+padding-top: 0.3em;
+white-space: nowrap;
+}
+
+.statsframe tr>td+td {padding-left: 0 !important;}  /* Fix table overflow width */
+.statsframe tr+tr+tr+tr+tr>td {min-width: 10em;}
+.statsframe tr+tr+tr+tr+tr+tr>td {min-width: 10em;}
+.statsframe tr+tr+tr+tr+tr>td+td {min-width: inherit;}  /* Shiny Banner */
+
+.statsframe .stats_col1>div {width: 8.8em;}
+.statsframe .stats_col2>div {width: 8em;}
+
+.stats_pid {
+font-family: Verdana, Geneva, monospace;
+font-size: 10px;
+color: #FF0000;
+text-align: right;
+vertical-align: top;
+margin-top: -8px;
+padding-right: 14px;
+padding-bottom: 4px;
+cursor: default;
+display: none;
+}
+
+.statslabel {width: 3.2em; float: left;}
+.statsval {font-weight: bold; white-space: nowrap; float: left; margin-left: 0.2em;}
+
+.shinybanner {
+width: 6em;
+height: 2em;
+border: 0.22em solid #555;
+padding: 0.14em;
+background-color: #FFFFFF;
+text-align: center;
+font-family: Arial, Geneva, sans-serif;
+font-weight: bold;
+-moz-border-radius: 0.52em;
+-webkit-border-radius: 0.52em;
+border-radius: 0.52em;
+}
+.shinybanner div {
+background-color: #AAAAAA;
+color: #FFFFFF;
+height: 101%;
+line-height: 1.5em;
+  vertical-align: middle;
+-moz-border-radius: 0.4em;
+-webkit-border-radius: 0.4em;
+border-radius: 0.4em;
+cursor: default;
+text-shadow: rgba(0,0,0,0.01) 0 0 0;  /* "Komodo" text-shadow hack (legible text in Safari) */
+}
+
+.normal_color{ border-color: #BA2015; }
+.normal_color div{ /*background-color: #F66;*/ background-color: #FA6555; }
+
+.shiny_color{ border-color: green; }
+.shiny_color div{ /*background-color: #3F6;*/ background-color: #60E43A; }
+
+#freewebsSticker {
+display: block; 
+position: absolute; 
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+filter: alpha(opacity=50); 
+-moz-opacity: 0.5; 
+-webkit-opacity: 0.5; 
+opacity: 0.5; 
+z-index: 0;
+}
+-->
+</style>
+
+
+<style type="text/css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)">
+<!--
+@viewport {
+zoom:1.0;
+width:extend-to-zoom;
+}
+
+html * {
+color:#000;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+body {
+margin:0;
+padding:0;
+/*background-color:#4088CC;*/
+background-color:#387CC0;
+-moz-user-select:none;
+-webkit-user-select:none;
+-ms-user-select:none;
+}
+
+form {
+margin:0;
+-moz-user-select:text;
+-webkit-user-select:text;
+-ms-user-select:text;
+}
+
+label {cursor:default;}
+
+img {border-width:0;}
+
+.dragSpot {position:relative; cursor:move;}
+.dragAny {position:relative; clear:left;}
+.dragRoot {}
+.noClone {}
+
+.dragSpot b {background:#DE6B39 url("spinda/Spinda_over.gif") scroll no-repeat 50px 50px;}
+.dragSpot.shiny b {background:#90A038 url("spinda/Spinda_over_S.gif") scroll no-repeat 50px 50px;}
+
+.viewSpot b {background:#DE6B39 url("spinda/Spinda_over_Real.gif") scroll no-repeat 410px 145px;}
+.viewSpot.shiny b {background:#90A038 url("spinda/Spinda_over_Real_S.gif") scroll no-repeat 410px 145px;}
+
+.xsnazzy.dragAny {
+-moz-border-radius:8px;
+-webkit-border-radius:8px;
+border-radius:8px;
+-moz-box-shadow:1px 2px 6px #444;
+-webkit-box-shadow:1px 2px 6px #444;
+box-shadow:1px 2px 6px #444;
+}
+
+.winframe {width:262px; min-width:262px;}
+.winframe th, .winframe label {font-size:16px;}
+.winframe table {width:258px !important;}
+.winframe table th {padding-left:8px !important;}
+.winframe form>table {margin-top:-14px;}
+
+#coordinate_hex {width:80px !important;}
+#coordinate_dec {width:80px !important;}
+.winframe label {margin-right:-6px;}
+.winframe table th+td>p {margin-right:-6px;}
+
+.canvas1, .canvas2, .canvas3, .canvas4 {
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+border-color:#248;
+visibility:hidden;
+}
+
+.mini_shadow {
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=33)";
+filter:alpha(opacity=33);
+-moz-opacity:0.33;
+-webkit-opacity:0.33;
+opacity:0.33;
+}
+
+.boundaries {
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+filter:alpha(opacity=20);
+-moz-opacity:0.2;
+-webkit-opacity:0.2;
+opacity:0.2;
+/*background-image:url("spinda/boundaries6.gif");*/
+background-repeat:no-repeat;
+visibility: hidden;
+}
+
+.closebtn {
+position:absolute;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+width:10px;
+line-height:6px;
+height:9px;
+margin:2px;
+right:5px;
+top:3px;
+margin-top:-1px;
+border:1px solid red;
+background-color:#F53;
+color:#FFF;
+font-family:Verdana, Arial, sans-serif;
+font-size:8.5px;
+font-weight:bold;
+cursor:pointer;
+-moz-border-radius:2px;
+-webkit-border-radius:2px;
+border-radius:2px;
+}
+
+.closebtn {
+background-image:none;
+}
+
+.winframe div.closebtn {
+position:absolute;
+width:16px;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+line-height:8px;
+height:17px;
+margin:2px;
+right:5px;
+top:7px;
+margin-top:-1px;
+padding-top:4px;
+border:1px solid #D00;
+background-color:#F53;
+color:#FFF;
+font-family:"Comic Sans MS", Arial, sans-serif;
+font-size:17.4px;
+font-weight:bold;
+text-align:center;
+vertical-align:baseline;
+cursor:pointer;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+}
+
+.winframe div.closebtn {
+background-image:none;
+}
+
+.mini_pid {
+color:#FFF; 
+background-color:transparent;
+position:absolute;
+top:1px;
+right:18px;
+vertical-align:top;
+font-size:8.4px;
+font-family:Verdana, Geneva, monospace;
+text-align:right;
+cursor:default;
+z-index:1;
+text-shadow:rgba(0,0,0,0.01) 0 0 0;  /* "Komodo" text-shadow hack (legible text in Safari) */
+display:none;
+}
+
+.statsframe {width:262px; min-width:262px; font-size:16px;}
+.statsframe table {width:258px; min-width:244px;}
+.statsframe table th {padding-left:8px !important;}
+.statsframe th {font-size:16px;}
+.statsframe td>div {margin-left:0px !important; margin-right:0px !important; max-width:244px;}
+.statsframe td+td>div {margin-right:-8px !important;}
+.statsframe td {padding-top:0.3em; padding-left:8px !important; white-space:nowrap;}
+.statsframe td+td .statslabel {margin-left:-22px !important;}
+
+.statsframe tr>td {max-width:65px;}  /* Fix table overflow width */
+.statsframe tr+tr+tr>td {max-width:inherit;}
+.statsframe tr+tr>td+td {max-width:inherit;}
+.statsframe tr+tr+tr+tr+tr>td+td {text-align:left;}  /* Fix position of Shiny Banner (in case of table overflow) */
+
+.statsframe .stats_col1>div {max-width:161px;}
+.statsframe .stats_col2>div {max-width:97px;}
+
+
+.stats_pid {
+display:none;
+font-family:Verdana, Geneva, monospace;
+font-size:10px;
+color:#FF0000;
+text-align:right;
+vertical-align:top;
+margin-top:-8px;
+padding-right:8px;
+padding-bottom:4px;
+cursor:default;
+}
+
+.statslabel {width:3.2em; float:left;}
+.statsval {font-weight:bold; white-space:nowrap; float:left; margin-left:0.2em;}
+
+.shinybanner {
+width:5.5em;
+height:2em;
+border:0.22em solid #555;
+padding:0.14em;
+background-color:#FFF;
+text-align:center;
+font-family:Arial, Geneva, sans-serif;
+font-weight:bold;
+-moz-border-radius:0.5em;
+-webkit-border-radius:0.5em;
+border-radius:0.5em;
+}
+.shinybanner div {
+background-color:#AAA;
+color:#FFF;
+height:101%;
+line-height:1.5em;
+-moz-border-radius:0.4em;
+-webkit-border-radius:0.4em;
+border-radius:0.4em;
+cursor:default;
+text-shadow:rgba(0,0,0,0.01) 0 0 0;  /* "Komodo" text-shadow hack (legible text in Safari) */
+}
+
+.normal_color {border-color:#BA2015;}
+.normal_color div {background-color:#FA6555;}
+
+.shiny_color {border-color:green;}
+.shiny_color div {background-color:#60E43A;}
+
+#wheel {
+display:none;
+}
+
+#winframe {left:2px !important; top:3px !important;}
+#winframe {position:relative !important; margin-left:auto; margin-right:auto;}  /* h-center winframe */
+.winframe > div {cursor:default !important;}
+.winframe .xtitle {cursor:default !important;}
+.miniframe > div {cursor:default !important;}
+.statsframe > div {cursor:default !important;}
+.winframe .closebtn, .miniframe .closebtn, .statsframe .closebtn {cursor:pointer !important;}
+
+.spinda, .face, .boundaries, .mask {
+position:absolute; 
+left:1px !important; /*20 = 1 + 19*/
+top:28px !important; /*40 = 28 + 12*/
+}
+
+.canvas1 {left:0px !important; top:27px !important;}
+.canvas1 + div {left: 1px !important; top: 28px !important;}
+
+.canvas2 {left:120px !important; top:32px !important; width:142px !important;}
+.canvas2 + div {left:121px !important; top:33px !important;}
+
+.canvas3 {left:30px !important; top:117px !important;}
+.canvas3 + div {left:31px !important; top:118px !important;}
+
+.canvas4 {left:90px !important; top:122px !important;}
+.canvas4 + div {left:91px !important; top:123px !important;}
+
+.winframe #viewsOptions > br + label {display:none;}
+.winframe #viewsOptions > br {display:none;}
+.winframe .viewsOptions[id^=viewsOptions_] {display:none;}
+
+#miniframe {display:none !important;}
+
+#statsframe {
+left:2px !important;
+top:450px !important;
+z-index:0 !important;
+/*outline:6px dotted rgba(255,255,255,0.0);*/
+}
+#statsframe {position:relative !important; top:16px !important; margin-left:auto; margin-right:auto; margin-bottom:16px;}  /* h-center statsframe */
+
+#shydiv {display:none;}
+.statsframe tr+tr+tr+tr+tr+tr+tr {display:none;}
+.statsframe table {padding-bottom:4px;}
+
+#freewebsSticker {
+display:block; 
+position:relative !important; 
+-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+filter:alpha(opacity=50); 
+-moz-opacity:0.5; 
+-webkit-opacity:0.5; 
+opacity:0.5; 
+z-index:1;
+/*background-color:#33FF00;*/
+min-height:1px; min-width:1px;
+top:8px !important;
+left:4px !important;
+}
+-->
+</style>
+
+<!--[if IE]> <style type="text/css">
+html * {box-sizing: border-box;}
+body{ overflow: auto; }
+.winframe{ width: 301px; min-width: 301px; }
+.statsframe{ width: 20.4em; }
+.statsframe table{ width: 20em; }
+.mini_pid { margin-top: 1px; }
+.stats_pid{ font-size: 68%; margin-top: -2%; }
+#shydiv{ display: none; }
+
+/*.closebtn, .miniframe .closebtn, .statsframe .closebtn {
+position: absolute;
+box-sizing: border-box;
+width: 9px;
+line-height: 6px;
+height: 8px;
+margin: 2px;
+right: 5px; top: 3px;
+margin-top: 0px;
+border: 1px solid red;
+border-radius: 2px;
+background: #FF5533 none;
+color: #FFFFFF;
+font-family: Verdana, Arial, sans-serif;
+font-size: 8.4px;
+font-weight: bold;
+cursor: pointer;
+}*/
+
+.winframe div.closebtn {
+position: absolute;
+box-sizing: border-box;
+width: 16px;
+line-height: 8px;
+height: 17px;
+margin: 2px;
+right: 5px;
+top: 7px;
+margin-top: -1px;
+padding-top: 4px;
+border: 1px solid #DD0000;
+border-radius: 3px;
+background: #FF5533 none;
+color: #FFFFFF;
+font-family: "Comic Sans MS", Arial, sans-serif;
+font-size: 17.4px;
+font-weight: bold;
+text-align: center;
+vertical-align: baseline;
+cursor: pointer;
+}
+
+.shinybanner {
+width: 6em;
+height: 2em;
+border-width: 0.14em;
+padding: 0.14em;
+}
+</style> <![endif]-->
+
+<!--[if IE 6]> <style type="text/css">
+body {overflow:auto;}
+
+.closebtn, .miniframe .closebtn, .statsframe .closebtn {
+position:absolute;
+box-sizing:border-box;
+width:7px;
+line-height:7px;
+height:7px;
+text-align:center;
+overflow:hidden;
+padding:0px;
+margin:0px;
+right:5px;
+top:2px;
+border:1px solid #E30;
+border-radius:2px;
+background:#F63 none;
+color:#FFF;
+font-family:Verdana,Arial,sans-serif;
+font-size:9px;
+font-weight:bold;
+cursor:pointer;
+}
+.winframe div.closebtn {
+position:absolute;
+box-sizing:border-box;
+width:14px;
+line-height:14px;
+height:14px;
+text-align:center;
+overflow:hidden;
+padding:0px;
+margin:0px;
+right:6px;
+top:6px;
+border:1px solid #D00;
+border-radius:3px;
+background:#F63 none;
+color:#FFF;
+font-family:"Comic Sans MS",Arial,sans-serif;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.shinybanner {
+position: relative;
+width: 100%;
+height: 1.5em;
+left: -1em;
+border-width: 0.14em;
+padding: 0.14em;
+}
+.shinybanner div {
+height:1.5em;
+line-height:1.5em;
+vertical-align: middle;
+}
+</style> <![endif]-->
+
+<!--[if IE 8]> <style type="text/css">
+.shinybanner {border-width: 2px; padding: 2px;}
+.shinybanner div {height: 100%;}
+</style> <![endif]-->
+
+<!--[if IE 7]> <style type="text/css">
+.shinybanner {
+position: relative;
+left: -0.5em;
+font-size: 1em;
+width: 5.8em;
+height: 1.5em;
+border-width: 0.14em;
+padding: 0.14em;
+}
+.shinybanner div {
+height:1.5em;
+line-height:1.5em;
+vertical-align: middle;
+}
+</style> <![endif]-->
+
+<!--[if gte IE 9]> <style type="text/css" media="only screen and (min-width: 481px)">
+.shinybanner {
+position: relative;
+min-width: 96px;
+min-height: 32px;
+border-width: 2px;
+border-radius: 8px;
+}
+.shinybanner div {
+border-radius: 6px;
+}
+</style> <![endif]-->
+
+<!--[if IE]> <style type="text/css" media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)">
+html * {box-sizing: border-box;}
+body {overflow: auto;}
+
+.winframe {width:262px; min-width:262px;}
+.winframe th, .winframe label {font-size:16px;}
+.winframe table {width:258px !important;}
+.winframe table th {padding-left:8px !important;}
+.winframe form>table {margin-top:-14px;}
+
+.statsframe {width:262px; min-width:262px; font-size:16px;}
+.statsframe table {width:258px; min-width:244px;}
+
+.mini_pid { margin-top: 1px; }
+.stats_pid{ font-size: 68%; margin-top: -2%; }
+#shydiv{ display: none; }
+
+.shinybanner {
+width:5.5em;
+height:2em;
+border-width:2px;
+padding:2px;
+text-align:center;
+font-family:Arial, Geneva, sans-serif;
+border-radius:0.5em;
+}
+.shinybanner div {
+border-radius:0.4em;
+}
+</style> <![endif]-->
+
+<!--[if gte IE 8]> <script type="text/javascript">
+(function(){
+/*
+var css = "body {background-color: #EEE2FF;}",
+    head = document.head || document.getElementsByTagName("head")[0],
+    style = document.createElement("style");
+style.type = "text/css";
+style.setAttribute("media", "screen")
+if (style.styleSheet){
+  style.styleSheet.cssText = css;
+} else {
+  style.appendChild(document.createTextNode(css));
+}
+head.appendChild(style);
+*/
+
+var style = {
+  type: 'text/css', 
+  style: document.createElement('style'),
+  head: document.head || document.getElementsByTagName('head')[0],
+  media: 'screen',
+  content: 'body {background-color: #EEE4FF;}',
+  
+  append: function(){
+    this.style.type = this.type;
+    if(this.media) {this.style.setAttribute('media', this.media);}
+    if(this.style.styleSheet){
+      this.style.styleSheet.cssText = this.content;
+    }else{
+      this.style.appendChild(document.createTextNode(this.content));
+    }
+    this.head.appendChild(this.style);
+  }
+}; style.append();
+})();
+</script> <![endif]-->
+
+<style type="text/css" media="all">
+<!--
+.xsnazzy h1 {
+margin:0; 
+font-size:1.0em; 
+padding:0 10px 5px 10px; 
+border-bottom:1px solid #444444;
+font-family:Verdana;
+}
+.xsnazzy p {
+margin:0; 
+padding:5px 10px; 
+font-size:10px;
+font-family:Verdana;
+}
+.xtop, .xbottom {
+display:block; 
+background:transparent; 
+font-size:1px;
+}
+.xtop {
+margin:0 0px;
+}
+.xbottom {
+margin:0 0px;
+}
+.xb1, .xb2, .xb3, .xb4, .xb5 {
+display:block; 
+overflow:hidden;
+}
+.xb1, .xb2, .xb3, .xb5 {
+height:1px;
+}
+.xb2, .xb3, .xb4 {
+background:#FFF; 
+border-left:1px solid #444; 
+border-right:1px solid #444;
+}
+.xb1 {
+margin:0 5px;
+background:#444;  /* makes line */
+}
+.xb2 {
+margin:0 3px; 
+border-width:0 2px;
+}
+.xb3 {
+margin:0 2px;
+}
+.xb4 {
+margin:0 1px;
+height:2px; 
+}
+.xb5 {
+/* border-top:1px solid #444; */
+background:#444;
+}
+.xtitle {
+cursor:default; 
+color:#FFF; 
+background-color: transparent;
+font-size:14px; 
+font-family:Verdana, Arial, sans-serif; 
+line-height:inherit;
+position:absolute; 
+left:8px; 
+top:6px; 
+white-space:nowrap;
+}
+.xtitle * {
+color:#FFF; 
+font-family:inherit;
+font-weight:inherit; 
+}
+.xboxcontent {
+display:block; 
+background:#FFF; 
+border-color:#444;
+border-style:solid;
+border-width:0 1px; 
+}
+.xfix {
+padding:1px 0px 0px 0px;
+font-size:1px;
+display:block;
+}
+
+.color_a {
+background-color:#4C98D5;  /* #408cc5;  #4392C9; */
+color:#FFF;
+}
+.color_b {
+background-color:#3878C5;  /* #3774B4; */
+color:#FFF;
+}
+-->
+</style>
+
+<style type="text/css">
+<!--
+.css3_animation{ 
+-webkit-transition-property: margin, opacity, height, offset; 
+-webkit-transition-duration: 500ms; 
+-webkit-transition-timing-function: ease-out; 
+-webkit-transition-delay: initial; 
+-o-transition: margin-top 300ms ease-out, opacity 500ms ease-out; 
+-o-transition-delay: initial;
+}
+-->
+</style>
+
+<style type="text/css" media="print">
+<!--
+/* Spinda is not displayed with spots when printing, thus this is pointless! */
+
+@page {size: 8.5in 11in; margin: 0.25in;}
+
+html * {
+color:#000;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+body {background-color:#FFF;}
+#wheel {display:none;}
+
+.xtitle {color:#EEE; margin-top: -3px; background-color: #3878C5; z-index: 999;}
+.xtitle * {color:#EEE;}
+.xtop {border-width:0;}
+.color_a {background-color:#3878C5 !important;}
+.xb1, .xb2, .xb4 {display:none;}
+.xb3, .xb5 {margin:-1px 0 0 0; padding:0; border-width:0; background-color: #444; border-bottom:1px solid #444;}
+.xtop .xb2 {display:block; margin:0; padding:0; border-bottom:1px solid #444;}
+.xb5 {margin:0;}
+.xboxcontent {padding-top:4px;}
+.mini_pid {display:none; visibility:hidden;}
+.stats_pid {display:none; visibility:hidden;}
+
+.miniframe .mini_shadow {display:none;}
+.viewsOptions {padding-bottom:8px;}
+.miniframe .xfix {padding-bottom:68px;}
+.statsframe #shydiv {display:none;}
+.statsframe tr+tr+tr+tr+tr+tr+tr {display:none;}
+.statsframe table {padding-bottom:6px;}
+.statsframe form {margin:0; padding:0;}
+
+.mask, .face {display:none;}
+#mini_face {z-index:99 !important;}
+
+.statsframe .shinybanner {
+border:2px solid #444; 
+width:6em; 
+text-align:center; 
+padding:4px;
+font-weight:bold;
+font-family:Arial, sans-serif;
+}
+
+.closebtn {
+position:absolute;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+width:10px;
+line-height:6px;
+height:9px;
+margin:2px;
+right:3px;
+top:2px;
+margin-top:-1px;
+border:1px solid red;
+background-color:#F53;
+color:#FFF;
+font-family:Verdana, Arial, sans-serif;
+font-size:8.5px;
+font-weight:bold;
+-moz-border-radius:2px;
+-webkit-border-radius:2px;
+border-radius:2px;
+}
+
+.winframe div.closebtn {
+position:absolute;
+width:16px;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
+box-sizing:border-box;
+line-height:8px;
+height:17px;
+margin:2px;
+right:3px;
+top:3px;
+margin-top:0px;
+padding-top:4px;
+border:1px solid #D00;
+background-color: #F53;
+color:#FFF;
+font-family:"Comic Sans MS", Arial, sans-serif;
+font-size:17.4px;
+font-weight:bold;
+text-align:center;
+vertical-align:baseline;
+-moz-border-radius:3px;
+-webkit-border-radius:3px;
+border-radius:3px;
+}
+
+.normal_color {border-color:#BA2015; background-color:#FC6B49;}
+.shiny_color {border-color:green; background-color:#80FF5A;}
+#shinyval {display:block !important;}
+
+.dragSpot, .viewSpot {visibility:hidden;}
+
+/**
+.dragSpot b {background: #DE6B39 url("spinda/Spinda_over.gif") scroll no-repeat 50px 50px;}
+.dragSpot.shiny b {background: #90A038 url("spinda/Spinda_over_S.gif") scroll no-repeat 50px 50px;}
+.viewSpot b {background: #DE6B39 url("spinda/Spinda_over_Real.gif") scroll no-repeat 410px 145px;}
+.viewSpot.shiny b {background: #90A038 url("spinda/Spinda_over_Real_S.gif") scroll no-repeat 410px 145px;}
+**/
+-->
+</style>
+
+<style type="text/css" media="only screen and (min-width: 481px)">
+<!--
+/* This produces a better rubber stamp look for the shiny banner. */
+
+.shinybanner .stamp {display: none;}
+
+@supports ((transform: rotate(-6deg)) or (-webkit-transform: rotate(-6deg))) and (background-size: 100% 100%) {
+  .shinybanner {
+  position: relative;
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+  min-width: 96px;
+  min-height: 32px;
+  border-width: 3px;
+  border-radius: 8px;
+  }
+
+  .shinybanner div {
+  border-radius: 6px;
+  }
+
+  .shinybanner .stamp {
+  display: block !important;
+  background: transparent url("data:image/gif;base64,R0lGODlhYQAgAIAAAAAAAP///yH5BAMAAAAALAAAAABhACAAAAL/hB1xq+uQoFMNRkkr04c/RDHgpXHeh55il07o+2QWC9c2fatt3l3YDYwFccNhohI56YpMiZDp+yyJzqYVKHPhVJ7Q9TWlPmfVLGLk/arBxvOqZ+Gu57Zu+Fil6/cgMjLMFzgmlgcoeLiDqKhmkpS3CPmUZKYVaXkWgud2qdiFeRTlZMippxk1SmqFtPlIg5p65ejY+grb5IPbartXW7lLhyeTOft7W0eV0ZDVm9ipK/pYUlz6BjoJKsUMzNMXN4yB7Rk7vVVepK0amkOpXqIeo+z619ZjSMK6nEYMPzimKVUmTQpxheLBeCfP3TEjd0b0+WPN3alPz2Yku4fwjZZ/BNikFAAAOw==") no-repeat left top;
+  background-size: 100% 100%;
+  position: absolute;
+  left: -0.20em;
+  top: -0.20em;
+  width: 6.08em;
+  height: 2.0em;
+  min-width: 97px;
+  min-height: 32px;
+  overflow: hidden;
+  }
+
+  /*
+    div[id^=statsframe_] tr+tr+tr+tr+tr>td+td {display:block; position:absolute; vertical-align:middle;}
+    div[id^=statsframe_] tr+tr+tr+tr+tr>td+td>div {margin-left:22px; margin-top:10px;}
+    #statsframe tr+tr+tr+tr+tr>td+td {display:block; position:absolute; vertical-align:middle;}
+    #statsframe tr+tr+tr+tr+tr>td+td>div {margin-left:-45px; margin-top:10px;}
+  */
+  
+  .statsframe tr+tr+tr+tr+tr td {overflow: hidden;}  /* this does the trick */
+  /* .statsframe tr+tr+tr+tr+tr td+td {overflow: visible;} */
+
+}
+-->
+</style>
+
+<script type="text/javascript">
+// <![CDATA[
+/* Key Listener */
+
+function addEvent(obj, type, fn ){
+  if(obj.attachEvent){
+    obj['e'+type+fn] = fn;
+    obj[type+fn] = function(){obj['e'+type+fn]( window.event );};
+    obj.attachEvent( 'on'+type, obj[type+fn] );
+  }else{
+    obj.addEventListener( type, fn, false );
+  }
+}
+
+function EnterKeyBlur(e, target){
+// Intercepts ENTER keypress event and removes focus on element
+  var evt = (typeof(e) != 'undefined') ? e : event;
+  if(evt.keyCode == 13 || evt.keyCode == 3){
+    if(target.nodeName!="BODY" && target.nodeName!="HTML")
+      target.blur();
+  }
+}
+// ]]>
+</script>
+
+<script type="text/javascript">
+// <![CDATA[
+/* Preload Shiny Images */
+
+var imgs = new Array();
+imgs[0] = "spinda/Spinda_base.png";
+imgs[1] = "spinda/Spinda_base_S.png";
+imgs[2] = "spinda/Spinda_mask_S.gif";
+imgs[3] = "spinda/Spinda_mask_Real_S.gif";
+imgs[4] = "spinda/Spinda_over_S.gif";
+imgs[5] = "spinda/Spinda_over_Real_S.gif";
+
+function preload(){
+// preload the images
+  var tmp = null;
+  for(var i=0; i<imgs.length; i++){
+    tmp = imgs[i];
+    imgs[i] = new Image();
+    imgs[i].src = tmp;
+  }
+}
+void(preload());
+// ]]>
+</script>
+
+<script type="text/javascript">
+// <![CDATA[
+/* Spot Background-Image Scroll Fix  - NOW UNNECESSARY?? 
+ Used to correct bug with mousewheel scrolling over body element in early Firefox.
+ Still useful to keep pointer over element being dragged when scroll position is not [0,0].
+*/
+
+var orightmlheight=0;
+var orightmlwidth=0;
+var scrolltracksize=0;
+var trueW=0, trueH=0;
+
+function resize(){
+// Resize scrollwheel layer to fill entire page  
+  // "orightmlheight" is global, located above closing body tag 
+  // "scrolltracksize" is global, value from getScrollbarSize() 
+  if(typeof(window.innerHeight) == 'undefined'){return;}  // IE disable
+  var pageframe = document.getElementById("wheel");  
+  var htmlheight = document.body.scrollHeight;
+  var htmlwidth = document.body.scrollWidth;
+  var windowheight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+  var windowwidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+  
+  var workspaceH = orightmlheight;
+  var workspaceW = orightmlwidth;
+
+  if(document.getElementById("miniframe") === null)
+    return;
+
+  var kids = document.body.childNodes;
+  for(var i=0; i<kids.length; i++){
+    if(kids[i].tagName == "DIV"){
+      if(kids[i].getAttribute("id") && kids[i].getAttribute("id") != "wheel"){
+        if((kids[i].offsetHeight)+(kids[i].offsetTop)+8 > workspaceH)
+          workspaceH = (kids[i].offsetHeight) + (kids[i].offsetTop) + 8;
+        if((kids[i].offsetWidth)+(kids[i].offsetLeft)+8 > workspaceW)
+          workspaceW =(kids[i].offsetWidth) + (kids[i].offsetLeft) + 8;
+      }
+    }
+  }
+  
+  if(windowwidth < workspaceW)
+    windowheight = windowheight - scrolltracksize;
+  if(windowheight >= workspaceH) {  // meaning: no v-scrollbar
+    trueH = windowheight;
+    pageframe.style.height = windowheight + "px"; 
+    pageframe.style.backgroundColor="#D2E3F1";
+    document.getElementById("oAreaSize").innerHTML =  "H:" + trueH;
+  }else{                            // meaning: v-scrollbar present
+    trueH = workspaceH;
+    pageframe.style.height = workspaceH + "px";
+    pageframe.style.backgroundColor="#C1DAF4";
+    document.getElementById("oAreaSize").innerHTML =  "Hv:" + workspaceH;
+  } 
+
+  if(windowheight < workspaceH)
+    windowwidth = windowwidth - scrolltracksize;
+  if(windowwidth >= workspaceW) {  // meaning: no h-scrollbar
+    trueW = windowwidth;
+    pageframe.style.width = windowwidth + "px"; 
+    if(windowheight >= workspaceH)
+      pageframe.style.backgroundColor="#D2E3F1";
+    document.getElementById("oAreaSize").innerHTML += ", W:" + trueW;
+  }else{                           // meaning: h-scrollbar present
+    trueW = workspaceW;
+    pageframe.style.width = workspaceW + "px"; 
+    pageframe.style.backgroundColor="#C1DAF4";
+    document.getElementById("oAreaSize").innerHTML += ", Wh:" + trueW;
+  } 
+}
+
+function getScrollbarSize(){
+  var testscroll = document.createElement("div");
+  var scrollsize=0;
+  document.body.appendChild(testscroll);
+  testscroll.style.overflow="hidden";
+  testscroll.style.width="50px";
+  testscroll.style.height="50px";
+  var noScrollW = testscroll.clientWidth;
+  testscroll.style.overflow="scroll";
+  var scrollW = testscroll.clientWidth;
+  document.body.removeChild(testscroll);
+  
+  if(noScrollW-scrollW >= 0)
+    scrollsize = noScrollW-scrollW;
+  return scrollsize;
+}
+
+
+if(typeof(window.innerHeight) != 'undefined'){
+  addEvent(window, 'resize', resize);
+  addEvent(window, 'scroll', resize);
+}
+// ]]>
+</script>
+
+<script type="text/javascript">
+// <![CDATA[
+// Begin
+
+/*
+Drag and Drop Script
+Created by: elouai.com 
+Revised by: Silly_TomcaT 
+Adapted(and Modified) by: GatorShark
+*/
+
+var dragVars = {
+  x: undefined,
+  y: undefined,
+  tx: undefined,
+  ty: undefined,
+  dobj: undefined,
+  step: 5,
+  maskTimer: setTimeout('null',1),
+  maskDelay: 450,
+  maskVisible: false,
+  isdrag: false
+};
+
+function movemouse(e){
+  if(dragVars.isdrag){
+    var evt = (typeof(e) != 'undefined') ? e : event;
+    var wx, wy;
+    wx = dragVars.tx + evt.clientX - dragVars.x;
+    wy = dragVars.ty + evt.clientY - dragVars.y;
+    if(dragVars.dobj.className.indexOf("dragSpot")>=0){
+      wx=(wx>0)?wx:0;  // x-coordinate min boundary
+      wy=(wy>0)?wy:0;  // y-coordinate min boundary
+      wx=(wx<15*dragVars.step)?wx:15*dragVars.step;  // x-coordinate max boundary
+      wy=(wy<15*dragVars.step)?wy:15*dragVars.step;  // y-coordinate max boundary   
+     dragVars.dobj.style.left = Math.floor(wx/dragVars.step)*dragVars.step +"px";
+     dragVars.dobj.style.top = Math.floor(wy/dragVars.step)*dragVars.step +"px";
+     pokemonID();  // changes number while dragging, and corrects spot backgrounds
+    }else{
+      wx=(wx>3)?wx:3;  // x-coordinate min boundary
+      wy=(wy>3)?wy:3;  // y-coordinate min boundary
+     dragVars.dobj.style.left = Math.floor(wx/2)*2 +"px";
+     dragVars.dobj.style.top = Math.floor(wy/2)*2 +"px";
+     //__if(typeof(window.innerHeight) != 'undefined'){ resize(); }
+    }
+    return false;
+  }
+}
+
+function selectmouse(e){
+  var evt      = (typeof(e) != 'undefined') ? e : event;
+  var fobj     = (typeof(e) != 'undefined') ? e.target : event.srcElement;
+  
+  // Detect modifier keys pressed
+  var shiftPressed=0, altPressed=0, ctrlPressed=0;
+  shiftPressed = evt.shiftKey;
+  altPressed   = evt.altKey;
+  ctrlPressed  = evt.ctrlKey;
+  
+  // Backtrack through DOM, find dragSpot or dragAny, cancel on top element or dragRoot 
+  //_if(fobj.tagName==null) return;  // skip disabled fields
+  if(fobj.nodeName=="BODY" || fobj.nodeName=="HTML") return true;
+  while((typeof fobj.className=='undefined' && fobj.nodeName!="BODY") || fobj.nodeName!="BODY" && fobj.nodeName!="HTML" && fobj.className.indexOf("dragSpot")<0 && fobj.className.indexOf("dragAny")<0 && fobj.className.indexOf("dragRoot")<0){
+    fobj = fobj.parentNode;
+  }
+  if(typeof fobj.className=='undefined') return true;
+  //_if(fobj.className.indexOf("dragAny")>=0){
+  //_  if(window.innerWidth<=480){ return false; }  // Disable free-drag for small-screen devices (note: never true for IE)
+  //_}
+  if(fobj.className.indexOf("dragSpot")>=0 || fobj.className.indexOf("dragAny")>=0){
+    dragVars.isdrag = true;
+    dragVars.dobj = fobj;
+    if(fobj.className.indexOf("dragAny")>=0 && (ctrlPressed || shiftPressed) && fobj.className.indexOf("noClone")<0){ dragVars.dobj=cloneMini(fobj); }  // if Ctrl is down, clone instead of move
+    if(dragVars.dobj.className.indexOf("statsframe")>=0){
+      var tempelem = dragVars.dobj;
+      //////dragVars.dobj.innerHTML = dragVars.dobj.innerHTML+"<div style='clear:both; margin-top:-20em; padding-top:-20em'>_</div>";
+    }
+    dragVars.tx = parseInt(dragVars.dobj.style.left+0,10);
+    dragVars.ty = parseInt(dragVars.dobj.style.top+0,10);
+    dragVars.x = evt.clientX;
+    dragVars.y = evt.clientY;
+    document.onmousemove=movemouse;
+    return false;
+  }
+}
+
+function releasemouse(){
+  dragVars.isdrag = false;
+  //_pokemonID();  // refreshes number after move is complete
+  document.onmousemove=monitormouse;  // corrects event sharing problem
+  if(typeof(window.innerHeight) != 'undefined'){ resize(); }
+  return false;
+}
+
+function monitormouse(e){
+// This function sees if the mouse moves off the Spinda image
+  var mousex=0, mousey=0;
+  var spindaLeft = parseInt(document.getElementById("spinda").style.left)+parseInt(document.getElementById("winframe").style.left);
+  var spindaTop = parseInt(document.getElementById("spinda").style.top)+parseInt(document.getElementById("winframe").style.top);
+  var spindaWidth = parseInt(document.getElementById("spinda").style.width);
+  var spindaHeight = parseInt(document.getElementById("spinda").style.height);
+  
+  spindaLeft = (document.getElementById("spinda").offsetLeft+document.getElementById("winframe").offsetLeft);
+  spindaTop = (document.getElementById("spinda").offsetTop+document.getElementById("winframe").offsetTop);
+
+  // Mouse position plus scroll position
+  if(typeof(e) == 'undefined'){mousex = window.event.clientX+document.body.scrollLeft;
+         mousey = window.event.clientY+document.body.scrollTop;}
+  else{mousex = e.pageX; mousey = e.pageY;}
+
+  if(mousex < spindaLeft || mousey < spindaTop){
+    if(dragVars.maskVisible===false){
+      clearTimeout(dragVars.maskTimer); dragVars.maskVisible=true; dragVars.maskTimer = setTimeout('showMask(true)', dragVars.maskDelay);
+    }
+  }else if(mousex > (spindaLeft+spindaWidth) || mousey > (spindaTop+spindaHeight)){
+    if(dragVars.maskVisible===false){
+      clearTimeout(dragVars.maskTimer); dragVars.maskVisible=true; dragVars.maskTimer = setTimeout('showMask(true)', dragVars.maskDelay);
+    }
+  }else{
+    if(dragVars.maskVisible===true){
+      clearTimeout(dragVars.maskTimer); 
+      showMask(false);
+    }
+  }
+  return true;
+}  
+
+
+document.onmousemove=monitormouse;
+document.onmousedown=selectmouse;
+document.onmouseup=releasemouse;  //$$ new Function("isdrag=false");
+/* ------------ end of drag ------------ */
+
+
+/* ------------------------------------------------
+Spinda Painter Calculation and Adjustment Functions
+Functions created by: GatorShark
+Background-pinning solution from: 
+  http://www.howtocreate.co.uk/fixedBackground.html
+--------------------------------------------------- */
+
+function findPosition(oElement){
+  if(typeof(oElement.offsetParent) != 'undefined') {
+    for(var posX = 0, posY = 0; oElement; oElement = oElement.offsetParent) {
+      posX += oElement.offsetLeft;
+      posY += oElement.offsetTop;
+    }
+    return { posX: posX, posY: posY };
+  }else{
+    return { posX: oElement.x, posY: oElement.y };
+  }
+}
+
+function correctPosition(oElement,oPos,oWhich){
+  if(typeof(oElement.offsetParent) != 'undefined'){
+    while(oElement.offsetParent){
+      oPos -= oElement['offset'+oWhich];
+      oElement = oElement.offsetParent;
+    }
+  }
+  return oPos;
+}
+
+function moveBackground(){
+  var SpindaPos = findPosition(document.getElementById("spinda"));
+  var spotParts;
+  for(var i=1; i<5; i++){
+    spotParts = document.getElementById("spot" + i).getElementsByTagName("b");  
+    for(var j=0; j<spotParts.length; j++){
+      spotParts[j].style.backgroundPosition = correctPosition(spotParts[j],SpindaPos.posX,"Left") +"px "+ correctPosition(spotParts[j],SpindaPos.posY,"Top") +"px";
+    }
+  }
+}
+
+function moveMiniBackground(){
+  if(document.getElementById("miniframe") === null)
+    return;
+  var MiniSpindaPos = findPosition(document.getElementById("mini_face"));
+  var spotParts;
+  for(var i=1; i<5; i++){
+    spotParts = document.getElementById("mini_spot" + i).getElementsByTagName("b");  
+    for(var j=0; j<spotParts.length; j++){
+      spotParts[j].style.backgroundPosition = correctPosition(spotParts[j],MiniSpindaPos.posX,"Left") +"px "+ correctPosition(spotParts[j],MiniSpindaPos.posY,"Top") +"px";
+    }
+  }
+}
+
+function showMask(s){
+  if(s===false){
+    document.getElementById("mask").style.visibility="hidden";
+    document.getElementById("face").style.visibility="hidden";    
+    opacSpots(0.8);
+  }
+  else if(s===true){
+    document.getElementById("mask").style.visibility="visible";
+    document.getElementById("face").style.visibility="visible";    
+    opacSpots(1.0);
+  }
+  dragVars.maskVisible = s;
+  showBoundaries();
+}
+
+function showBoundaries(){
+  var d=document;
+  var f=document.getElementById("SpindaForm");
+  var i=1;
+  if(d.getElementById("mask").style.visibility=="hidden" && f.Bound.checked){
+    for(i=1; i<5; i++){
+      d.getElementById("canvas" + i).style.borderStyle="solid";
+      d.getElementById("canvas" + i).style.borderWidth=1 +"px";
+      d.getElementById("canvas" + i).style.visibility="visible";
+      d.getElementById("canvas" + i).style.MozBoxShadow="inset 0px 0px 5px 0px #C8E6FF";
+      d.getElementById("canvas" + i).style.WebkitBoxShadow="inset 0px 0px 5px 0px #C8E6FF";
+      d.getElementById("canvas" + i).style.boxShadow="inset 0px 0px 5px 0px rgb(200,230,255)";
+    }
+    d.getElementById("boundaries").style.visibility="hidden";
+    d.getElementById("boundaries").style.zIndex="4";
+  }    
+  if(d.getElementById("mask").style.visibility=="visible" || f.Bound.checked==false){
+    for(i=1; i<5; i++){
+      d.getElementById("canvas" + i).style.borderStyle="none";
+      d.getElementById("canvas" + i).style.borderWidth=0 +"px";
+      d.getElementById("canvas" + i).style.visibility="hidden";
+      d.getElementById("canvas" + i).style.MozBoxShadow="";
+      d.getElementById("canvas" + i).style.WebkitBoxShadow="";
+      d.getElementById("canvas" + i).style.boxShadow="";
+    }
+    if(f.Bound.checked==false)  d.getElementById("boundaries").style.visibility="hidden";
+    d.getElementById("boundaries").style.zIndex="31";
+  }
+  if(d.getElementById("mask").style.visibility=="visible" && f.Bound.checked)  d.getElementById("boundaries").style.visibility="visible";
+}    
+
+function showPreview(){
+  var f=document.getElementById("SpindaForm");
+  if(f.Preview.checked){
+    document.getElementById("miniframe").style.display="block";
+    if(typeof(window.innerHeight) != 'undefined'){resize();}
+  }else{
+    document.getElementById("miniframe").style.display="none";
+    if(typeof(window.innerHeight) != 'undefined'){resize();}
+  }
+}
+
+function showStats(){
+  var f=document.getElementById("SpindaForm");
+  if(f.Stats.checked){
+    document.getElementById("statsframe").style.display="block";
+    if(typeof(window.innerHeight) != 'undefined'){resize();}
+  }else{
+    document.getElementById("statsframe").style.display="none";
+    if(typeof(window.innerHeight) != 'undefined'){resize();}
+  }
+}
+
+function seeShiny(){
+  var f=document.getElementById("SpindaStatsForm");
+  if(f.Shy.checked){
+    calculateStats();
+  }else{
+    f.Shy.checked=true; // mark temporarily to allow functions to work
+    shinyWorking(0);
+    shinyPreview(0);
+    f.Shy.checked=false;
+  }
+}
+
+function opacSpots(opaz){
+  for(var i=1; i<5; i++){
+    document.getElementById("spot" + i).style.filter='alpha(opacity=' + (100 * opaz) + ')';  // IE5-7
+    document.getElementById("spot" + i).style.MozOpacity=opaz;  // Gecko before CSS3 support
+    document.getElementById("spot" + i).style.opacity=opaz;  // CSS3
+  }
+}
+
+function randomPosition(){
+  var d=document;
+  d.getElementById("spot1").style.left = Math.round(Math.random()*15)*dragVars.step +"px";
+  d.getElementById("spot1").style.top = Math.round(Math.random()*15)*dragVars.step +"px";
+  d.getElementById("spot2").style.left = Math.round(Math.random()*15)*dragVars.step +"px";
+  d.getElementById("spot2").style.top = Math.round(Math.random()*15)*dragVars.step +"px";
+  d.getElementById("spot3").style.left = Math.round(Math.random()*15)*dragVars.step +"px";
+  d.getElementById("spot3").style.top = Math.round(Math.random()*15)*dragVars.step +"px";
+  d.getElementById("spot4").style.left = Math.round(Math.random()*15)*dragVars.step +"px";
+  d.getElementById("spot4").style.top = Math.round(Math.random()*15)*dragVars.step +"px";
+  pokemonID();   
+}
+
+function pokemonID(){
+// Produces the "Personality Value" number Outputs
+  var d=document;
+  var f=document.getElementById("SpindaForm");
+  var combined=0;
+  combined = parseInt(d.getElementById("spot1").style.left) *1 /dragVars.step;
+  combined += parseInt(d.getElementById("spot1").style.top) *16 /dragVars.step;
+  combined += parseInt(d.getElementById("spot2").style.left) *256 /dragVars.step;
+  combined += parseInt(d.getElementById("spot2").style.top) *4096 /dragVars.step;
+  combined += parseInt(d.getElementById("spot3").style.left) *65536 /dragVars.step;
+  combined += parseInt(d.getElementById("spot3").style.top) *1048576 /dragVars.step;
+  combined += parseInt(d.getElementById("spot4").style.left) *16777216 /dragVars.step;
+  combined += parseInt(d.getElementById("spot4").style.top) *268435456 /dragVars.step;
+  
+  if(DecToHex(combined,8) != f.coordinate_hex.value || combined != f.coordinate_dec.value){
+    f.coordinate_hex.value = DecToHex(combined,8);
+    f.coordinate_dec.value = combined;
+    d.getElementById("mini_pid").innerHTML = f.coordinate_hex.value;
+    d.getElementById("stats_pid").innerHTML = f.coordinate_hex.value;
+    miniSpots();
+    moveBackground();
+    moveMiniBackground();
+    calculateStats();
+  }
+}   
+
+function positionSpots(n,base){
+// Moves the spots when a number is Inputted
+// n = input number, base = the radix of input
+  var d=document;
+  var a=0;
+  var b=0;
+  var pv=0;
+  var nibble=0;
+  var i=0;
+  var coord=new Array();
+  if(!n || n<0){n=0;}
+  if(!base || base<2){base=10;}
+  a = parseInt(n,base);
+  pv = 0x10000000;  // Max place value
+  if(a > pv*0x10-1){a = pv*0x10-1;}  // Reduces values too large to highest allowed value
+  for(i=8; i>0; i--){
+    b = a % pv;
+    nibble = (a - b) / pv;
+    a = b;
+    coord[i]=nibble;
+    pv /= 0x10;
+  }
+  d.getElementById("spot1").style.left=coord[1]*dragVars.step +"px";
+  d.getElementById("spot1").style.top=coord[2]*dragVars.step +"px";
+  d.getElementById("spot2").style.left=coord[3]*dragVars.step +"px";
+  d.getElementById("spot2").style.top=coord[4]*dragVars.step +"px";
+  d.getElementById("spot3").style.left=coord[5]*dragVars.step +"px";
+  d.getElementById("spot3").style.top=coord[6]*dragVars.step +"px";
+  d.getElementById("spot4").style.left=coord[7]*dragVars.step +"px";
+  d.getElementById("spot4").style.top=coord[8]*dragVars.step +"px";
+  pokemonID();
+}
+
+function miniSpots(){
+  var d=document;
+  d.getElementById("mini_spot1").style.left = parseInt(d.getElementById("spot1").style.left)/dragVars.step +"px";
+  d.getElementById("mini_spot1").style.top = parseInt(d.getElementById("spot1").style.top)/dragVars.step +"px";
+  d.getElementById("mini_spot2").style.left = parseInt(d.getElementById("spot2").style.left)/dragVars.step +"px";
+  d.getElementById("mini_spot2").style.top = parseInt(d.getElementById("spot2").style.top)/dragVars.step +"px";
+  d.getElementById("mini_spot3").style.left = parseInt(d.getElementById("spot3").style.left)/dragVars.step +"px";
+  d.getElementById("mini_spot3").style.top = parseInt(d.getElementById("spot3").style.top)/dragVars.step +"px";
+  d.getElementById("mini_spot4").style.left = parseInt(d.getElementById("spot4").style.left)/dragVars.step +"px";
+  d.getElementById("mini_spot4").style.top = parseInt(d.getElementById("spot4").style.top)/dragVars.step +"px";
+}
+
+function DecToHex(n, digits, invert, prefix){
+  var p = '';
+  if (prefix) p = prefix;
+  var HexChars = "0123456789ABCDEF";
+  var InvHex = "FEDCBA9876543210";
+  var HexOut = "00000000";
+  var a = parseInt(n,10);
+  var b = 0;
+  var i = 0;
+  var pv = 0x1;
+  var tc = 0;
+  var H = 0;
+  if(invert>=1) HexChars = InvHex;
+  pv = Math.pow(0x10,digits-1);  // Generate digits max place value
+  if(a > pv*0x10-1){a = pv*0x10-1;}  // Values too large are lowered to highest allowed value
+  HexOut = "";
+  // Convert number to Hex
+  for(i=digits; i>0; i--){
+    b = a % pv;
+    H = (a - b) / pv;
+    a = b;
+    tc = HexChars.charAt(H);
+    HexOut += tc;
+    pv /= 0x10;
+  }
+  // Append zeros to prefix  
+  for (i=0; i < (digits - HexOut.length); i++){
+    p += '0';
+  }
+  return p + HexOut;
+}
+
+function calculateStats(){
+  var f0=document.getElementById("SpindaForm");
+  var f1=document.getElementById("SpindaStatsForm");
+  var pid=parseInt(f0.coordinate_dec.value);
+  var tid=parseInt(f1.trainer_id.value);
+  var stid=parseInt(f1.secret_id.value);
+  var ta, tn, tg, ts;
+  var atext="", ntext="", gtext="";
+  var A=document.getElementById("ability");
+  var N=document.getElementById("nature");
+  var G=document.getElementById("gender");
+  var S=document.getElementById("shiny");
+  
+  ta=Math.floor(pid%2);
+  if(ta<0){ta+=2;}
+  switch(ta){
+    case 0: atext="First"; break;
+    case 1: atext="Second"; break;
+  }
+  A.innerHTML=atext;
+  A.setAttribute("title","Own Tempo");
+  
+  tn=Math.floor(pid%25);
+  if(tn<0){tn+=25;}
+  switch(tn){
+    case 0: ntext="Hardy"; break;
+    case 1: ntext="Lonely"; break;
+    case 2: ntext="Brave"; break;
+    case 3: ntext="Adamant"; break;
+    case 4: ntext="Naughty"; break;
+    case 5: ntext="Bold"; break;
+    case 6: ntext="Docile"; break;
+    case 7: ntext="Relaxed"; break;
+    case 8: ntext="Impish"; break;
+    case 9: ntext="Lax"; break;
+    case 10: ntext="Timid"; break;
+    case 11: ntext="Hasty"; break;
+    case 12: ntext="Serious"; break;
+    case 13: ntext="Jolly"; break;
+    case 14: ntext="Naive"; break;
+    case 15: ntext="Modest"; break;
+    case 16: ntext="Mild"; break;
+    case 17: ntext="Quiet"; break;
+    case 18: ntext="Bashful"; break;
+    case 19: ntext="Rash"; break;
+    case 20: ntext="Calm"; break;
+    case 21: ntext="Gentle"; break;
+    case 22: ntext="Sassy"; break;
+    case 23: ntext="Careful"; break;
+    case 24: ntext="Quirky"; break;
+  }
+  N.innerHTML=ntext;
+  //_N.setAttribute('title',tn);
+  
+  tg=Math.floor(pid%256);
+  if(tg<0){tg+=256;}
+  //_G.setAttribute('title',tg);
+  if(tg>=127){tg=0;}else{tg=1;}
+  switch(tg){
+    case 0: gtext="Male"; break;
+    case 1: gtext="Female"; break;
+  }
+  G.innerHTML=gtext;
+  
+  tid=(stid*65536)+(tid);
+  if(isNaN(tid)){
+    ts=-1;
+  }else{
+    ts=pid^tid;
+    ts=(ts>>>16)^(ts%65536);  // ts=(Math.floor(ts/0x10000))^(ts%0x10000);
+  }
+  if(ts<-1){ts+=0x10000;}  // corrects large numbers
+  S.innerHTML=(ts<0)?"&nbsp;":ts;
+
+  if(ts>7){  // is Normal
+    document.getElementById("shinybanner").getElementsByTagName("div")[0].innerHTML="Not Shiny";
+    document.getElementById("shinybanner").className = "shinybanner normal_color";
+    //_document.getElementById("shinyval").style.display="block";
+    shinyWorking(0);
+    shinyPreview(0);
+  }else if(ts>=0){  // is Shiny
+    document.getElementById("shinybanner").getElementsByTagName("div")[0].innerHTML="Shiny";
+    document.getElementById("shinybanner").className = "shinybanner shiny_color";
+    //_document.getElementById("shinyval").style.display="block";
+    shinyWorking(1);
+    shinyPreview(1);
+  }else{
+    document.getElementById("shinybanner").getElementsByTagName("div")[0].innerHTML="N/A";
+    document.getElementById("shinybanner").className = "shinybanner";
+    document.getElementById("shinyval").style.display="none";
+  }
+}
+
+
+function shinyWorking(shiny){
+  if(document.getElementById("SpindaStatsForm").Shy!== null){ if(document.getElementById("SpindaStatsForm").Shy.checked==false) return; }
+  if(document.getElementById("winframe") === null)
+    return;
+  var normalSpotColor="#de6b39";
+  var shinySpotColor="#90a038";
+  var spotParts, spotColor, spotImage;
+  
+  if(shiny){
+    if(document.getElementById('mask').getElementsByTagName('img')[0].src.indexOf('Spinda_mask_S')>=0)
+      return;  // already shiny, do nothing
+    spotColor=shinySpotColor;
+    spotImage="url('spinda/Spinda_over_S.gif')";
+    document.getElementById("spinda").getElementsByTagName("img")[0].src = "spinda/Spinda_base_S.png";
+    document.getElementById("mask").getElementsByTagName("img")[0].src = "spinda/Spinda_mask_S.gif";
+  }else{
+    if(document.getElementById('mask').getElementsByTagName('img')[0].src.indexOf('Spinda_mask_S')<0)
+      return;  // already nonshiny, do nothing
+    spotColor=normalSpotColor;
+    spotImage="url('spinda/Spinda_over.gif')";
+    document.getElementById("spinda").getElementsByTagName("img")[0].src = "spinda/Spinda_base.png";
+    document.getElementById("mask").getElementsByTagName("img")[0].src = "spinda/Spinda_mask.gif";
+  }
+  
+  /**
+  for(var i=1; i<5; i++){
+    if(shiny)
+      document.getElementById("spot" + i).className = "dragSpot shiny";
+    else
+      document.getElementById("spot" + i).className = "dragSpot";
+  }
+  **/
+  
+  for(var i=1; i<5; i++){
+    spotParts = document.getElementById("spot" + i).getElementsByTagName("b");
+    for(var j=0; j<spotParts.length; j++){
+      spotParts[j].style.backgroundColor = spotColor;
+      spotParts[j].style.backgroundImage = spotImage;
+    }
+  }
+}
+
+function shinyPreview(shiny){
+  if(document.getElementById("SpindaStatsForm").Shy!== null){ if(document.getElementById("SpindaStatsForm").Shy.checked==false) return; }
+  if(document.getElementById("miniframe") === null)
+    return;
+  var normalSpotColor="#de6b39";
+  var shinySpotColor="#90a038";
+  var spotParts, spotColor, spotImage;
+  
+  if(shiny){
+    if(document.getElementById('mini_mask').getElementsByTagName('img')[0].src.indexOf('Spinda_mask_Real_S')>=0)
+      return;
+    spotColor=shinySpotColor;
+    spotImage="url('spinda/Spinda_over_Real_S.gif')";
+    document.getElementById("mini_mask").getElementsByTagName("img")[0].src = "spinda/Spinda_mask_Real_S.gif";
+  }else{
+    if(document.getElementById('mini_mask').getElementsByTagName('img')[0].src.indexOf('Spinda_mask_Real_S')<0)
+      return;
+    spotColor=normalSpotColor;
+    spotImage="url('spinda/Spinda_over_Real.gif')";
+    document.getElementById("mini_mask").getElementsByTagName("img")[0].src = "spinda/Spinda_mask_Real.gif";
+  }
+  
+  /**
+  for(var i=1; i<5; i++){
+    if(shiny)
+      document.getElementById("mini_spot" + i).className = "viewSpot shiny";
+    else
+      document.getElementById("mini_spot" + i).className = "viewSpot";
+  }
+  **/
+  
+  for(var i=1; i<5; i++){
+    spotParts = document.getElementById("mini_spot" + i).getElementsByTagName("b");
+    for(var j=0; j<spotParts.length; j++){
+      spotParts[j].style.backgroundColor = spotColor;
+      spotParts[j].style.backgroundImage = spotImage;
+    }
+  }
+}
+
+//  End
+// ]]>
+</script>
+
+<script type="text/javascript">
+// <![CDATA[
+/* Clone Mini Windows  (created by GatorShark)  */
+
+function deleteMini(object, root){
+  if(!root) var root=document.body;
+  if(!object) return;
+  root.removeChild(object);
+  if(typeof(window.innerHeight) != 'undefined'){resize();}
+}
+
+function cloneMini(object, root){
+  if(!root) var root=document.body;
+  if(!object) var object=document.getElementById('miniframe');
+  var clone=object.cloneNode(true);
+  var i=0, j=0;
+  var deep=clone;
+
+  while(deep){
+    if(deep.getAttribute("id")){
+      j=0;
+      var suff="";
+      var idVerify=deep.getAttribute("id");
+      if(idVerify=="shyhandle"){ // hide handle element
+        deep.parentNode.parentNode.style.display="none";
+      }
+      if(idVerify.match(/^(.+)_([0-9]+)$/)){
+        idVerify = RegExp.$1; 
+      }
+      while(document.getElementById(idVerify+suff)){
+        j++;
+        suff="_"+j;
+      }
+      deep.setAttribute("id", idVerify+suff);  // make ids on elements unique
+    }
+    if(deep.className.indexOf("closebtn")>=0){
+      try{clone.removeChild(deep); i-=1;}catch(e){}  // remove the pre-existing close button on the clone
+    }
+    if(deep.className.indexOf("mini_pid")>=0 || deep.className.indexOf("stats_pid")>=0){
+      deep.style.display="block";  // show personality value on clone window
+    }
+    
+    deep = clone.getElementsByTagName("*")[i];  // (needed to include: form,input,td,div,span)
+    i++;
+  }
+  
+  for(i=0; i<clone.getElementsByTagName("input").length; i++){
+    clone.getElementsByTagName("input")[i].setAttribute("disabled", "disabled");
+  }
+  
+  // Adjust positions
+  clone.style.left=object.offsetLeft+"px";
+  clone.style.top=object.offsetTop+"px";
+ 
+  root.appendChild(clone);  // add the clone to the document tree
+  
+  var closebtn = document.createElement("div");
+  closebtn.innerHTML="X";
+  closebtn.setAttribute("unselectable", "on");
+  closebtn.className="closebtn";
+    
+  closebtn.onclick = function() { deleteMini(clone,root) };
+  
+  clone.appendChild(closebtn);
+  return clone;
+}
+// ]]>
+</script>
+
+
+</head>
+
+<body onload="showBoundaries(); showPreview(); randomPosition(); pokemonID(); showStats(); if(typeof(window.innerHeight)!=&#39;undefined&#39;){resize();}">
+<div id="oAreaSize" style="position:fixed; left:0px; top:0px; z-index:33; display:none">H:860, W:991</div>
+<div id="wheel" style="position: absolute; left: 0px; top: 0px; width: 991px; height: 860px; overflow: hidden; background-color: rgb(210, 227, 241);" onmouseover="if(window.devicePixelRatio){ clearTimeout(shytimer); shytimer=setTimeout(function(){document.getElementById(&#39;shylabel&#39;).style.opacity=&#39;0.01&#39;; document.getElementById(&#39;shydiv&#39;).style.marginTop=&#39;-1.7em&#39;; document.getElementById(&#39;shyhandle&#39;).style.opacity=&#39;1.0&#39;;},500); }"><!-- Empty layer to correct mousewheel scroll bug --></div>
+
+<div class="xsnazzy dragAny winframe" id="winframe" style="position: absolute; left: 30px; top: 10px; z-index:1">
+  <div style="cursor:move">
+    <b class="xtop">
+     <b class="xb1"></b>
+     <b class="xb2 color_a"></b>
+     <b class="xb3 color_a"></b>
+     <b class="xb4 color_a"></b>
+     <b class="xboxcontent color_a" style="display:block;height:10px;color:#444" unselectable="on"></b>
+     <b class="xboxcontent color_b" style="display:block;height:12px;color:#444" unselectable="on"></b>
+     <b class="xb5"></b>
+    </b> 
+  </div>
+          
+<div class="xboxcontent">
+  <b class="xtitle" style="cursor:move" unselectable="on">Spinda Painter 1.3<span style="font-size:0.7em; vertical-align:text-top" unselectable="on">.2</span></b>
+  <div class="dragRoot">
+
+<table width="260" border="0" cellpadding="0" cellspacing="0" align="center" style="text-align:center; width:260px">
+  <tbody><tr>
+    <td width="260" height="315" align="center" style="text-align:center; width:260px; height:315px">
+        <div id="spinda" class="spinda" style="position: absolute; left: 20px; top: 40px; width: 260px; height: 295px; overflow: visible; z-index: 2"> 
+          <img border="0" src="./Spinda Painter 1.3.2_files/Spinda_base.png" width="260" height="295" alt=""> 
+        </div>
+    </td>
+  </tr>
+</tbody></table>
+
+<div id="face" class="face" style="position: absolute; left: 20px; top: 40px; overflow: visible; visibility: visible; z-index: 3;">  
+  <img border="0" src="./Spinda Painter 1.3.2_files/Spinda_clean.gif" width="260" height="215" alt="">
+</div>
+
+<div id="boundaries" class="boundaries" style="position: absolute; left: 20px; top: 40px; width: 259px; height: 214px; overflow: visible; visibility: visible; z-index: 31;"></div>
+
+<div id="canvas1" class="canvas1" style="position: absolute; left: 19px; top: 39px; width: 136px; height: 136px; border-width: 0px; border-style: none; z-index: 5; visibility: hidden;"></div> 
+<div style="position: absolute; left: 20px; top: 40px; width: 1px; height: 1px; overflow: visible; z-index: 8">
+  <div id="spot1" class="dragSpot" style="position: relative; left: 30px; top: 60px; width: 60px; height: 60px; overflow: hidden; z-index: 13; opacity: 1;">
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 25px 0px 20px; background-position: -50px -60px;"></b>
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 15px 0px 10px; background-position: -40px -65px;"></b>
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 10px 0px 5px; background-position: -35px -70px;"></b>
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 5px; background-position: -35px -75px;"></b>
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 5px 0px 0px; background-position: -30px -80px;"></b>
+    <b style="font-size: 1px; display: block; height: 15px; overflow: hidden; margin: 0px; background-position: -30px -85px;"></b>
+    <b style="font-size: 1px; display: block; height: 10px; overflow: hidden; margin: 0px 5px; background-position: -35px -100px;"></b>
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 10px; background-position: -40px -110px;"></b>
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 15px 0px 20px; background-position: -50px -115px;"></b>
+  </div>
+</div>
+
+<div id="canvas2" class="canvas2" style="position: absolute; left: 139px; top: 44px; width: 141px; height: 141px; border-width: 0px; border-style: none; z-index: 5; visibility: hidden;"></div>
+<div style="position: absolute; left: 140px; top: 45px; width: 1px; height: 1px; overflow: visible; z-index: 6"> 
+  <div style="position: relative; left: 0px; top: 0px; width: 1px; height: 1px; overflow: visible; z-index: 8">
+    <div id="spot2" class="dragSpot" style="position: relative; left: 5px; top: 35px; width: 65px; height: 65px; overflow: hidden; z-index: 13; opacity: 1;">
+      <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 20px 0px 25px; background-position: -150px -40px;"></b>
+      <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 15px; background-position: -140px -45px;"></b>
+      <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 10px; background-position: -135px -50px;"></b>
+      <b style="font-size: 1px; display: block; height: 10px; overflow: hidden; margin: 0px 5px; background-position: -130px -55px;"></b>
+      <b style="font-size: 1px; display: block; height: 15px; overflow: hidden; margin: 0px; background-position: -125px -65px;"></b>
+      <b style="font-size: 1px; display: block; height: 10px; overflow: hidden; margin: 0px 5px; background-position: -130px -80px;"></b>
+      <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 10px; background-position: -135px -90px;"></b>
+      <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 10px 0px 15px; background-position: -140px -95px;"></b>
+      <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 25px; background-position: -150px -100px;"></b>  
+    </div>
+  </div>
+</div>
+
+<div id="canvas3" class="canvas3" style="position: absolute; left: 49px; top: 129px; width: 111px; height: 121px; border-width: 0px; border-style: none; z-index: 5; visibility: hidden;"></div>
+<div style="position: absolute; left: 50px; top: 130px; width: 1px; height: 1px; overflow: visible; z-index: 7">
+  <div id="spot3" class="dragSpot" style="position: relative; left: 25px; top: 20px; width: 35px; height: 45px; overflow: hidden; z-index: 13; opacity: 1;">
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 10px; background-position: -65px -110px;"></b>
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 5px; background-position: -60px -115px;"></b>
+    <b style="font-size: 1px; display: block; height: 25px; overflow: hidden; margin: 0px; background-position: -55px -120px;"></b>
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 5px; background-position: -60px -145px;"></b>
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 10px; background-position: -65px -150px;"></b>  
+  </div>
+</div>
+
+<div id="canvas4" class="canvas4" style="position: absolute; left: 109px; top: 134px; width: 116px; height: 121px; border-width: 0px; border-style: none; z-index: 5; visibility: hidden;"></div>
+<div style="position: absolute; left: 110px; top: 135px; width: 1px; height: 1px; overflow: visible; z-index: 5">
+  <div style="position: relative; left: 0px; top: 0px; width: 1px; height: 1px; overflow: visible; z-index: 7">
+    <div id="spot4" class="dragSpot" style="position: relative; left: 60px; top: 75px; width: 40px; height: 45px; overflow: hidden; z-index: 13; opacity: 1;">
+      <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 10px; background-position: -160px -170px;"></b>
+      <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 5px; background-position: -155px -175px;"></b>
+      <b style="font-size: 1px; display: block; height: 25px; overflow: hidden; margin: 0px; background-position: -150px -180px;"></b>
+      <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 5px; background-position: -155px -205px;"></b>
+      <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px 10px; background-position: -160px -210px;"></b>  
+    </div>
+  </div>
+</div>
+
+<div id="mask" class="mask" style="position: absolute; left: 20px; top: 40px; width: 260px; height: 295px; overflow: visible; visibility: visible; z-index: 30;"> 
+  <img border="0" src="./Spinda Painter 1.3.2_files/Spinda_mask.gif" width="260" height="295" alt="">
+</div>
+
+
+<form action="https://gatorshark.webs.com/Spinda%20Painter.htm#" method="post" name="SpindaForm" id="SpindaForm" onsubmit="return false">
+<table width="298" border="0" cellpadding="0" cellspacing="0" style="width:298px">
+<tbody><tr>
+  <th align="left" style="text-align:left; padding-left: 20px; text-decoration:underline; white-space:nowrap" nowrap="nowrap">    
+    <span>Personality Value</span>
+  </th>
+  <td align="right" style="text-align:right">
+    <p align="right" style="text-align:right; padding-right: 20px">input / output</p>
+  </td>
+</tr>
+<tr>
+  <td rowspan="2" align="center" valign="middle" style="text-align:center; vertical-align:middle">    
+    <label style="padding: 0 0 0 8px"><input type="button" value="Random" name="Random" onclick="randomPosition()"></label>
+  </td>
+  <td align="right" style="text-align:right">
+    <label style="padding: 0 18px 0 0; white-space:nowrap">Hex: <input type="text" name="coordinate_hex" id="coordinate_hex" size="10" maxlength="8" style="color: #FF0000; width:7em" onkeydown="EnterKeyBlur(event,this)" onchange="positionSpots(this.value,16)"></label>
+  </td>
+</tr>
+<tr>
+  <td rowspan="1" align="right" style="text-align:right; padding-top: 4px">
+    <label style="padding: 0 18px 0 0; white-space:nowrap">Dec: <input type="text" name="coordinate_dec" id="coordinate_dec" size="10" maxlength="10" style="width:7em" onkeydown="EnterKeyBlur(event,this)" onchange="positionSpots(this.value)"></label>
+  </td>
+</tr>
+<tr>
+  <td height="5"></td>
+  <td height="5"></td>
+</tr>
+<tr>
+  <td id="viewsOptions" class="viewsOptions" colspan="2" align="center" style="text-align:center; padding-top:2px">
+    <label>View spot boundaries? <input type="checkbox" name="Bound" value="0" onclick="showBoundaries()"></label><br>
+    <label>View normal-size preview? <input type="checkbox" name="Preview" value="0" onclick="showPreview()" checked="checked"></label><br>
+    <label>View stats and shiny calculation? <input type="checkbox" name="Stats" value="0" onclick="showStats()" checked="checked"></label><br>
+  </td>
+</tr>
+</tbody></table>
+</form>
+
+  <b class="xfix"></b>
+</div></div>
+  <b class="xbottom">
+   <b class="xb4"></b>
+   <b class="xb3"></b>
+   <b class="xb2"></b>
+   <b class="xb1"></b>
+  </b>
+<div id="footer" style="position:relative; height:0px; font-size:1px; overflow:hidden"></div>  
+
+</div>
+
+
+
+<!-- Begin Mini-Spinda -->
+<div id="miniframe" class="xsnazzy dragAny miniframe" style="position: absolute; left: 400px; top: 132px; width: 72px; display: block; z-index: 32;">
+  <div style="cursor:move">
+    <b class="xtop">
+     <b class="xb1"></b>
+     <b class="xb2 color_a" unselectable="on"></b>
+     <b class="xb3 color_a" unselectable="on"></b>
+     <b class="xb4 color_a" unselectable="on"></b>
+     <b class="xboxcontent color_a" style="display:block;height:1px;color:#444" unselectable="on"></b>   
+     <b class="xboxcontent color_b" style="display:block;height:5px;color:#444" unselectable="on"></b>
+     <b class="xb5"></b>
+    </b>  
+  </div>
+  <div class="xboxcontent xfix" style="height: 62px">  
+
+<div id="mini_face" style="position: absolute; left: 10px; top: 13px; overflow: visible; visibility: visible; z-index: 33">  
+  <img border="0" src="./Spinda Painter 1.3.2_files/Spinda_clean_Real.gif" width="52" height="43" alt="">
+</div>
+
+<div id="mini_canvas1" style="position: absolute; left: 10px; top: 13px; width: 1px; height: 1px; overflow: visible; z-index: 37">
+  <div id="mini_spot1" class="viewSpot" style="position: relative; left: 6px; top: 12px; width: 12px; height: 12px; overflow: hidden; z-index: 40;">
+    <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 5px 0px 4px; background-position: -10px -12px;"></b>
+    <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 3px 0px 2px; background-position: -8px -13px;"></b>
+    <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 2px 0px 1px; background-position: -7px -14px;"></b>
+    <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 1px; background-position: -7px -15px;"></b>
+    <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 1px 0px 0px; background-position: -6px -16px;"></b>
+    <b style="font-size: 1px; display: block; height: 3px; overflow: hidden; margin: 0px; background-position: -6px -17px;"></b>
+    <b style="font-size: 1px; display: block; height: 2px; overflow: hidden; margin: 0px 1px; background-position: -7px -20px;"></b>
+    <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 2px; background-position: -8px -22px;"></b>
+    <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 3px 0px 4px; background-position: -10px -23px;"></b>
+  </div>
+</div>
+
+<div id="mini_canvas2" style="position: absolute; left: 34px; top: 14px; width: 1px; height: 1px; overflow: visible; z-index: 35"> 
+  <div style="position: relative; left: 0px; top: 0px; width: 1px; height: 1px; overflow: visible; z-index: 5">
+    <div id="mini_spot2" class="viewSpot" style="position: relative; left: 1px; top: 7px; width: 13px; height: 13px; overflow: hidden; z-index: 40;">
+      <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 4px 0px 5px; background-position: -30px -8px;"></b>
+      <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 3px; background-position: -28px -9px;"></b>
+      <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 2px; background-position: -27px -10px;"></b>
+      <b style="font-size: 1px; display: block; height: 2px; overflow: hidden; margin: 0px 1px; background-position: -26px -11px;"></b>
+      <b style="font-size: 1px; display: block; height: 3px; overflow: hidden; margin: 0px; background-position: -25px -13px;"></b>
+      <b style="font-size: 1px; display: block; height: 2px; overflow: hidden; margin: 0px 1px; background-position: -26px -16px;"></b>
+      <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 2px; background-position: -27px -18px;"></b>
+      <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 2px 0px 3px; background-position: -28px -19px;"></b>
+      <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 5px; background-position: -30px -20px;"></b>  
+    </div>
+  </div>
+</div>
+
+<div id="mini_canvas3" style="position: absolute; left: 16px; top: 31px; width: 1px; height: 1px; overflow: visible; z-index: 36">
+  <div id="mini_spot3" class="viewSpot" style="position: relative; left: 5px; top: 4px; width: 7px; height: 9px; overflow: hidden; z-index: 40;">
+    <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 2px; background-position: -13px -22px;"></b>
+    <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 1px; background-position: -12px -23px;"></b>
+    <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px; background-position: -11px -24px;"></b>
+    <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 1px; background-position: -12px -29px;"></b>
+    <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 2px; background-position: -13px -30px;"></b>  
+  </div>
+</div>
+
+<div id="mini_canvas4" style="position: absolute; left: 28px; top: 32px; width: 1px; height: 1px; overflow: visible; z-index: 34">
+  <div style="position: relative; left: 0; top: 0; width: 1px; height: 1px; overflow: visible; z-index: 4">
+    <div id="mini_spot4" class="viewSpot" style="position: relative; left: 12px; top: 15px; width: 8px; height: 9px; overflow: hidden; z-index: 40;">
+      <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 2px; background-position: -32px -34px;"></b>
+      <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 1px; background-position: -31px -35px;"></b>
+      <b style="font-size: 1px; display: block; height: 5px; overflow: hidden; margin: 0px; background-position: -30px -36px;"></b>
+      <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 1px; background-position: -31px -41px;"></b>
+      <b style="font-size: 1px; display: block; height: 1px; overflow: hidden; margin: 0px 2px; background-position: -32px -42px;"></b>  
+    </div>
+  </div>
+</div>
+
+<div id="mini_mask" style="position: absolute; left: 10px; top: 13px; width: 52px; height: 59px; overflow: visible; visibility: visible; z-index: 50"> 
+  <img border="0" src="./Spinda Painter 1.3.2_files/Spinda_mask_Real.gif" width="52" height="59" alt="">
+</div>
+
+<div id="mini_shadow" class="mini_shadow" style="position: absolute; left: 19px; top: 64px; width: 34px; height: 9px; overflow: visible; visibility: visible; z-index: 50"> 
+  <img border="0" src="./Spinda Painter 1.3.2_files/Shadow_o.gif" width="34" height="9" alt="">
+</div>
+
+<div id="mini_pid" class="mini_pid" unselectable="on" style="transform-origin: right top; transform: scale(0.661538, 0.661538);">FC4571C6</div>
+
+</div>
+  <b class="xbottom">
+   <b class="xb4"></b>
+   <b class="xb3"></b>
+   <b class="xb2"></b>
+   <b class="xb1"></b>
+  </b>
+
+</div>
+<!-- End Mini-Spinda -->
+
+
+
+<div id="statsframe" class="xsnazzy dragAny statsframe" style="position: absolute; left: 400px; top: 290px; display: block; z-index: 30;">
+  <div style="cursor:move">
+    <b class="xtop">
+     <b class="xb1"></b>
+     <b class="xb2 color_a"></b>
+     <b class="xb3 color_a"></b>
+     <b class="xb4 color_a"></b>
+     <b class="xboxcontent color_a" style="display:block;height:1px;color:#444"></b>   
+     <b class="xboxcontent color_b" style="display:block;height:5px;color:#444"></b>
+     <b class="xb5"></b>
+    </b>  
+  </div>
+  <div class="xboxcontent dragRoot">  
+
+<form action="https://gatorshark.webs.com/Spinda%20Painter.htm#" method="post" name="SpindaStatsForm" id="SpindaStatsForm" onsubmit="return false">
+<table border="0" cellpadding="0" cellspacing="0">
+  <tbody><tr>
+    <th colspan="3" align="left" style="text-align:left; padding-left: 18px; padding-top: 0.2em; padding-bottom:0.4em; text-decoration:underline; white-space:nowrap" nowrap="nowrap">    
+      <span>Spinda Stats</span>
+    </th>
+    <td><div id="stats_pid" class="stats_pid">FC4571C6</div></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="stats_col1" style="padding-left: 18px">
+      <div class="dragRoot" style="width:8.8em">
+        <span class="statslabel">Gender:</span>
+        <span id="gender" class="statsval">Male</span>
+      </div>
+    </td>
+    <td colspan="2" class="stats_col2" style="padding-left: 18px">
+      <div class="dragRoot" style="width:8em">
+        <span class="statslabel">Nature:</span>
+        <span id="nature" class="statsval">Quiet</span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="stats_col1" style="padding-left: 18px">
+      <div class="dragRoot" style="width:8.8em">
+        <span class="statslabel">Ability:</span>
+        <span id="ability" class="statsval" style="cursor:help" onclick="alert(&quot;Spinda only has the ability \&quot;Own Tempo\&quot; in Generation III. \r\n\r\nHowever, it is possible to give all Spindas [in your game only] other first and second abilities by using programs, such as \&quot;Pokemon Ability Coder\&quot;.&quot;)" title="Own Tempo">First</span>
+      </div>
+    </td>
+    
+    <td colspan="2" class="stats_col2" style="padding-left: 18px">
+      <div id="shinyval" class="dragRoot" style="width:8em; display:none">
+        <span title="Is shiny if less than 8" style="cursor:help" onclick="alert(&#39;Spinda will be shiny if this value is less than 8, provided of course the Spinda belongs to a trainer whose ID\&#39;s match those given here.&#39;)">
+          <span class="statslabel">Rarity:</span>
+          <span id="shiny" class="statsval">&nbsp;</span>
+        </span>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="4" style="height:3px; line-height:1px; font-size:1px">
+      <div style="margin:8px 18px; border-top: 3px dashed #3878C5; height:3px; overflow:hidden"></div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="3" style="padding-left:18px; padding-top:0; text-align:left" align="left" nowrap="nowrap">
+      <div class="dragRoot">
+        <label><span style="display:block; float:left; padding:0.3em 0 0.2em 0; width:4.6em; white-space:nowrap">Trainer ID:</span> <input type="text" id="trainer_id" name="trainer_id" maxlength="6" size="6" style="display:block; float:left; width:5em; font-size:0.82em; padding:0 0 0.2em 0; margin:0.2em 0 0.1em 0" onkeydown="EnterKeyBlur(event,this)" onchange="calculateStats()"></label>
+      </div>
+    </td>
+    <td rowspan="2" align="right" valign="middle" style="padding-right:18px; padding-top:0; text-align:right;  vertical-align:middle">
+      <div class="shinybanner" id="shinybanner" style="margin-left:auto"><div onclick="if(this.parentNode.getAttribute(&#39;id&#39;)==&#39;shinybanner&#39;){ if(this.innerHTML==&#39;N/A&#39;){ if(document.getElementById(&#39;mask&#39;).getElementsByTagName(&#39;img&#39;)[0].src.indexOf(&#39;Spinda_mask_S&#39;)&gt;=0){ shinyPreview(0); shinyWorking(0); }else{ shinyPreview(1); shinyWorking(1);} }else{ document.getElementById(&#39;shinyval&#39;).style.display=(document.getElementById(&#39;shinyval&#39;).style.display==&#39;none&#39;) ? &#39;block&#39;:&#39;none&#39;;} }" unselectable="on">N/A</div><span class="stamp" style="display:none;" onclick="this.parentNode.getElementsByTagName(&#39;div&#39;)[0].onclick()" unselectable="on"></span></div>
+    </td>
+  </tr>
+  <tr>
+    <td rowspan="1" colspan="3" style="padding-left:18px; padding-top:0; text-align:left" align="left" nowrap="nowrap">
+      <div class="dragRoot">
+        <label><span style="display:block; float:left; padding:0.3em 0 0.2em 0; width:4.6em; white-space:nowrap">Secret ID:</span> <input type="text" id="secret_id" name="secret_id" maxlength="6" size="6" style="display:block; float:left; width:5em; font-size:0.82em; padding:0 0 0.2em 0; margin:0.2em 0 0.1em 0" onkeydown="EnterKeyBlur(event,this)" onchange="calculateStats()"></label>
+      </div>
+    </td>
+  </tr>
+  <tr>
+  <!--<td rowspan="1" colspan="4" style="text-align:center; padding:0px; overflow:hidden"><div id="shydiv" style="padding:0.4em 18px 0 18px; font-size:0.9em; display:none"><label>Display shiny sprite when shiny? <input type="checkbox" name="Shy" value="0" onclick="seeShiny()" checked="checked"></label></div></td>-->
+    <td rowspan="1" colspan="4" style="text-align:center; padding-top:4px; padding-bottom:3px; overflow:hidden;">
+        <div id="shydiv" class="css3_animation" style="height:1.8em; padding:0.4em 18px 0 18px; font-size:1em; margin-top:-1.7em; margin-bottom:2px;" onmouseover="if(window.devicePixelRatio){ if(this.getAttribute(&#39;id&#39;)==&#39;shydiv&#39;){clearTimeout(shytimer); document.getElementById(&#39;shylabel&#39;).style.opacity=&#39;1.0&#39;; this.style.marginTop=&#39;0em&#39;; document.getElementById(&#39;shyhandle&#39;).style.opacity=&#39;0.01&#39;;} }" onmouseout="if(window.devicePixelRatio){ if(this.getAttribute(&#39;id&#39;)==&#39;shydiv&#39;){shytimer=setTimeout(function(){ document.getElementById(&#39;shylabel&#39;).style.opacity=&#39;0.01&#39;; document.getElementById(&#39;shydiv&#39;).style.marginTop=&#39;-1.7em&#39;;  document.getElementById(&#39;shyhandle&#39;).style.opacity=&#39;1.0&#39;;},1200);} }">
+          <label id="shylabel" class="css3_animation" style="opacity:0.01;">Display shiny sprite when shiny? <input type="checkbox" class="dragRoot" name="Shy" value="0" onclick="seeShiny()" checked="checked"></label>
+          <div id="shyhandle" class="dragRoot" style="height: 3px; line-height: 1px; font-size: 2px; width: 13%; padding-bottom: 3px; margin: 2px auto 0px; background-color: rgb(238, 238, 238); border-top: 1px solid rgb(153, 153, 153); border-left: 1px solid rgb(170, 170, 170); overflow: hidden; opacity: 1;"><!-- vspace for handle --></div>
+        </div>
+        <script type="text/javascript">if(!window.devicePixelRatio){document.getElementById("shydiv").style.display="none";}</script>
+    </td>
+  </tr>
+</tbody></table>
+</form>
+
+  </div>
+  <b class="xbottom">
+   <b class="xb4"></b>
+   <b class="xb3"></b>
+   <b class="xb2"></b>
+   <b class="xb1"></b>
+  </b>
+</div>
+
+
+<div id="mini_font" style="position:absolute; visibility:hidden; speak:none; right:10px; font-size:8px; font-family: Verdana, Arial, monospace; text-align:right"><span>Mini</span></div>
+
+
+<!-- Freewebs Sticker --> 
+<div id="freewebsSticker" class="noClone" style="bottom:10px; right:10px; position:fixed">
+  <script type="text/javascript">
+// <![CDATA[
+function loadScript(url, parent, callback){
+  if(parent.nodeType !== 1){parent = document.body;}
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = url;
+  if(typeof(callback) == 'function'){
+    script.onreadystatechange = callback;
+    script.onload = callback;
+  }
+  parent.appendChild(script);
+}
+
+if(window.location.hostname.indexOf("webs.com")>=0){
+  loadScript("http://images.freewebs.com/JS/Freebar/btn_roundblue.js", document.getElementById("freewebsSticker"));
+}else{
+  document.getElementById("freewebsSticker").style.display = "none";
+}
+// ]]>
+  </script><script type="text/javascript" src="./Spinda Painter 1.3.2_files/btn_roundblue.js.下载"></script>
+  <!-- <script type="text/javascript" src="http://images.freewebs.com/JS/Freebar/btn_roundblue.js"></script> -->
+</div>
+<!-- End of Freewebs Sticker --> 
+
+
+<script type="text/javascript">
+// <![CDATA[
+
+//$$ var orightmlheight=document.body.scrollHeight;
+var orightmlheight=document.getElementById("footer").offsetTop+12;  // global
+var scrolltracksize=getScrollbarSize();  // global
+var shytimer=setTimeout('null',1);
+
+// Compensate for large minimum font size choice
+if(document.getElementById("mini_font") && document.getElementById("mini_font").offsetHeight){  
+  var MinimumFontSize = parseInt(document.getElementById("mini_font").offsetHeight)-2;
+  //_alert(MinimumFontSize);
+  var testEl = document.createElement("div");
+  if(MinimumFontSize > 8){
+    // Testing SCALING TRANSFORMATION:
+    if(testEl.style.OTransform!=undefined || testEl.style.WebkitTransform!=undefined || testEl.style.MozTransform!=undefined){
+      delete testEl;
+      var reduceby = 8.6 / MinimumFontSize;
+      
+      document.getElementById("mini_pid").style.OTransformOrigin="right top";
+      document.getElementById("mini_pid").style.WebkitTransformOrigin="right top";
+      document.getElementById("mini_pid").style.MozTransformOrigin="right top";
+      
+      document.getElementById("mini_pid").style.OTransform="scale("+reduceby+", "+reduceby+")";
+      document.getElementById("mini_pid").style.WebkitTransform="scale("+reduceby/1+", "+reduceby/1+")";
+      document.getElementById("mini_pid").style.MozTransform="scale("+reduceby+", "+reduceby+")";
+      //_document.getElementById("mini_pid").style.top = 1-(MinimumFontSize/2-4) +"px";
+      //_document.getElementById("mini_pid").style.left = 1-(MinimumFontSize/4) +"px";
+    }else{
+      delete testEl;
+      //_alert("Notice!! Your minimum font size is set too high. \r\n\r\nThe close button and text on cloned Preview \rwindows uses a font size of 8px, thus they will probably look off.");
+      document.getElementById("mini_pid").style.top = "11px";
+      document.getElementById("mini_pid").style.right = "4px";
+      document.getElementById("mini_pid").style.cursor = "default";
+      document.getElementById("mini_pid").style.color = "#FF0000";
+      document.getElementById("mini_pid").style.zIndex = "51";
+    }
+  }
+}
+// ]]>
+</script> 
+<script>(function(){var js = "window['__CF$cv$params']={r:'79639f4fbb5d24f5',m:'XSin_Au3j_R3cWx3ywwPocCZgzIxGpreROp_WFhS_Io-1675851517-0-AXfi4FrwcutrCM6Ve7AuBI6phujzL26Mg+uY0kLFJrxuWcqEGxqeYLmI11vxAJ2/tMysmiivMhbDEO9SCiH+vZFsI0ot5oTfxNiF3OzWJoVtaL67vWwBtTyeSQxxEVGPe+wjv8Cm+RHGmHL1RcC7ZoU=',s:[0xbd00c284b1,0x0f0681b6b5],u:'/cdn-cgi/challenge-platform/h/g'};var now=Date.now()/1000,offset=14400,ts=''+(Math.floor(now)-Math.floor(now%offset)),_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/h/g/scripts/alpha/invisible.js?ts='+ts,document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: none; visibility: hidden;" src="./Spinda Painter 1.3.2_files/saved_resource.html"></iframe>
+
+</body></html>
