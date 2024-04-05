@@ -1,0 +1,12 @@
+- name: 主页
+  link: /
+- name: 文章
+  link: /page/blog.html
+- name: 工具
+  link: /page/tools.html
+- name: 作者
+  link: /page/staff.html
+- name: 友情链接
+  link: /page/friends.html
+- name: 关于
+  link: /page/about.html
