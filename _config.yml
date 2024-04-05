@@ -1,3 +1,5 @@
+baseurl: ""
+
 collections:
   authors:
     output: true
