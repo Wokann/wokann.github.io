@@ -4,11 +4,12 @@ layout: default
 <h1>{{ page.title }}</h1>
 
 <p>
-  {{ page.date | date: "%Y-%m-%d" }}
   {% assign author = site.authors | where: 'short_name', page.author | first %}
   {% if author %}
-    - <a href="{{ author.url }}">{{ author.name }}</a>
-  {% endif %}
+  作者：<a href="{{ author.url }}">{{ author.name }}</a>
+  {% endif %}<br>
+  创建日期：{{ page.date | date: "%Y-%m-%d" }}<br>
+  修改日期：{{ page.last_modified_at | date: "%Y-%m-%d" }}
 </p>
 
 {{ content }}
