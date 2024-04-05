@@ -6,3 +6,17 @@
   color: #999; /* 淡灰色 */
   font-size: 0.8em; /* 相对于父元素的相对字号 */
 }
+
+/* 设置导航栏的宽度和背景颜色 */
+nav {
+  width: 100%; /* 设置导航栏宽度为100% */
+  background-color: #484758; /* 设置背景颜色为深灰色 */
+  padding: 20px; /* 设置内边距 */
+}
+
+/* 设置导航链接的样式 */
+nav a {
+  color: white; /* 设置链接文字颜色为白色 */
+  text-decoration: none; /* 去除链接的下划线 */
+  margin-right:20px; /* 设置链接之间的右边距 */
+}
