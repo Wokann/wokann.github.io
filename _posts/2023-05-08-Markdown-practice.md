@@ -2,6 +2,7 @@
 title: Markdown语法格式练习
 layout: post
 author: wokann
+excerpt: "markdown练习"
 ---
 本贴用于练习学习markdown的各种写法格式。
 
