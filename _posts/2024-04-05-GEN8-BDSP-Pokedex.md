@@ -11,8 +11,8 @@ excerpt: "BDSP全图鉴记录"
 ## 阶段一-神奥图鉴部分
 一周目内，BD及SP同进度互补情况下，可以完成神奥图鉴**150+1(幻兽)**。<br>
 <figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/01-FirstRunWithoutNationDex/Sinnho-Dex-complete.jpg" alt="（图片）神奥图鉴全获得。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 神奥图鉴全获得 </figcaption> </figure>
-<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/01-FirstRunWithoutNationDex/Diploma-Sinnoh-Wokan.jpg" alt="（图片）卧看微尘的神奥全图鉴奖状。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 卧看微尘（明亮珍珠）的神奥全图鉴奖状 </figcaption> </figure>
-<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/01-FirstRunWithoutNationDex/Diploma-Sinnoh-Lena.jpg" alt="（图片）微若星尘的神奥全图鉴奖状。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 微若星尘（晶灿钻石）的神奥全图鉴奖状 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/01-FirstRunWithoutNationDex/Diploma-Sinnoh-Wokan.jpg" alt="（图片）卧看微尘（明亮珍珠）的神奥全图鉴奖状。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 卧看微尘（明亮珍珠）的神奥全图鉴奖状 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/01-FirstRunWithoutNationDex/Diploma-Sinnoh-Lena.jpg" alt="（图片）微若星尘（晶灿钻石）的神奥全图鉴奖状。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 微若星尘（晶灿钻石）的神奥全图鉴奖状 </figcaption> </figure>
 
 这里列出部分获取方式需要注意的宝可梦（以下标注**独占**的类别，仅指一周目未获得全国图鉴前的唯一获得途径）：
 
@@ -180,17 +180,7 @@ excerpt: "BDSP全图鉴记录"
 <hr>
 
 # 阶段三（二周目，升级全国图鉴后）
-阶段三的收集还在进行中，以下是提前规划好的分类。<br>
-二周目，升级全国图鉴后，还可以再获得**53+3(幻兽)**个宝可梦：<br>
-* **幻之宝可梦(3)**：<br>
-　达克莱伊（网络配信会员卡，新月岛定点）、<br>
-　谢米（网络配信大木的信，花之乐园定点）、<br>
-　阿尔宙斯（宝可梦传说阿尔宙斯内捕获阿尔宙斯后，bdsp内存档联动获得天界之笛，枪之柱定点）
-* **传说的宝可梦(4)**：<br>
-　席多蓝恩（归途洞窟定点）、<br>
-　雷吉奇卡斯（雪锋神殿定点，雷吉洛克、雷吉艾斯、雷吉斯奇鲁同行）、<br>
-　骑拉帝纳（归途洞窟定点）、<br>
-　克雷色利亚（满月岛相遇后游走）<br>
+二周目，升级全国图鉴后，还可以再获得**53+3(幻兽)**(/**51+5(幻兽)**)个宝可梦：<br>
 * **普通遇敌(6)**：<br>
 　烈雀（大嘴雀）（225、226号道路）、<br>
 　地鼠（三地鼠）（228号道路）、<br>
@@ -208,6 +198,7 @@ excerpt: "BDSP全图鉴记录"
 　超甲狂犀（护具：228号道路）、<br>
 　黑夜魔灵（灵界之布：229号道路）、<br>
 　天蝎王（锐利之牙：对战公园）
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/03-SecondRun/Nation-Box-21.jpg" alt="（图片）二周目升级全国图鉴后可获得的非神奥图鉴-01。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 二周目升级全国图鉴后可获得的非神奥图鉴-01 </figcaption> </figure>
 * **大量出现独占(16)**：<br>
 　波波（比比鸟、大比鸟）（229号道路）、<br>
 　土龙弟弟（208号道路）、<br>
@@ -217,6 +208,16 @@ excerpt: "BDSP全图鉴记录"
 　落雷兽（雷电兽）（山谷发电厂）、<br>
 　跳跳猪（噗噗猪）（214号道路）、<br>
 　晃晃斑（227号道路）
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/03-SecondRun/Nation-Box-22.jpg" alt="（图片）二周目升级全国图鉴后可获得的非神奥图鉴-02。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 二周目升级全国图鉴后可获得的非神奥图鉴-02 </figcaption> </figure>
+* **幻之宝可梦(3)**：<br>
+　达克莱伊（网络配信会员卡，新月岛定点）、<br>
+　谢米（网络配信大木的信，花之乐园定点）、<br>
+　阿尔宙斯（宝可梦传说阿尔宙斯内捕获阿尔宙斯后，bdsp内存档联动获得天界之笛，枪之柱定点）
+* **传说的宝可梦(4)**：<br>
+　席多蓝恩（归途洞窟定点）、<br>
+　雷吉奇卡斯（雪锋神殿定点，雷吉洛克、雷吉艾斯、雷吉斯奇鲁同行）、<br>
+　骑拉帝纳（归途洞窟定点）、<br>
+　克雷色利亚（满月岛相遇后游走）<br>
 * **玫瑰公园(17)**：<br>
 　***初始(3/17)***：<br>
 　雷吉洛克、雷吉艾斯、雷吉斯奇鲁（引导之厅：引导石板）<br>
@@ -232,18 +233,24 @@ excerpt: "BDSP全图鉴记录"
 　盖欧卡（大海之厅：大海之石板）、<br>
 　固拉多（大陆之厅：大陆之石板）、<br>
 　烈空坐（天空之厅：天空之石板）、<br>
-
-至阶段三，BDSP互补所能获得的所有宝可梦均已获得，总计可以获得**484+7(幻兽)**个宝可梦。<br>
-此时除幻兽外宝可梦**(484)**全部集齐，可以拿到奖状。
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/03-SecondRun/Nation-Box-23.jpg" alt="（图片）二周目升级全国图鉴后可获得的非神奥图鉴-03。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 二周目升级全国图鉴后可获得的非神奥图鉴-03 </figcaption> </figure>
+至阶段三，BDSP互补所能获得的所有宝可梦均已获得，总计可以获得**484+7(幻兽)**(/**482+9(幻兽)**)个宝可梦。<br>
+注：由于4代钻石珍珠白金时期，凤王洛奇亚还不存在纯游戏内的获得方式（指不走配信等渠道），故对于4代DPPt来说，凤王洛奇亚同3代一样也属于幻之宝可梦，即DPPt的全国图鉴集齐要求，也不包含凤王洛奇亚。<br>
+而BDSP同样继承了这一点（虽然玫瑰公园可以游戏内捕获凤王洛奇亚），即BDSP集齐除**11**只幻之宝可梦（梦幻、凤王、洛奇亚、时拉比、基拉祈、代欧奇希斯、霏欧纳、玛纳霏、达克莱伊、谢米、阿尔宙斯）外的**482**只宝可梦便能拿到奖状。<br>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/03-SecondRun/National-Dex-493.jpg" alt="（图片）BDSP互补获得的最多图鉴" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > BDSP互补获得的最多图鉴 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/03-SecondRun/TrainerCard-Wokan2.jpg" alt="（图片）卧看微尘（明亮珍珠）的二周目最多图鉴记录" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 卧看微尘（明亮珍珠）的二周目最多图鉴记录 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/03-SecondRun/TrainerCard-Lena2.jpg" alt="（图片）微若星尘（晶灿钻石）的二周目最多图鉴记录" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 微若星尘（晶灿钻石）的二周目最多图鉴记录 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/03-SecondRun/Diploma-Sinnoh-Wokan2.jpg" alt="（图片）卧看微尘（明亮珍珠）的全国图鉴全图鉴奖状。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 卧看微尘（明亮珍珠）的全国图鉴全图鉴奖状 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/03-SecondRun/Diploma-Sinnoh-Lena2.jpg" alt="（图片）微若星尘（晶灿钻石）的全国图鉴全图鉴奖状。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 微若星尘（晶灿钻石）的全国图鉴全图鉴奖状 </figcaption> </figure>
 <hr>
 
 # 阶段四（BDSP互补全收集后，外部联动补充）
-阶段三还在进行中，此处为提前规划好的获得方式。<br>
-BDSP最多可以获得**484+7(幻兽)**个宝可梦，<br>
+阶段四还在进行中，等待从前代传来宝可梦。<br>
+BDSP最多可以获得**484+7(幻兽)**(/**482+9(幻兽)**)个宝可梦，<br>
 仅剩下**2只（时拉比、代欧奇希斯）**无法在BDSP内获得，必须从外部Home联动传入。<br>
 完全合法无争议的来源（此处不计入GO和自制配信器等内容）：<br>
 
 * 时拉比：3代圆竞特典盘、2代vc水晶<br>
 * 代欧奇希斯：6代ORAS二周目捕获
 
-至阶段四，BDSP**全图鉴493**达成，总计可以获得**484+9(幻兽)**个宝可梦。
+至阶段四，BDSP**全图鉴493**达成，总计可以获得**484+9(幻兽)**(/**482+11(幻兽)**)个宝可梦。
