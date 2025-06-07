@@ -10,19 +10,19 @@
 
 	<body>
 		<h1>
-			3代幻之岛计算器 v1.3
-			<br/>GEN3 Mirage island calculator v1.3
+			3代幻之岛计算器 v1.4
+			<br/>GEN3 Mirage island calculator v1.4
 		</h1>
 		<hr/> <hr/> 
 
 		<p class="p"> 
-			　　• 图文攻略地址: <a href="https://tieba.baidu.com/p/7680216276?pn=2">百度贴吧</a><br/>
+			　　• 图文攻略地址: <a href="https://tieba.baidu.com/p/7680216276">百度贴吧</a><br/>
 			　　• 视频攻略地址:<br/>
-			　　• 单独演示视频地址: <a href="https://www.bilibili.com/video/BV1WP4y1n7CL?spm_id_from=333.999.0.0">B站</a>，
+			　　• 单独演示视频地址: <a href="https://www.bilibili.com/video/BV1WP4y1n7CL">B站</a>，
 				<a href="https://youtu.be/BLi7_YnWpbI">油管</a> <br/>
-			　　• Walkthrough(word) address: <a href="https://tieba.baidu.com/p/7680216276?pn=2">BaiduTieba</a><br/>
+			　　• Walkthrough(word) address: <a href="https://tieba.baidu.com/p/7680216276">BaiduTieba</a><br/>
 			　　• Walkthrough(video) address:  <br/>
-			　　• Separate operation record(video) address:  <a href="https://www.bilibili.com/video/BV1WP4y1n7CL?spm_id_from=333.999.0.0">Bilibili</a>，
+			　　• Separate operation record(video) address:  <a href="https://www.bilibili.com/video/BV1WP4y1n7CL">Bilibili</a>，
 			<a href="https://youtu.be/BLi7_YnWpbI">Youtube</a> <br/> 
 		</p>
 		<hr/> 
@@ -42,8 +42,18 @@
 			Stpe 1: Make sure you’re not in RTC glitch
 		<h2/>
 		<p class="p"> 
-			　　• 通过时间相关事件,如种树果,抽奖等,触发事件后保存,rtcread修改时间至后1天,对比能否再次触发,来判断是否处于RTC漏洞状态.<br/>
-			　　• Through time-based event such as berry, lottery. After lanuching event and saving, use rtcread to change rtc to next day. Then check whether you can lanuch event again or not to judge if you are in glitch.<br/> 
+			　　• 通过时间相关事件,如种树果,抽奖等,触发事件后保存,rtcread修改时间至后1天,对比能否再次触发,来判断是否处于RTC漏洞状态.以抽奖为例:<br/>
+			　　     1、前往水静百货大厦一楼前台右侧大姐姐，对话进行抽奖，并保存； <br/>
+			　　     2、关机，若RTC时间为2000年，则调整至2002/01/02（避免树果漏洞，无漏洞的版本卡带可不用如此操作）；若不是则向后加1天。 <br/>
+			　　     3、开机对话抽奖，若可以抽奖，则不处在漏洞期间；若不能抽奖，则处于漏洞期间，此时不要保存直接关机，将时间向后调（如2年），直到可以再次抽奖（无需特定时间，只要可以再次抽奖的时间均可），然后保存。 <br/>
+			　　     4、记下最终可以抽奖并保存后，对应的当前RTC时间。 <br/>
+			　　• Through time-based event such as berry, lottery. After lanuching event and saving, use rtcread to change rtc to next day. Then check whether you can lanuch event again or not to judge if you are in glitch. Using Lottery as example:<br/> 
+			　　     1. Go to the lottery counter (right side of the front desk on the first floor of Lilycove Department Store) and interact with the woman to draw a lottery ticket. Save the game afterward. <br/>
+			　　     2. Turn off the game. If the RTC (Real-Time Clock) time is set to the year 2000, adjust it to January 2, 2002 (this avoids the Berry glitch; skip this step if using a non-glitch cartridge). If not in 2000, simply advance the date by 1 day. <br/>
+			　　     3. Turn the game back on and try the lottery again. If you can draw a lottery ticket, you are not in a glitch state. If you cannot draw, you are in a glitch state. Turn off the game without save, adjust the time further (e.g., +2 years), and repeat until you can draw again (no specific date is required—just ensure the lottery works). Then, save the game.<br/>
+			　　     4. Record the RTC time when you successfully draw and then save the game. <br/>
+			<figure> <img src="{{ site.baseurl }}/../../../assets/images/Mirage_Island/7.1-1.png" style="max-width:100%; height:auto;"></figure>
+			<figure> <img src="{{ site.baseurl }}}/../../../assets/images/Mirage_Island/7.1-2.png" style="max-width:100%; height:auto;"></figure>
 		</p>
 		<hr/> 
 
@@ -52,8 +62,30 @@
 			Stpe 2: Get your Initial-RTC 
 		<h2/>
 		<p class="p"> 
-			　　• 前往暮水镇西南角房屋，与宝可梦发烧友俱乐部会长的弟弟对话。具体流程详见攻略说明。 <br/>
-			　　• Go to Southwest of Pacifidlog Town, talk with Pokemon fan's club chairman's younger brother. For more infomation, please see my walkthrough.<br/> 
+			　　• 前往暮水镇西南角房屋，与宝可梦发烧友俱乐部会长的弟弟对话。具体流程如下。 <br/>
+			　　     1、确保处于非漏洞状态。（可以通过种树抽奖后保存，再rtcread更改天数后进游戏对比的方式来判断）；<br/>
+			　　     2、与暮水镇绅士对话触发倒计时并保存，同时记录当前RTC（如2021/12/31）； <br/>
+			　　     3、关机修改RTC，进游戏与绅士对话，检查倒计时若为8，则处在初始RTC之前，若为正常增加的数值，则处在初始RTC之后； <br/>
+			　　     4、RTC调整的技巧：二分法，先筛选年、再筛选月、在筛选日。 <br>
+			　　     　　如存档对应RTC（2021/12/31），取2000-2021中间值2010，若倒计时为8，则年份范围为2010-2021。 <br/>
+			　　     　　不保存关机，反复二分法（最多调整7次），直到年的范围缩小到366天内； <br>
+			　　     　　再对月份进行二分法（最多调整4次），直到月的范围缩小到31天内； <br>
+			　　     　　在对日进行二分法（最多调整5次），直到选中的日期倒计时不为8，即是“初始RTC”，同时倒计时显示的天数，也正为存档内记录的“经过RTC”+7天。 <br>
+			　　     　　也就是通过二分法，最多16次，我们便可以定位初始RTC，无论它设置在了RTC总范围100年，多达36525天中的哪一天，都可以找到它。 <br>
+			　　• Go to Southwest of Pacifidlog Town, talk with Pokemon fan's club chairman's younger brother. For more infomation, please see below.<br/> 
+			　　     1. Ensure the game is in a non-glitched state. (Can be verified by planting berries or lottery draws and save after checking, then compare by adjusting RTC days via rtcread);<br/>
+			　　     2. Speak with the gentleman in Pacifidlog Town to activate the countdown and save, and recording current RTC (e.g. 2021/12/31); <br/>
+			　　     3. Power off, modify RTC, boot game and speak with the gentleman - if countdown shows 8, current RTC is before initial RTC; if countdown decreases normally, current RTC is after initial RTC; <br/>
+			　　     4. RTC adjustment technique: Binary search - first narrow down year, then month, then day. <br/>
+			　　     　　Example: For saved RTC (2021/12/31), take midpoint 2010. If countdown is 8, year range is 2010-2021. <br/>
+			　　     　　Power off without saving, repeat binary search (max 7 adjustments) until year range is within 366 days; <br/>
+			　　     　　Then perform binary search on month (max 4 adjustments) until month range is within 31 days; <br/>
+			　　     　　Finally perform binary search on day (max 5 adjustments) until selected date's countdown isn't 8, which is the "initial RTC". The displayed countdown days will equal the saved "elapsed RTC" + 7 days. <br/>
+			　　     　　Thus through binary search (max 16 attempts), we can locate initial RTC, regardless of where it's set within the 100-year RTC range (36,525 possible days). <br/>
+			<figure> <img src="{{ site.baseurl }}/../../../assets/images/Mirage_Island/6.1-1.png" style="max-width:100%; height:auto;"></figure>
+			<figure> <img src="{{ site.baseurl }}/../../../assets/images/Mirage_Island/6.1-2.png" style="max-width:100%; height:auto;"></figure>
+			<figure> <img src="{{ site.baseurl }}/../../../assets/images/Mirage_Island/6.1-3.png" style="max-width:100%; height:auto;"></figure>
+			<figure> <img src="{{ site.baseurl }}/../../../assets/images/Mirage_Island/6.1-4.png" style="max-width:100%; height:auto;"></figure>
 		</p>
 		<hr/> 
 
