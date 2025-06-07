@@ -199,6 +199,7 @@ excerpt: "BDSP全图鉴记录"
 　黑夜魔灵（灵界之布：229号道路）、<br>
 　天蝎王（锐利之牙：对战公园）
 <figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/03-SecondRun/Nation-Box-21.jpg" alt="（图片）二周目升级全国图鉴后可获得的非神奥图鉴-01。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 二周目升级全国图鉴后可获得的非神奥图鉴-01 </figcaption> </figure>
+
 * **大量出现独占(16)**：<br>
 　波波（比比鸟、大比鸟）（229号道路）、<br>
 　土龙弟弟（208号道路）、<br>
@@ -207,8 +208,10 @@ excerpt: "BDSP全图鉴记录"
 　朝北鼻（大朝北鼻）（206号道路）、<br>
 　落雷兽（雷电兽）（山谷发电厂）、<br>
 　跳跳猪（噗噗猪）（214号道路）、<br>
-　晃晃斑（227号道路）
+　晃晃斑（227号道路）<br>
+　**注：**大量出现可在该[网站](https://lincoln-lm.github.io/JS-Finder/Tools/BDSP-Daily-Event-Calendar/)通过1、2天内彩票计算得到的数据，以此计算后续每日的彩票号及大量出现的宝可梦。若触发时间惩罚等则需要重新进行计算，可以以此来刷新数据避免某些宝可梦要在很久后才出现，但也可能刷新后时间会更久。<br>
 <figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/03-SecondRun/Nation-Box-22.jpg" alt="（图片）二周目升级全国图鉴后可获得的非神奥图鉴-02。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 二周目升级全国图鉴后可获得的非神奥图鉴-02 </figcaption> </figure>
+
 * **玫瑰公园(17)**：<br>
 　***初始(3/17)***：<br>
 　雷吉洛克、雷吉艾斯、雷吉斯奇鲁（引导之厅：引导石板）<br>
@@ -234,6 +237,7 @@ excerpt: "BDSP全图鉴记录"
 　谢米（网络配信大木的信，花之乐园定点）、<br>
 　阿尔宙斯（宝可梦传说阿尔宙斯内捕获阿尔宙斯后，bdsp内存档联动获得天界之笛，枪之柱定点）
 <figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/03-SecondRun/Nation-Box-23.jpg" alt="（图片）二周目升级全国图鉴后可获得的非神奥图鉴-03。" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 二周目升级全国图鉴后可获得的非神奥图鉴-03 </figcaption> </figure>
+
 至阶段三，BDSP互补所能获得的所有宝可梦均已获得，总计可以获得**484+7(幻兽)**(/**482+9(幻兽)**)个宝可梦。<br>
 注：由于4代钻石珍珠白金时期，凤王洛奇亚还不存在纯游戏内的获得方式（指不走配信等渠道），故对于4代DPPt来说，凤王洛奇亚同3代一样也属于幻之宝可梦，即DPPt的全国图鉴集齐要求，也不包含凤王洛奇亚。<br>
 而BDSP同样继承了这一点（虽然玫瑰公园可以游戏内捕获凤王洛奇亚），即BDSP集齐除**11**只幻之宝可梦（梦幻、凤王、洛奇亚、时拉比、基拉祈、代欧奇希斯、霏欧纳、玛纳霏、达克莱伊、谢米、阿尔宙斯）外的**482**只宝可梦便能拿到奖状。<br>
@@ -252,5 +256,32 @@ BDSP最多可以获得**484+7(幻兽)**(/**482+9(幻兽)**)个宝可梦，<br>
 
 * 时拉比：3代圆竞特典盘、2代vc水晶<br>
 * 代欧奇希斯：6代ORAS二周目捕获
+
+此处使用vc水晶和or进行捕获。
+
+* **水晶的时拉比与欧米伽红宝石的代欧奇希斯**：<br>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3ds_gbcvc_celebi_1.jpg" alt="gbcvc内的时拉比_1" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > gbcvc内的时拉比_1 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3ds_gbcvc_celebi_2.jpg" alt="gbcvc内的时拉比_2" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > gbcvc内的时拉比_2 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3ds_or_deoxys_1.jpg" alt="or内的代欧奇希斯_1" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > or内的代欧奇希斯_1 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3ds_or_deoxys_2.jpg" alt="or内的代欧奇希斯_2" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > or内的代欧奇希斯_2 </figcaption> </figure>
+
+* **游戏转移至3DS Pokemon Bank**：<br>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3ds_bank_mover_celebi_1.jpg" alt="时拉比的转移_1" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 时拉比的转移_1 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3ds_bank_celebi_2.jpg" alt="时拉比的转移_2" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 时拉比的转移_2 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3ds_bank_deoxys_1.jpg" alt="代欧奇希斯的转移_1" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 代欧奇希斯的转移_1 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3ds_bank_deoxys_2.jpg" alt="代欧奇希斯的转移_2" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 代欧奇希斯的转移_2 </figcaption> </figure>
+
+* **3DS Pokemon Bank转移至NS Pokemon Home**：<br>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3dsbank_to_nshome_1.jpg" alt="转移至Home_1" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 转移至Home_1 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3dsbank_to_nshome_2.jpg" alt="转移至Home_2" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 转移至Home_2 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3dsbank_to_nshome_3.jpg" alt="转移至Home_3" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 转移至Home_3 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3dsbank_to_nshome_4.jpg" alt="转移至Home_4" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 转移至Home_4 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3dsbank_to_nshome_5.jpg" alt="转移至Home_5" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 转移至Home_5 </figcaption> </figure>
+
+* **NS Pokemon Home转移至NS Pokemon BDSP**：<br>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/3dsbank_to_nshome_6.jpg" alt="转移至BDSP_1" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 转移至BDSP_1 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/ns_bdsp_1.jpg" alt="转移至BDSP_2" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 转移至BDSP_2 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/TrainerCard-Wokan3.jpg" alt="（图片）卧看微尘（明亮珍珠）的493全图鉴记录" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 卧看微尘（明亮珍珠）的493全图鉴记录 </figcaption> </figure>
+<figure> <img src="{{ site.baseurl }}/assets/images/BDSP_pokedex/04-FromOtherGame/TrainerCard-Lena3.jpg" alt="（图片）微若星尘（晶灿钻石）的493全图鉴记录" style="max-width: 400px; max-height: 225px;"> <figcaption class="image-text" > 微若星尘（晶灿钻石）的493全图鉴记录 </figcaption> </figure>
 
 至阶段四，BDSP**全图鉴493**达成，总计可以获得**484+9(幻兽)**(/**482+11(幻兽)**)个宝可梦。
