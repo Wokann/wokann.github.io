@@ -12,4 +12,4 @@ title: 友情链接
 
 [xzonn](https://xzonn.top/)
 
-[SteveXMH]（https://stevexmh.net/）
+[SteveXMH](https://stevexmh.net/)
