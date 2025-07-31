@@ -10,8 +10,8 @@
 
 	<body>
 		<h1>
-			3代幻之岛计算器 v1.4
-			<br/>GEN3 Mirage island calculator v1.4
+			3代幻之岛计算器 v1.5
+			<br/>GEN3 Mirage island calculator v1.5
 		</h1>
 		<hr/> <hr/> 
 
@@ -61,6 +61,10 @@
 			第2步：推算初始RTC<br/>
 			Stpe 2: Get your Initial-RTC 
 		<h2/>
+		<h3>
+			方法一：暮水镇招式赠送者计数法<br/>
+			Method 1: Moves Sender Counts in Pacifidlog Town<br/>
+		<h3/>
 		<p class="p"> 
 			　　• 前往暮水镇西南角房屋，与宝可梦发烧友俱乐部会长的弟弟对话。具体流程如下。 <br/>
 			　　     1、确保处于非漏洞状态。（可以通过种树抽奖后保存，再rtcread更改天数后进游戏对比的方式来判断）；<br/>
@@ -87,6 +91,31 @@
 			<figure> <img src="{{ site.baseurl }}/../../../assets/images/Mirage_Island/6.1-3.png" style="max-width:100%; height:auto;"></figure>
 			<figure> <img src="{{ site.baseurl }}/../../../assets/images/Mirage_Island/6.1-4.png" style="max-width:100%; height:auto;"></figure>
 		</p>
+		<h3>
+			方法二：绿岭市火箭发射计数法<br/>
+			Method 1: Rocket Launching Counts in Mossdeep City<br/>
+		<h3/>
+		<p class="p"> 
+			　　• 前往绿岭市东侧的绿岭宇宙中心，与一楼大厅正北方的研究员对话。具体流程如下。 <br/>
+			　　     1、确保处于非漏洞状态。（可以通过种树抽奖后保存，再rtcread更改天数后进游戏对比的方式来判断）；<br/>
+			　　     2、与一楼大厅正北方的研究员对话查看火箭发射次数，同时记录当前RTC（如2021/12/31）；<br/>
+			　　     3、火箭发射次数为当前硬件RTC时间与初始RTC时间之间所经历的周数，<br/>
+			　　     　　即已发射n次，代表你当前硬件RTC距离初始RTC之间的周数为n周，经过RTC天数范围即为7n~(7n+6)，<br/>
+			　　     　　如果火箭没发射，范围为0~6天；<br/>
+			　　     　　如果为9999天，说明仍然处在漏洞期间，请回到第一步重新操作。<br/>
+			　　     4、此时你可以采用RTC往前后调整各7天的范围内，检查什么时候发射次数更新，意味着处在两个周次的交界处，从而确定具体的经过RTC天数时间。<br>
+			　　     　　或者不动RTC，单纯每天开机检查发射次数是否更新，来等到下一次周次更新，从而确定具体的经过RTC天数时间。<br/>
+			　　• Go to the Mossdeep Space Center located east of Mossdeep City and speak to the researcher at the north end of the first-floor lobby. For more infomation, please see below. <br/> 
+			　　     1. Ensure the game is in a non-glitched state. (Can be verified by planting berries or lottery draws and save after checking, then compare by adjusting RTC days via rtcread); <br/>
+			　　     2. Speak with researcher at the north end of the first-floor lobby to check the rocket launch count, and recording current hardware RTC (e.g. 2021/12/31);  <br/>
+			　　     3. The rocket launch count represents the number of weeks that have passed between the current hardware RTC time and the initial RTC time. <br/>
+			　　     　　If the count is n, it means n weeks have elapsed, covering an Elapsed-RTC-Days range of 7n ~ (7n + 6);  <br/>
+			　　     　　If the rocket has not launched, the range is 0 ~ 6 days. <br/>
+			　　     　　If the count shows 9999, you are still in a glitched state, Please return to Step 1 and repeat the process. <br/>
+			　　     4. You can now adjust the RTC forward or backward within a 7-day range to check when the launch count updates, indicating a weekly transition point, which helps determine the exact elapsed RTC days. <br/>
+			　　     　　Alternatively, without changing the RTC, you can simply check the launch count daily until it updates, confirming the exact elapsed RTC days. <br/>
+			<figure> <img src="{{ site.baseurl }}/../../../assets/images/Mirage_Island/6.1-6.png" style="max-width:100%; height:auto;"></figure>
+		</p>
 		<hr/> 
 
 		<h2>
@@ -96,6 +125,10 @@
 		<p class="p"> 
 			　　• 请点击<a href="https://wokann.github.io/Tool/Spinda_Painter/Spinda%20Painter%201.3.2.htm"> 这里 </a>以查询你晃晃斑的PID。<br/>
 			　　• Please click <a href="https://wokann.github.io/Tool/Spinda_Painter/Spinda%20Painter%201.3.2.htm"> here </a> to check your Spindas' PID.<br/> 
+		</p>
+		<p class="p"> 
+			　　• 感谢ProfessorRex和他的伙伴，现在有一个专门针对幻之岛制作的晃晃版PID及幻岛出现天数的<a href="https://professorrex.github.io/Mirage/Spinda_Painter/index.html"> 计算工具。</a> （手机端也可以操作）。<br/>
+			　　• Thanks to ProfessorRex and his friend, now there is a new <a href="https://professorrex.github.io/Mirage/Spinda_Painter/index.html"> tool </a> to calculate Spinda spots' PID and the Elapsed-RTC-Days when island appear (which can also be used on mobile devices).<br/> 
 		</p>
 		<hr/> 
 
