@@ -239,3 +239,78 @@ Kor_v1 (Lite):  USG-KOR       -Ver1.0K
 ## 4.2 FlashMe的版本
 
 ## 4.3 FlashMe的发展
+
+# 五、DS固件及破解时间线
+为方便阅读，固件版本以民间命名方式描述
+## 2004
+* 2004/10/05 官方国际版v1固件制成
+* 2004/11/21 NDS于北美地区发售
+* 2004/11/26 官方国际版v2固件制成
+* 2004/12/02 NDS于日本发售
+* 2004/12/13 NDS于中国台湾发售
+* 2004/12/29 NDS于韩国发售
+* 2024/12/31 不晚于该日期，DarkFader(Rafael Vuijk) 已经成功dump转储Metroid Prime Hunters demo演示卡带（因为这个游戏早期是与NDS主机同捆销售的），并在个人网站上公开了基于FPGA的最早的（pass through）破解原型设备的相关代码资料。
+
+## 2005
+* 2005/01/26 Natrium42(Alexey Karpenko)基于DarkFader的资料，尝试自己使用Xilinx Spartan-3 FPGA开发套件制作pass through设备
+* 2005/01/31 Natrium42设计了使用CPLD的小型的电路板，称之为PassMe，并公开了相关资料。并提及定制PCB主板主要大约2周时间，Lynx将在收到主板后进行组装。
+* 2005/02/09 DarkFader开发了程序以破解crc算法，社区协力使用该程序以收集足够的信息，最终DarkFader实现了crc算法的重新实现，意味着PassMe不再仅限于特定的游戏才能使用。
+* 2005/02/24 NDS于澳洲地区发售
+* 2005/02/28 官方国际版v3固件制成
+* 2005/03/02 Natrium42提及收到主板的人无法让其正常工作，由于他的定制主板还未生产出来，他使用同样CPLD芯片的PLCC版本进行组装验证，测试结果顺利。尽管不保证实际的PassMe主板能否正常运行，但至少证明了这个方式的可行性。
+* 2005/03/04 Lynx组装了PassMe电路板并成功运行。Natrium42与Lynx随后不断对电路板结构进行优化改进。此时PassMe仅支持Metroid Prime Hunters的demo卡带。
+* 2005/03/09 得益于DarkFader对于crc算法的破解并公开了新的代码资料，新版本PassMe已经可以支持任意DS卡带
+* 2005/03/11 NDS于欧洲地区发售
+* 2005/04/11 DarkFader公开通过短路SL1触点，可以解除固件头部0x10000数据写入保护机制的信息，并表示Loopy正在为此开发固件补丁（即后来的FlashMe）
+* 2005/04/13 Tim Schuerewegen制作并发布了WMB (Wireless MultiBoot Hack)的驱动和程序，除了可以发送自制程序外，还可以实现如同PassMe的功能的WiFiMe
+* 2005/04/19 不晚于该时间，NeoFlash商业版PassMe设备及烧录卡宣布即将发售，及可以免费提供套件给前来联系的DS开发者或游戏网站管理员进行测试
+* 2005/04/20 FlashMe Beta版本面世（又称v0）。玩家需要通过PassMe/WiFiMe运行getID.ds.gba以生成与本机关联的序列号，再将序列号上传，以获取固件补丁程序 玩家的序列号.ds.gba，再运行该软件并短接SL1以刷入固件
+* 2005/04/26 FlashMe Beta版本再次开放测试
+* 2005/05/12 FlashMe_v1发布，不再像Beta版本需要提供唯一的序列号后获得固件
+* 2005/05/20 不晚于该日期，NeoFlash更新官网文本正式发售（也可能是0519发售，时光机缺少19号的记录，0518官网页面还是即将发售）
+* 2005/05/22 该日期起，flashme在原有.ds.gba基础上，新增提供.nds的刷写工具
+* 2005/05/23 FlashMe_v2发布（时光机记录中，0524存在一个版本的flashme.ds.gba，与部分网站留档名FlashMe_v050715的数据相同）
+* 2005/05/24 FlashMe_v3发布（时光机记录中，0525存在一个版本的flashme.nds，且与相邻0524的flashme.ds.gba的固件内容不同）
+* 2005/06/06 官方国际版v4固件制成
+* 2005/06/09 官方神游版iQue_v1固件制成
+* 2005/07/23 NDS于中国大陆以神游iQue名称发售
+* 2005/09/03 FlashMe_v4发布
+* 2005/10    预载v4固件的国际版NDS面世。v4、iQue_v1固件均封堵了初代PassMe、WiFiMe
+* 2005/10    Loopy破解新固件的封堵机制，PassMe2现世
+* 2005/10/07 由于对于DS固件漏洞安全性的讨论，DarkFader发布了DS Bricker，分两个版本r0mloader.nds和taihen.nds。这是DS上首个恶意软件，软件会故意损毁固件数据。DarkFader随后道歉并提供了刷写工具以还原固件。
+* 2005/10/15 不晚于该日期，FlashMe_v4 新增flashme_stealth.nds版本
+* 2005/10/23 YaW在gbadev.org反馈在线游玩马力欧卡丁车DS后，砖机（此时该游戏尚未发售，但是官方展厅里可以游玩到试玩版、测试版、最终版）（Diskun: I can confirm what YaW says. He could try Mario Kart DS Final Version in the Nintendo Friends Showroom at Madrid. A press room for spanish media, they have demos, betas and final versions before they are released so journalists can go and try the games or take some screenshots for reviews. YaW currently runs DSMagazine, while I'm the webmaster of NDSSpain, so you can trust in us.）
+* 2005/11/03 FlashMe_v5发布，避开了固件尾部的wifi数据范围
+* 2005/11/14 马力欧卡丁车DS于北美地区发售
+* 2005/11    马力欧卡丁车DS作为首款支持WiFi联机功能游戏，首次将WiFi数据写入固件尾部，FlashMe_v1-v4恰好将部分数据写在这块区域导致被wifi数据覆盖，引发了砖机潮
+* 2005/11/17 马力欧卡丁车DS于澳洲地区发售
+* 2005/11/24 不晚于该日期，FlashMe_v5发布，避开了固件尾部的wifi数据范围
+* 2005/11/25 马力欧卡丁车DS于欧洲地区发售
+* 2005/12/07 官方国际版v5固件制成
+* 2005/12/08 马力欧卡丁车DS于日本发售
+
+## 2006
+* 2006/01/01 PicoChat聊天室颜色法被MaHe提出，此方法又被戏称TakeMeOut
+* 2006/01/02 FlashMe_v6发布，支持显示当前固件版本
+* 2006/01/24 据称no$gba的作者Martin Korth已经破解了DS卡带的加密规则，这将使插入slot1的PassMe设备不再需要附带一张正版DS卡带，被称之为NoPass
+* 2006/01/26 新机型NDSL正式宣布即将发售
+* 2006/02/05 官方国际版v6(Lite)固件制成
+* 2006/03/02 NDSL于日本发售
+* 2006/03/08 官方国际版v7(Lite)固件制成
+* 2006/03/24 不晚于该日期（0225时官网标注v6），FlashMe_v7发布
+* 2006/04/26 官方神游版iQue_v2 (Lite)固件制成
+* 2006/04/17 不晚于该日期（0415时v7为旧版本），FlashMe_v7更新，用于初代ds的固件发生了些许改动，同时整合了用于dslite的固件，v7最初发布到更新期间，还存在独立的flashme_lite beta 1、beta 2版本
+* 2006/06/01 NDSL于澳洲地区发售
+* 2006/06/11 NDSL于北美地区发售
+* 2006/06/22 NDSL于中国台湾发售
+* 2006/06/23 NDSL于欧洲地区发售
+* 2006/06/25 NDSL于新加坡发售
+* 2006/06/29 NDSL于中国大陆以神游iQue名称发售
+* 2006/07/20 NDSL于韩国发售（国际版固件）
+* 2006/11/09 官方韩版Kor_v1 (Lite)固件制成
+
+## 2007
+* 2007/01/18 NDSL于韩国发售（韩版固件）
+* 2007/04/30 FlashMe_v8发布
+* 2007/05/01 FlashMe_v8a作为FlashMe最后的版本发布
+
