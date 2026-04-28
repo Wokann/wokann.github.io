@@ -1,0 +1,17 @@
+<header class="site-header">
+  <div class="wrap nav-wrap">
+    <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+
+    <nav class="site-nav">
+      {% assign custom_order = "主页,文章,工具,作者,友情链接,关于" | split: "," %}
+      {% for title in custom_order %}
+        {% assign page = site.pages | where_exp:"p","p.title == title" | first %}
+        {% if page and page.name != '404.html' %}
+          <a class="nav-item {% if page.url == page.url %}active{% endif %}" href="{{ page.url | relative_url }}">
+            {{ page.title }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+  </div>
+</header>

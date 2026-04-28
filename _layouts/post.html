@@ -1,15 +1,153 @@
 ---
 layout: default
 ---
-<h1>{{ page.title }}</h1>
+<article class="post">
+  <h1>{{ page.title }}</h1>
 
-<p>
-  {% assign author = site.authors | where: 'short_name', page.author | first %}
-  {% if author %}
-  作者：<a href="{{ author.url }}">{{ author.name }}</a>
-  {% endif %}<br>
-  创建日期：{{ page.date | date: "%Y-%m-%d" }}<br>
-  修改日期：{{ page.last_modified_at | date: "%Y-%m-%d" }}
-</p>
+  <div class="post-date" style="margin: 0.8em 0 2em; font-size: 14px; color: #888; display: flex; gap: 16px; flex-wrap: wrap;">
+    <span>创建于：{{ page.date | date: "%Y-%m-%d" }}</span>
+    {% if page.last_modified_at %}
+    <span>更新于：{{ page.last_modified_at | date: "%Y-%m-%d" }}</span>
+    {% endif %}
+  </div>
 
-{{ content }}
+  {{ content }}
+</article>
+
+<!-- 全局通用 左侧悬浮目录｜电脑+手机都显示 -->
+<div class="toc-fixed">
+  <button class="toc-btn" onclick="toggleTOC()">📑 目录</button>
+  <div class="toc-box" id="tocBox">
+    <div class="toc-title">文章目录</div>
+    <ul id="tocList"></ul>
+  </div>
+</div>
+
+<script>
+function toggleTOC() {
+  document.getElementById("tocBox").classList.toggle("show");
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+  const list = document.getElementById('tocList');
+  const article = document.querySelector('article.post');
+  const pageTitle = article.querySelector('h1');
+
+  // 取文章里所有h1/h2，再排除文章标题本身
+  const allTitles = article.querySelectorAll('h1, h2');
+  const titles = Array.from(allTitles).filter(el => el !== pageTitle);
+
+  if (titles.length === 0) {
+    document.querySelector('.toc-fixed').style.display = 'none';
+    return;
+  }
+
+  titles.forEach((t, i) => {
+    const id = 'heading_' + i;
+    t.id = id;
+
+    // 给标题加 顶部内边距，防止被导航栏挡住
+    t.style.paddingTop = "50px";
+    t.style.marginTop = "-50px";
+    t.style.scrollMarginTop = "50px"; // 核心修复：滚动后不被挡住
+
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = '#' + id;
+    a.innerText = t.innerText.trim();
+    a.className = t.tagName.toLowerCase();
+    li.appendChild(a);
+    list.appendChild(li);
+  });
+});
+</script>
+
+<style>
+/* 悬浮目录容器 */
+.toc-fixed {
+  position: fixed;
+  top: 90px;
+  left: 12px;
+  z-index: 9999;
+}
+
+/* 目录按钮 */
+.toc-btn {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* 目录面板 默认隐藏 */
+.toc-box {
+  position: absolute;
+  top: 45px;
+  left: 0;
+  width: 220px;
+  max-height: 60vh;
+  overflow-y: auto;
+  background: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+  display: none;
+}
+.toc-box.show {
+  display: block;
+}
+
+.toc-title {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.toc-box ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.toc-box li {
+  margin: 6px 0;
+}
+.toc-box a {
+  font-size: 13px;
+  color: #555;
+  text-decoration: none;
+  line-height: 1.5;
+}
+.toc-box a.h1 {
+  font-weight: 600;
+  color: #222;
+}
+.toc-box a.h2 {
+  padding-left: 12px;
+  color: #666;
+}
+.toc-box a:hover {
+  color: #2478f5;
+}
+
+/* 手机端修复：不跑左下角，内容不超出屏幕 */
+@media (max-width: 768px) {
+  .toc-fixed {
+    top: 80px;
+    left: 10px;
+    bottom: auto;
+  }
+  .toc-box {
+    width: 180px;
+    max-height: 50vh;
+    position: absolute;
+    left: 0;
+    right: auto;
+  }
+}
+</style>
