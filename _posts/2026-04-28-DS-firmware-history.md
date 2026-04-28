@@ -276,7 +276,7 @@ Kor_v1 (Lite):  USG-KOR       -Ver1.0K
 * 2005/07/23 NDS于中国大陆以神游iQue名称发售
 * 2005/09/03 FlashMe_v4发布
 * 2005/10    预载v4固件的国际版NDS面世。v4、iQue_v1固件均封堵了初代PassMe、WiFiMe
-* 2005/10    Loopy破解新固件的封堵机制，PassMe2现世
+* ？2005/10    （Loopy破解新固件的封堵机制，PassMe2现世，PassMe2内容暂未梳理完成）
 * 2005/10/07 由于对于DS固件漏洞安全性的讨论，DarkFader发布了DS Bricker，分两个版本r0mloader.nds和taihen.nds。这是DS上首个恶意软件，软件会故意损毁固件数据。DarkFader随后道歉并提供了刷写工具以还原固件。
 * 2005/10/15 不晚于该日期，FlashMe_v4 新增flashme_stealth.nds版本
 * 2005/10/23 YaW在gbadev.org反馈在线游玩马力欧卡丁车DS后，砖机（此时该游戏尚未发售，但是官方展厅里可以游玩到试玩版、测试版、最终版）（Diskun: I can confirm what YaW says. He could try Mario Kart DS Final Version in the Nintendo Friends Showroom at Madrid. A press room for spanish media, they have demos, betas and final versions before they are released so journalists can go and try the games or take some screenshots for reviews. YaW currently runs DSMagazine, while I'm the webmaster of NDSSpain, so you can trust in us.）
@@ -284,7 +284,6 @@ Kor_v1 (Lite):  USG-KOR       -Ver1.0K
 * 2005/11/14 马力欧卡丁车DS于北美地区发售
 * 2005/11    马力欧卡丁车DS作为首款支持WiFi联机功能游戏，首次将WiFi数据写入固件尾部，FlashMe_v1-v4恰好将部分数据写在这块区域导致被wifi数据覆盖，引发了砖机潮
 * 2005/11/17 马力欧卡丁车DS于澳洲地区发售
-* 2005/11/24 不晚于该日期，FlashMe_v5发布，避开了固件尾部的wifi数据范围
 * 2005/11/25 马力欧卡丁车DS于欧洲地区发售
 * 2005/12/07 官方国际版v5固件制成
 * 2005/12/08 马力欧卡丁车DS于日本发售
@@ -292,7 +291,7 @@ Kor_v1 (Lite):  USG-KOR       -Ver1.0K
 ## 2006
 * 2006/01/01 PicoChat聊天室颜色法被MaHe提出，此方法又被戏称TakeMeOut
 * 2006/01/02 FlashMe_v6发布，支持显示当前固件版本
-* 2006/01/24 据称no$gba的作者Martin Korth已经破解了DS卡带的加密规则，这将使插入slot1的PassMe设备不再需要附带一张正版DS卡带，被称之为NoPass
+* 2006/01/24 据称no$gba的作者Martin Korth已经破解了DS卡带的加密规则，这将使插入slot1的PassMe设备不再需要附带一张正版DS卡带，被称之为NoPass（NoPass资料尚未梳理完成）
 * 2006/01/26 新机型NDSL正式宣布即将发售
 * 2006/02/05 官方国际版v6(Lite)固件制成
 * 2006/03/02 NDSL于日本发售
