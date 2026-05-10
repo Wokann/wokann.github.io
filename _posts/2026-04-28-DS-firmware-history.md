@@ -159,10 +159,10 @@ Kor_v1 (Lite):  0x74f0
 判断对照为：
 ```
 v1:             DS主机卡死
-v2:             上下屏幕呈蓝色
-v3:             上下屏幕呈绿色
-v4:             上下屏幕呈黄色
-v5:             上下屏幕呈紫色
+v2:             上下屏幕呈蓝色(0x3D06 #304078)
+v3:             上下屏幕呈绿色(0x01E0 #007800)
+v4:             上下屏幕呈黄色(0x03FF #F8F800)
+v5:             上下屏幕呈紫色(0x741B #D800E8)
 ```
 关于v6-v7网络上流传着错误的版本：
 ```
@@ -171,15 +171,15 @@ v7 (Lite):      不卡死，一切正常
 ```
 但实际测试情况是：
 ```
-v6 (Lite):      上下屏幕呈紫色
-v7 (Lite):      上下屏幕呈紫色
+v6 (Lite):      上下屏幕呈紫色(0x741B #D800E8)
+v7 (Lite):      上下屏幕呈紫色(0x741B #D800E8)
 ```
 即，从v5开始之后的所有版本，均为紫色。也就是说，PicoChat聊天室颜色法仅适用于DS初代主机的5个版本进行判断（仅考虑零售时预装版本，不考虑玩家自己另行刷入lite固件或第三方固件的情况），而不适用于Lite起的版本判断。<br>
 以下附上神游及韩版的PicoChat聊天室颜色情况：
 ```
-iQue_v1:        上下屏幕呈绿色
-iQue_v2 (Lite): 上下屏幕呈紫色
-Kor_v1 (Lite):  上下屏幕呈紫色
+iQue_v1:        上下屏幕呈绿色(0x01E0 #007800)
+iQue_v2 (Lite): 上下屏幕呈紫色(0x741B #D800E8)
+Kor_v1 (Lite):  上下屏幕呈紫色(0x741B #D800E8)
 ```
 
 ## 3.3 版本号的官方命名
@@ -197,6 +197,16 @@ WORLD WIDE
 Ver5.0
 0x12071445
 0x80F824E1
+0x00002BCA
+```
+```
+console
+region
+path
+official version naming
+timestamp
+crc32
+border color of F-writer
 ```
 即数据结构为
 ```
@@ -204,9 +214,22 @@ Ver5.0
 区域(region)
 rom内文件路径(path)
 官方版本号(official version naming)
-未知(unknown)
+时间戳后8个数字(timestamp)
 crc32
+F-writer边框颜色(border color of F-writer)
 ```
+
+F-writer边框颜色:
+```
+border color:
+NTR-WORLD WIDE: 0x2BCA ( #50F050) green
+NTR-CHN [iQue]: 0x14BC ( #E02828) red
+USG-WORLD WIDE: 0x739C ( #E0E0E0) grey
+USG-CHN [iQue]: 0x161C ( #E08028) orange
+USG-NIS(L):     0x2D4E ( #705058) dustyrose
+USG-KOR:        0x5042 ( #1010A0) blue
+```
+
 经过统计，我们得到了大部分零售版固件对应的官方版本号命名：
 ```
 v4:             NTR-WORLD WIDE-Ver4.0
